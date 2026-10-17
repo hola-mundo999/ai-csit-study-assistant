@@ -87,6 +87,18 @@ The application includes a built-in **Demo Mode** out of the box! To enable live
 
 ---
 
+## 🧪 Testing
+
+```bash
+pip install -r requirements.txt
+pytest
+```
+
+The test suite covers PDF extraction, text chunking, deterministic Demo Mode responses,
+keyword-based context selection with page citations, and exam/flashcard generation.
+
+---
+
 ## 📬 Contact & Connect
 
 - **Author:** Samyog Sapkota
