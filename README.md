@@ -105,3 +105,6 @@ keyword-based context selection with page citations, and exam/flashcard generati
 - **GitHub:** [@hola-mundo999](https://github.com/hola-mundo999)
 - **LinkedIn:** [linkedin.com/in/samyogsapkota](https://www.linkedin.com/in/samyogsapkota/)
 - **College:** Prime College, Khusibu, Kathmandu
+## Demo
+
+[Live Demo (Streamlit)](https://ai-csit-study-assistant.streamlit.app)
