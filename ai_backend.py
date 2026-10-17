@@ -177,13 +177,13 @@ class AIChatBackend:
                 "---",
                 "Note: Your uploaded notes were detected, but this topic explanation "
                 "comes from the built-in study guide. For answers grounded specifically "
-                "in your notes, configure a live AI provider (server-side).",
+                "in your notes, configure a live AI provider (server-side) if available.",
             ]
 
         lines += [
             "",
             "---",
-            "_TU CSIT Study Assistant · Built-in study guide (no API key required)_",
+            "_TU CSIT Study Assistant · Built-in study guide_",
         ]
         return "\n".join(lines)
 
@@ -228,8 +228,7 @@ class AIChatBackend:
 
         lines += [
             "",
-            "To get AI-generated explanations from your notes, configure a live "
-            "provider (Gemini or Groq) via server-side environment variables.",
+            "To get AI-generated explanations from your notes, a live AI provider can be configured server-side by the administrator.",
         ]
         return AIChatResult(
             answer="\n".join(lines),
@@ -241,7 +240,7 @@ class AIChatBackend:
         return (
             "# I can help with CSIT topics\n\n"
             "I don't have a specific explanation for that topic in the built-in "
-            "study guide yet, and no live AI provider is configured.\n\n"
+            "study guide yet.\n\n"
             "Try asking about one of these instead: Quick Sort, Merge Sort, Binary "
             "Search, Big-O Notation, Linked List, Stack, Queue, Database "
             "Normalization, ACID Properties, Process vs Thread, Deadlock, TCP vs "
