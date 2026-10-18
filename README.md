@@ -2,7 +2,7 @@
 
 A comprehensive, student-friendly learning platform for **Tribhuvan University (TU) BSc CSIT students**, featuring verified semester notes, solved past board exam questions, official TU IOST syllabi, and an intelligent **Multi-Model AI Study Tutor** with customizable answer lengths.
 
-Developed by **[Samyog Sapkota](https://github.com/hola-mundo999)** · *BSc CSIT, Prime College · PR Director, Prime IT Club*.
+Developed by **[Samyog Sapkota](https://github.com/hola-mundo999)** · *BSc CSIT, Prime College · PR Advisor, Prime IT Club*.
 
 ---
 
