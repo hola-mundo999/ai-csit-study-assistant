@@ -89,6 +89,46 @@ st.markdown(
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
+        /* Completely hide Streamlit top header, toolbar, deploy button, menu, footer */
+        header[data-testid="stHeader"],
+        header,
+        [data-testid="stToolbar"],
+        [data-testid="stHeaderActionElements"],
+        [data-testid="stAppDeployButton"],
+        .stDeployButton,
+        #MainMenu,
+        footer,
+        div[data-testid="stStatusWidget"],
+        div[data-testid="stDecoration"] {
+            visibility: hidden !important;
+            display: none !important;
+            height: 0 !important;
+            min-height: 0 !important;
+            max-height: 0 !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* Completely hide Streamlit Community Cloud 'Manage app' badge / viewer badge / host status */
+        .viewerBadge_container__r5tak,
+        .viewerBadge_link__qRIco,
+        [class*="viewerBadge"],
+        [class*="manage-app"],
+        [id*="manage-app"],
+        #manage-app-button,
+        div[data-testid*="manage-app"],
+        iframe[title="manage-app"],
+        iframe[src*="share.streamlit.io"],
+        div[class*="StatusWidget"],
+        div[class*="HostStatus"] {
+            visibility: hidden !important;
+            display: none !important;
+            height: 0 !important;
+            width: 0 !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         /* Top Bar Container */
         .block-container {
             padding-top: 1.2rem !important;
@@ -275,8 +315,50 @@ st.markdown(
             color: #ffffff !important;
             border-radius: 8px !important;
             font-weight: 600 !important;
-        }
     </style>
+    <script>
+        const cleanChrome = () => {
+            const selectors = [
+                'header[data-testid="stHeader"]',
+                'header',
+                '[data-testid="stToolbar"]',
+                '[data-testid="stHeaderActionElements"]',
+                '[data-testid="stAppDeployButton"]',
+                '.stDeployButton',
+                '#MainMenu',
+                'footer',
+                '.viewerBadge_container__r5tak',
+                '.viewerBadge_link__qRIco',
+                '[class*="viewerBadge"]',
+                '[class*="manage-app"]',
+                '#manage-app-button',
+                'div[data-testid*="manage-app"]',
+                'iframe[title="manage-app"]',
+                'div[class*="StatusWidget"]',
+                'div[class*="HostStatus"]'
+            ];
+            selectors.forEach(sel => {
+                document.querySelectorAll(sel).forEach(el => {
+                    el.style.setProperty('display', 'none', 'important');
+                    el.style.setProperty('visibility', 'hidden', 'important');
+                    try { el.remove(); } catch(err) {}
+                });
+                try {
+                    if (window.parent && window.parent.document) {
+                        window.parent.document.querySelectorAll(sel).forEach(el => {
+                            el.style.setProperty('display', 'none', 'important');
+                            el.style.setProperty('visibility', 'hidden', 'important');
+                            try { el.remove(); } catch(err) {}
+                        });
+                    }
+                } catch(err) {}
+            });
+        };
+        setInterval(cleanChrome, 250);
+        cleanChrome();
+        window.addEventListener('DOMContentLoaded', cleanChrome);
+        window.addEventListener('load', cleanChrome);
+    </script>
     """,
     unsafe_allow_html=True,
 )
