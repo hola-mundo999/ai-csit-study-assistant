@@ -1,0 +1,348 @@
+{
+  "first": [
+    {
+      "name": "Introduction to Information Technology",
+      "code": "CSC114",
+      "url": "https://hamrocsit.com/semester/first/iit/"
+    },
+    {
+      "name": "C Programming",
+      "code": "CSC115",
+      "url": "https://hamrocsit.com/semester/first/c-program/"
+    },
+    {
+      "name": "Digital Logic",
+      "code": "CSC116",
+      "url": "https://hamrocsit.com/semester/first/dl/"
+    },
+    {
+      "name": "Mathematics I",
+      "code": "MTH117",
+      "url": "https://hamrocsit.com/semester/first/math-i/"
+    },
+    {
+      "name": "Physics",
+      "code": "PHY118",
+      "url": "https://hamrocsit.com/semester/first/physics/"
+    }
+  ],
+  "second": [
+    {
+      "name": "Discrete Structure",
+      "code": "CSC165",
+      "url": "https://hamrocsit.com/semester/second/ds/"
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "code": "CSC166",
+      "url": "https://hamrocsit.com/semester/second/oops/"
+    },
+    {
+      "name": "Microprocessor",
+      "code": "CSC167",
+      "url": "https://hamrocsit.com/semester/second/microprocessor/"
+    },
+    {
+      "name": "Mathematics II",
+      "code": "MTH168",
+      "url": "https://hamrocsit.com/semester/second/mathii/"
+    },
+    {
+      "name": "Statistics I",
+      "code": "STA169",
+      "url": "https://hamrocsit.com/semester/second/stat-i/"
+    }
+  ],
+  "third": [
+    {
+      "name": "Data Structure and Algorithm",
+      "code": "CSC211",
+      "url": "https://hamrocsit.com/semester/third/dsa/"
+    },
+    {
+      "name": "Numerical Method",
+      "code": "CSC212",
+      "url": "https://hamrocsit.com/semester/third/csc207/"
+    },
+    {
+      "name": "Computer Architecture",
+      "code": "CSC213",
+      "url": "https://hamrocsit.com/semester/third/csc208/"
+    },
+    {
+      "name": "Computer Graphics",
+      "code": "CSC214",
+      "url": "https://hamrocsit.com/semester/third/csc209/"
+    },
+    {
+      "name": "Statistics II",
+      "code": "STA215",
+      "url": "https://hamrocsit.com/semester/third/stat-ii/"
+    }
+  ],
+  "fourth": [
+    {
+      "name": "Theory of Computation",
+      "code": "CSC262",
+      "url": "https://hamrocsit.com/semester/fourth/toc/"
+    },
+    {
+      "name": "Computer Networks",
+      "code": "CSC263",
+      "url": "https://hamrocsit.com/semester/fourth/cn/"
+    },
+    {
+      "name": "Database Management System",
+      "code": "CSC265",
+      "url": "https://hamrocsit.com/semester/fourth/dbms/"
+    },
+    {
+      "name": "Operating System",
+      "code": "CSC264",
+      "url": "https://hamrocsit.com/semester/fourth/os/"
+    },
+    {
+      "name": "Artificial Intelligence",
+      "code": "CSC266",
+      "url": "https://hamrocsit.com/semester/fourth/ai/"
+    }
+  ],
+  "fifth": [
+    {
+      "name": "Design and Analysis of Algorithms",
+      "code": "CSC314",
+      "url": "https://hamrocsit.com/semester/fifth/daa/"
+    },
+    {
+      "name": "System Analysis and Design",
+      "code": "CSC315",
+      "url": "https://hamrocsit.com/semester/fifth/sad/"
+    },
+    {
+      "name": "Cryptography",
+      "code": "CSC316",
+      "url": "https://hamrocsit.com/semester/fifth/cryptography/"
+    },
+    {
+      "name": "Web Technology",
+      "code": "CSC318",
+      "url": "https://hamrocsit.com/semester/fifth/web-tech/"
+    },
+    {
+      "name": "Simulation and Modeling",
+      "code": "CSC317",
+      "url": "https://hamrocsit.com/semester/fifth/sm/"
+    },
+    {
+      "name": "Image Processing",
+      "code": "CSC332",
+      "url": "https://hamrocsit.com/semester/fifth/image-processing/"
+    },
+    {
+      "name": "Knowledge Management",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/knowledge-management/"
+    },
+    {
+      "name": "Microprocessor Based Design",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/mpbd/"
+    },
+    {
+      "name": "Multimedia Computing",
+      "code": "CSC319",
+      "url": "https://hamrocsit.com/semester/fifth/multimedia/"
+    },
+    {
+      "name": "Society and Ethics in Information Technology",
+      "code": "CSC323",
+      "url": "https://hamrocsit.com/semester/fifth/seit/"
+    },
+    {
+      "name": "Wireless Networking",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/wn/"
+    }
+  ],
+  "sixth": [
+    {
+      "name": "Software Engineering",
+      "code": "CSC364",
+      "url": "https://hamrocsit.com/semester/sixth/se/"
+    },
+    {
+      "name": "E-Governance",
+      "code": "CSC366",
+      "url": "https://hamrocsit.com/semester/sixth/e-governance/"
+    },
+    {
+      "name": "NET Centric Computing",
+      "code": "CSC367",
+      "url": "https://hamrocsit.com/semester/sixth/ncc/"
+    },
+    {
+      "name": "Applied Logic",
+      "code": "CSC369",
+      "url": "https://hamrocsit.com/semester/sixth/applied-logic/"
+    },
+    {
+      "name": "Automation and Robotics",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/ar/"
+    },
+    {
+      "name": "Cognitive Science",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/cog-science/"
+    },
+    {
+      "name": "Computer Hardware Design",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/chd/"
+    },
+    {
+      "name": "E-Commerce",
+      "code": "CSC370",
+      "url": "https://hamrocsit.com/semester/sixth/e-commerce/"
+    },
+    {
+      "name": "Neural Networks",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/neural-networks/"
+    },
+    {
+      "name": "Technical Writing",
+      "code": "CSC379",
+      "url": "https://hamrocsit.com/semester/sixth/tw/"
+    },
+    {
+      "name": "Compiler Design and Construction",
+      "code": "CSC365",
+      "url": "https://hamrocsit.com/semester/sixth/cdc/"
+    }
+  ],
+  "seventh": [
+    {
+      "name": "Advanced Java Programming",
+      "code": "CSC409",
+      "url": "https://hamrocsit.com/semester/seventh/advanced-java/"
+    },
+    {
+      "name": "Data Warehousing and Data Mining",
+      "code": "CSC410",
+      "url": "https://hamrocsit.com/semester/seventh/data-mining/"
+    },
+    {
+      "name": "Principles of Management",
+      "code": "MGT411",
+      "url": "https://hamrocsit.com/semester/seventh/pom/"
+    },
+    {
+      "name": "Project Work",
+      "code": "CSC412",
+      "url": "https://hamrocsit.com/semester/seventh/project-work/"
+    },
+    {
+      "name": "Database Administrator",
+      "code": "CSC414",
+      "url": "https://hamrocsit.com/semester/seventh/database-administrator/"
+    },
+    {
+      "name": "Digital System Design",
+      "code": "CSC417",
+      "url": "https://hamrocsit.com/semester/seventh/digital-system-design/"
+    },
+    {
+      "name": "Information Retrieval",
+      "code": "CSC413",
+      "url": "https://hamrocsit.com/semester/seventh/information-retrieval/"
+    },
+    {
+      "name": "International Marketing",
+      "code": "MGT418",
+      "url": "https://hamrocsit.com/semester/seventh/international-marketing/"
+    },
+    {
+      "name": "Network Security",
+      "code": "CSC416",
+      "url": "https://hamrocsit.com/semester/seventh/network-security/"
+    },
+    {
+      "name": "Software Project Management",
+      "code": "CSC415",
+      "url": "https://hamrocsit.com/semester/seventh/software-project-management/"
+    }
+  ],
+  "eight": [
+    {
+      "name": "Advanced Database",
+      "code": "CSC461",
+      "url": "https://hamrocsit.com/semester/eight/advanced-database/"
+    },
+    {
+      "name": "Internship",
+      "code": "CSC462",
+      "url": "https://hamrocsit.com/semester/eight/internship/"
+    },
+    {
+      "name": "Advanced Networking with IPV6",
+      "code": "CSC463",
+      "url": "https://hamrocsit.com/semester/eight/advanced-networking-with-ipv6/"
+    },
+    {
+      "name": "Decision Support System and Expert System",
+      "code": "CSC469",
+      "url": "https://hamrocsit.com/semester/eight/decision-support-system-and-expert-system/"
+    },
+    {
+      "name": "Distributed and Object-Oriented Database",
+      "code": "CSC466",
+      "url": "https://hamrocsit.com/semester/eight/distributed-and-object-oriented-database/"
+    },
+    {
+      "name": "Distributed Networking",
+      "code": "CSC464",
+      "url": "https://hamrocsit.com/semester/eight/distributed-networking/"
+    },
+    {
+      "name": "Embedded Systems Programming",
+      "code": "CSC473",
+      "url": "https://hamrocsit.com/semester/eight/embedded-systems-programming/"
+    },
+    {
+      "name": "Game Technology",
+      "code": "CSC465",
+      "url": "https://hamrocsit.com/semester/eight/game-technology/"
+    },
+    {
+      "name": "Geographical Information System",
+      "code": "CSC468",
+      "url": "https://hamrocsit.com/semester/eight/geographical-information-system/"
+    },
+    {
+      "name": "International Business Management",
+      "code": "MGT474",
+      "url": "https://hamrocsit.com/semester/eight/international-business-management/"
+    },
+    {
+      "name": "Introduction to Cloud Computing",
+      "code": "CSC467",
+      "url": "https://hamrocsit.com/semester/eight/introduction-to-cloud-computing/"
+    },
+    {
+      "name": "Mobile Application Development",
+      "code": "CSC470",
+      "url": "https://hamrocsit.com/semester/eight/mobile-application-development/"
+    },
+    {
+      "name": "Network and System Administration",
+      "code": "CSC472",
+      "url": "https://hamrocsit.com/semester/eight/network-and-system-administration/"
+    },
+    {
+      "name": "Real Time Systems",
+      "code": "CSC471",
+      "url": "https://hamrocsit.com/semester/eight/real-time-systems/"
+    }
+  ]
+}

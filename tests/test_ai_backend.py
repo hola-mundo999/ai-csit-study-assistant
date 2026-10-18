@@ -15,7 +15,7 @@ def test_backend_defaults_to_offline_when_no_keys():
 
 def test_backend_answers_quicksort_thoroughly():
     res = chat_backend.answer("quick sort", [])
-    assert res.source == "offline"
+    assert res.source == "tier1_course_content"
     assert res.error is False
     # Check required educational content
     assert "divide-and-conquer" in res.answer.lower()
@@ -25,12 +25,20 @@ def test_backend_answers_quicksort_thoroughly():
     assert "O(n²)" in res.answer or "O(n^2)" in res.answer
     assert "No API key is configured" not in res.answer
     assert "Demo Mode Active" not in res.answer
+    assert "HamroCSIT" in res.answer
 
 
 def test_backend_intent_simple_language():
     res = chat_backend.answer("Explain quick sort in simple language.", [])
     assert "Simple Language" in res.answer or "photograph" in res.answer.lower()
-    assert res.source == "offline"
+    assert res.source == "tier1_course_content"
+
+
+def test_backend_tier2_fallback_when_outside_curriculum():
+    res = chat_backend.answer("Explain quantum annealing in superconducting circuits", [])
+    assert "tier2" in res.source
+    assert "Notice" in res.answer
+    assert "No sufficiently relevant answer was found in the available local HamroCSIT course notes" in res.answer
 
 
 def test_backend_intent_worst_case():

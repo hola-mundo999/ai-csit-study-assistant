@@ -1,0 +1,2954 @@
+{
+  "semesters": {
+    "first": {
+      "slug": "first",
+      "title": "First Semester",
+      "description": "First semester in B.Sc. CSIT helps to create the fundamental foundation of technology, electronic circuits, programming, and arithmetic to urge you started with the journey of B.Sc. CSIT.",
+      "subjects": [
+        {
+          "name": "Introduction to Information Technology",
+          "code": "CSC114",
+          "url": "https://hamrocsit.com/semester/first/iit/",
+          "slug": "iit",
+          "mapped_notes_slug": "iit",
+          "chapter_count": 11,
+          "chapters": [
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "input-and-output-devices",
+              "title": "Input And Output Devices",
+              "url": "https://hamrocsit.com/note/iit/input-and-output-devices/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "introduction-to-computer",
+              "title": "Introduction To Computer",
+              "url": "https://hamrocsit.com/note/iit/introduction-to-computer/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "computer-security",
+              "title": "Computer Security",
+              "url": "https://hamrocsit.com/note/iit/computer-security/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "multimedia",
+              "title": "Multimedia",
+              "url": "https://hamrocsit.com/note/iit/multimedia/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "fundamentals-of-database",
+              "title": "Fundamentals Of Database",
+              "url": "https://hamrocsit.com/note/iit/fundamentals-of-database/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "the-internet-and-internet-services",
+              "title": "The Internet And Internet Services",
+              "url": "https://hamrocsit.com/note/iit/the-internet-and-internet-services/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "data-communication-and-computer-network",
+              "title": "Data Communication And Computer Network",
+              "url": "https://hamrocsit.com/note/iit/data-communication-and-computer-network/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "computer-software",
+              "title": "Computer Software",
+              "url": "https://hamrocsit.com/note/iit/computer-software/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "data-representation",
+              "title": "Data Representation",
+              "url": "https://hamrocsit.com/note/iit/data-representation/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "computer-memory",
+              "title": "Computer Memory",
+              "url": "https://hamrocsit.com/note/iit/computer-memory/"
+            },
+            {
+              "subject_slug": "iit",
+              "chapter_slug": "the-computer-system-hardware",
+              "title": "The Computer System Hardware",
+              "url": "https://hamrocsit.com/note/iit/the-computer-system-hardware/"
+            }
+          ]
+        },
+        {
+          "name": "C Programming",
+          "code": "CSC115",
+          "url": "https://hamrocsit.com/semester/first/c-program/",
+          "slug": "c-program",
+          "mapped_notes_slug": "c-program",
+          "chapter_count": 11,
+          "chapters": [
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "elements-of-c",
+              "title": "Elements Of C",
+              "url": "https://hamrocsit.com/note/c-program/elements-of-c/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "input-and-output",
+              "title": "Input And Output",
+              "url": "https://hamrocsit.com/note/c-program/input-and-output/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "operators-and-expression",
+              "title": "Operators And Expression",
+              "url": "https://hamrocsit.com/note/c-program/operators-and-expression/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "control-statement",
+              "title": "Control Statement",
+              "url": "https://hamrocsit.com/note/c-program/control-statement/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "arrays",
+              "title": "Arrays",
+              "url": "https://hamrocsit.com/note/c-program/arrays/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "functions",
+              "title": "Functions",
+              "url": "https://hamrocsit.com/note/c-program/functions/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "structure-and-union",
+              "title": "Structure And Union",
+              "url": "https://hamrocsit.com/note/c-program/structure-and-union/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "pointers",
+              "title": "Pointers",
+              "url": "https://hamrocsit.com/note/c-program/pointers/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "file-handling-in-c",
+              "title": "File Handling In C",
+              "url": "https://hamrocsit.com/note/c-program/file-handling-in-c/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "introduction-to-graphics",
+              "title": "Introduction To Graphics",
+              "url": "https://hamrocsit.com/note/c-program/introduction-to-graphics/"
+            },
+            {
+              "subject_slug": "c-program",
+              "chapter_slug": "problem-solving-computer",
+              "title": "Problem Solving Computer",
+              "url": "https://hamrocsit.com/note/c-program/problem-solving-computer/"
+            }
+          ]
+        },
+        {
+          "name": "Digital Logic",
+          "code": "CSC116",
+          "url": "https://hamrocsit.com/semester/first/dl/",
+          "slug": "dl",
+          "mapped_notes_slug": "dl",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "synchronous-and-asynchronous-sequential-logic",
+              "title": "Synchronous And Asynchronous Sequential Logic",
+              "url": "https://hamrocsit.com/note/dl/synchronous-and-asynchronous-sequential-logic/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "combinational-logic-with-msi-and-lsi",
+              "title": "Combinational Logic With Msi And Lsi",
+              "url": "https://hamrocsit.com/note/dl/combinational-logic-with-msi-and-lsi/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "combinational-logic",
+              "title": "Combinational Logic",
+              "url": "https://hamrocsit.com/note/dl/combinational-logic/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "simplification-of-boolean-functions",
+              "title": "Simplification Of Boolean Functions",
+              "url": "https://hamrocsit.com/note/dl/simplification-of-boolean-functions/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "boolean-algebra-and-logic-gates",
+              "title": "Boolean Algebra And Logic Gates",
+              "url": "https://hamrocsit.com/note/dl/boolean-algebra-and-logic-gates/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "binary-systems",
+              "title": "Binary Systems",
+              "url": "https://hamrocsit.com/note/dl/binary-systems/"
+            },
+            {
+              "subject_slug": "dl",
+              "chapter_slug": "registers-and-counters",
+              "title": "Registers And Counters",
+              "url": "https://hamrocsit.com/note/dl/registers-and-counters/"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics I",
+          "code": "MTH117",
+          "url": "https://hamrocsit.com/semester/first/math-i/",
+          "slug": "math-i",
+          "mapped_notes_slug": "math-i",
+          "chapter_count": 10,
+          "chapters": [
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "antiderivatives",
+              "title": "Antiderivatives",
+              "url": "https://hamrocsit.com/note/math-i/antiderivatives/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "infinite-sequence-and-series",
+              "title": "Infinite Sequence And Series",
+              "url": "https://hamrocsit.com/note/math-i/infinite-sequence-and-series/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "ordinary-differential-equations",
+              "title": "Ordinary Differential Equations",
+              "url": "https://hamrocsit.com/note/math-i/ordinary-differential-equations/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "applications-of-antiderivatives",
+              "title": "Applications Of Antiderivatives",
+              "url": "https://hamrocsit.com/note/math-i/applications-of-antiderivatives/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "applications-of-derivatives",
+              "title": "Applications Of Derivatives",
+              "url": "https://hamrocsit.com/note/math-i/applications-of-derivatives/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "function-of-one-variable",
+              "title": "Function Of One Variable",
+              "url": "https://hamrocsit.com/note/math-i/function-of-one-variable/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "derivatives",
+              "title": "Derivatives",
+              "url": "https://hamrocsit.com/note/math-i/derivatives/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "limits-and-continuity",
+              "title": "Limits And Continuity",
+              "url": "https://hamrocsit.com/note/math-i/limits-and-continuity/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "partial-derivatives-and-multiple-integration",
+              "title": "Partial Derivatives And Multiple Integration",
+              "url": "https://hamrocsit.com/note/math-i/partial-derivatives-and-multiple-integration/"
+            },
+            {
+              "subject_slug": "math-i",
+              "chapter_slug": "plain-and-space-vectors",
+              "title": "Plain And Space Vectors",
+              "url": "https://hamrocsit.com/note/math-i/plain-and-space-vectors/"
+            }
+          ]
+        },
+        {
+          "name": "Physics",
+          "code": "PHY118",
+          "url": "https://hamrocsit.com/semester/first/physics/",
+          "slug": "physics",
+          "mapped_notes_slug": "physics",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "rotational-dynamics-and-oscillatory-motion",
+              "title": "Rotational Dynamics And Oscillatory Motion",
+              "url": "https://hamrocsit.com/note/physics/rotational-dynamics-and-oscillatory-motion/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "methods-of-quantum-mechanics",
+              "title": "Methods Of Quantum Mechanics",
+              "url": "https://hamrocsit.com/note/physics/methods-of-quantum-mechanics/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "fundamentals-of-atomic-theory",
+              "title": "Fundamentals Of Atomic Theory",
+              "url": "https://hamrocsit.com/note/physics/fundamentals-of-atomic-theory/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "universal-gates-and-physics-of-integrated-circuits",
+              "title": "Universal Gates And Physics Of Integrated Circuits",
+              "url": "https://hamrocsit.com/note/physics/universal-gates-and-physics-of-integrated-circuits/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "electric-and-magnetic-field",
+              "title": "Electric And Magnetic Field",
+              "url": "https://hamrocsit.com/note/physics/electric-and-magnetic-field/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "physic-numericals",
+              "title": "Physic Numericals",
+              "url": "https://hamrocsit.com/note/physics/physic-numericals/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "semiconductor-and-semiconductor-devices",
+              "title": "Semiconductor And Semiconductor Devices",
+              "url": "https://hamrocsit.com/note/physics/semiconductor-and-semiconductor-devices/"
+            },
+            {
+              "subject_slug": "physics",
+              "chapter_slug": "fundamentals-of-solid-state-physics",
+              "title": "Fundamentals Of Solid State Physics",
+              "url": "https://hamrocsit.com/note/physics/fundamentals-of-solid-state-physics/"
+            }
+          ]
+        }
+      ]
+    },
+    "second": {
+      "slug": "second",
+      "title": "Second Semester",
+      "description": "The second semester of B.Sc. CSIT focuses on elementary ideas of object-oriented programming approach, problem-solving, and advanced ideas of electronic circuits and boards.",
+      "subjects": [
+        {
+          "name": "Discrete Structure",
+          "code": "CSC165",
+          "url": "https://hamrocsit.com/semester/second/ds/",
+          "slug": "ds",
+          "mapped_notes_slug": "ds",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "relations-and-graphs",
+              "title": "Relations And Graphs",
+              "url": "https://hamrocsit.com/note/ds/relations-and-graphs/"
+            },
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "counting-and-discrete-probability",
+              "title": "Counting And Discrete Probability",
+              "url": "https://hamrocsit.com/note/ds/counting-and-discrete-probability/"
+            },
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "induction-and-recursion",
+              "title": "Induction And Recursion",
+              "url": "https://hamrocsit.com/note/ds/induction-and-recursion/"
+            },
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "logic-and-proof-methods",
+              "title": "Logic And Proof Methods",
+              "url": "https://hamrocsit.com/note/ds/logic-and-proof-methods/"
+            },
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "integers-and-matrices",
+              "title": "Integers And Matrices",
+              "url": "https://hamrocsit.com/note/ds/integers-and-matrices/"
+            },
+            {
+              "subject_slug": "ds",
+              "chapter_slug": "basic-discrete-structures",
+              "title": "Basic Discrete Structures",
+              "url": "https://hamrocsit.com/note/ds/basic-discrete-structures/"
+            }
+          ]
+        },
+        {
+          "name": "Object-Oriented Programming",
+          "code": "CSC166",
+          "url": "https://hamrocsit.com/semester/second/oops/",
+          "slug": "oops",
+          "mapped_notes_slug": "oops",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "file-handling",
+              "title": "File Handling",
+              "url": "https://hamrocsit.com/note/oops/file-handling/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "function-templates-and-exception-handling",
+              "title": "Function Templates And Exception Handling",
+              "url": "https://hamrocsit.com/note/oops/function-templates-and-exception-handling/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "virtual-function-polymorphism-and-miscellaneous-c-features",
+              "title": "Virtual Function Polymorphism And Miscellaneous C Features",
+              "url": "https://hamrocsit.com/note/oops/virtual-function-polymorphism-and-miscellaneous-c-features/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "inheritance",
+              "title": "Inheritance",
+              "url": "https://hamrocsit.com/note/oops/inheritance/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "operator-overloading",
+              "title": "Operator Overloading",
+              "url": "https://hamrocsit.com/note/oops/operator-overloading/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "classes-objects",
+              "title": "Classes Objects",
+              "url": "https://hamrocsit.com/note/oops/classes-objects/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "basics-of-c-programming",
+              "title": "Basics Of C Programming",
+              "url": "https://hamrocsit.com/note/oops/basics-of-c-programming/"
+            },
+            {
+              "subject_slug": "oops",
+              "chapter_slug": "introduction-to-oops",
+              "title": "Introduction To Oops",
+              "url": "https://hamrocsit.com/note/oops/introduction-to-oops/"
+            }
+          ]
+        },
+        {
+          "name": "Microprocessor",
+          "code": "CSC167",
+          "url": "https://hamrocsit.com/semester/second/microprocessor/",
+          "slug": "microprocessor",
+          "mapped_notes_slug": "microprocessor",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "input-output-interfaces",
+              "title": "Input Output Interfaces",
+              "url": "https://hamrocsit.com/note/microprocessor/input-output-interfaces/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "advanced-microprocessors",
+              "title": "Advanced Microprocessors",
+              "url": "https://hamrocsit.com/note/microprocessor/advanced-microprocessors/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "basic-i-o-memory-r-w-and-interrupt-operations",
+              "title": "Basic I O Memory R W And Interrupt Operations",
+              "url": "https://hamrocsit.com/note/microprocessor/basic-i-o-memory-r-w-and-interrupt-operations/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "instruction-cycle",
+              "title": "Instruction Cycle",
+              "url": "https://hamrocsit.com/note/microprocessor/instruction-cycle/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "assembly-language-programming",
+              "title": "Assembly Language Programming",
+              "url": "https://hamrocsit.com/note/microprocessor/assembly-language-programming/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "basic-architecture",
+              "title": "Basic Architecture",
+              "url": "https://hamrocsit.com/note/microprocessor/basic-architecture/"
+            },
+            {
+              "subject_slug": "microprocessor",
+              "chapter_slug": "introduction",
+              "title": "Introduction",
+              "url": "https://hamrocsit.com/note/microprocessor/introduction/"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics II",
+          "code": "MTH168",
+          "url": "https://hamrocsit.com/semester/second/mathii/",
+          "slug": "mathii",
+          "mapped_notes_slug": "mathii",
+          "chapter_count": 10,
+          "chapters": [
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "rings-and-fields",
+              "title": "Rings And Fields",
+              "url": "https://hamrocsit.com/note/mathii/rings-and-fields/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "groups-and-subgroups",
+              "title": "Groups And Subgroups",
+              "url": "https://hamrocsit.com/note/mathii/groups-and-subgroups/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "orthogonality-and-least-squares",
+              "title": "Orthogonality And Least Squares",
+              "url": "https://hamrocsit.com/note/mathii/orthogonality-and-least-squares/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "eigenvalues-and-eigen-vectors",
+              "title": "Eigenvalues And Eigen Vectors",
+              "url": "https://hamrocsit.com/note/mathii/eigenvalues-and-eigen-vectors/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "vector-space-continued",
+              "title": "Vector Space Continued",
+              "url": "https://hamrocsit.com/note/mathii/vector-space-continued/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "vector-spaces",
+              "title": "Vector Spaces",
+              "url": "https://hamrocsit.com/note/mathii/vector-spaces/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "determinants",
+              "title": "Determinants",
+              "url": "https://hamrocsit.com/note/mathii/determinants/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "matrix-algebra",
+              "title": "Matrix Algebra",
+              "url": "https://hamrocsit.com/note/mathii/matrix-algebra/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "transformations",
+              "title": "Transformations",
+              "url": "https://hamrocsit.com/note/mathii/transformations/"
+            },
+            {
+              "subject_slug": "mathii",
+              "chapter_slug": "linear-equations-in-linear-algebra",
+              "title": "Linear Equations In Linear Algebra",
+              "url": "https://hamrocsit.com/note/mathii/linear-equations-in-linear-algebra/"
+            }
+          ]
+        },
+        {
+          "name": "Statistics I",
+          "code": "STA169",
+          "url": "https://hamrocsit.com/semester/second/stat-i/",
+          "slug": "stat-i",
+          "mapped_notes_slug": "stat-i",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "correlation-and-linear-regression",
+              "title": "Correlation And Linear Regression",
+              "url": "https://hamrocsit.com/note/stat-i/correlation-and-linear-regression/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "probability-distributions",
+              "title": "Probability Distributions",
+              "url": "https://hamrocsit.com/note/stat-i/probability-distributions/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "random-variables-and-mathematical-expectation",
+              "title": "Random Variables And Mathematical Expectation",
+              "url": "https://hamrocsit.com/note/stat-i/random-variables-and-mathematical-expectation/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "sampling",
+              "title": "Sampling",
+              "url": "https://hamrocsit.com/note/stat-i/sampling/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "introduction-to-probability",
+              "title": "Introduction To Probability",
+              "url": "https://hamrocsit.com/note/stat-i/introduction-to-probability/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "descriptive-statistics",
+              "title": "Descriptive Statistics",
+              "url": "https://hamrocsit.com/note/stat-i/descriptive-statistics/"
+            },
+            {
+              "subject_slug": "stat-i",
+              "chapter_slug": "introduction-to-stat-i",
+              "title": "Introduction To Stat I",
+              "url": "https://hamrocsit.com/note/stat-i/introduction-to-stat-i/"
+            }
+          ]
+        }
+      ]
+    },
+    "third": {
+      "slug": "third",
+      "title": "Third Semester",
+      "description": "The third semester of B.Sc. CSIT focuses on the foundation of information structures, mathematical modeling, the design of computers, ideas of graphics, and applied mathematics measures together with hypotheses and varied tests.",
+      "subjects": [
+        {
+          "name": "Data Structure and Algorithm",
+          "code": "CSC211",
+          "url": "https://hamrocsit.com/semester/third/dsa/",
+          "slug": "dsa",
+          "mapped_notes_slug": "dsa",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "trees-and-graphs",
+              "title": "Trees And Graphs",
+              "url": "https://hamrocsit.com/note/dsa/trees-and-graphs/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "searching-and-hashing",
+              "title": "Searching And Hashing",
+              "url": "https://hamrocsit.com/note/dsa/searching-and-hashing/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "sorting",
+              "title": "Sorting",
+              "url": "https://hamrocsit.com/note/dsa/sorting/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "lists",
+              "title": "Lists",
+              "url": "https://hamrocsit.com/note/dsa/lists/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "recursion",
+              "title": "Recursion",
+              "url": "https://hamrocsit.com/note/dsa/recursion/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "queue",
+              "title": "Queue",
+              "url": "https://hamrocsit.com/note/dsa/queue/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "stack",
+              "title": "Stack",
+              "url": "https://hamrocsit.com/note/dsa/stack/"
+            },
+            {
+              "subject_slug": "dsa",
+              "chapter_slug": "introduction-to-dsa",
+              "title": "Introduction To Dsa",
+              "url": "https://hamrocsit.com/note/dsa/introduction-to-dsa/"
+            }
+          ]
+        },
+        {
+          "name": "Numerical Method",
+          "code": "CSC212",
+          "url": "https://hamrocsit.com/semester/third/csc207/",
+          "slug": "csc207",
+          "mapped_notes_slug": "csc207",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "solution-of-partial-differential-equations",
+              "title": "Solution Of Partial Differential Equations",
+              "url": "https://hamrocsit.com/note/csc207/solution-of-partial-differential-equations/"
+            },
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "solution-of-ordinary-differential-equations",
+              "title": "Solution Of Ordinary Differential Equations",
+              "url": "https://hamrocsit.com/note/csc207/solution-of-ordinary-differential-equations/"
+            },
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "solving-system-of-linear-equations",
+              "title": "Solving System Of Linear Equations",
+              "url": "https://hamrocsit.com/note/csc207/solving-system-of-linear-equations/"
+            },
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "numerical-differentiation-and-integration",
+              "title": "Numerical Differentiation And Integration",
+              "url": "https://hamrocsit.com/note/csc207/numerical-differentiation-and-integration/"
+            },
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "interpolation-and-regression",
+              "title": "Interpolation And Regression",
+              "url": "https://hamrocsit.com/note/csc207/interpolation-and-regression/"
+            },
+            {
+              "subject_slug": "csc207",
+              "chapter_slug": "solution-of-nonlinear-equations",
+              "title": "Solution Of Nonlinear Equations",
+              "url": "https://hamrocsit.com/note/csc207/solution-of-nonlinear-equations/"
+            }
+          ]
+        },
+        {
+          "name": "Computer Architecture",
+          "code": "CSC213",
+          "url": "https://hamrocsit.com/semester/third/csc208/",
+          "slug": "csc208",
+          "mapped_notes_slug": "csc208",
+          "chapter_count": 9,
+          "chapters": [
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "data-representation-2",
+              "title": "Data Representation 2",
+              "url": "https://hamrocsit.com/note/csc208/data-representation-2/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "memory-organization",
+              "title": "Memory Organization",
+              "url": "https://hamrocsit.com/note/csc208/memory-organization/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "input-output-organization",
+              "title": "Input Output Organization",
+              "url": "https://hamrocsit.com/note/csc208/input-output-organization/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "computer-arithmetic",
+              "title": "Computer Arithmetic",
+              "url": "https://hamrocsit.com/note/csc208/computer-arithmetic/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "pipelining",
+              "title": "Pipelining",
+              "url": "https://hamrocsit.com/note/csc208/pipelining/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "central-processing-unit",
+              "title": "Central Processing Unit",
+              "url": "https://hamrocsit.com/note/csc208/central-processing-unit/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "microprogrammed-control",
+              "title": "Microprogrammed Control",
+              "url": "https://hamrocsit.com/note/csc208/microprogrammed-control/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "basic-computer-organization-and-design",
+              "title": "Basic Computer Organization And Design",
+              "url": "https://hamrocsit.com/note/csc208/basic-computer-organization-and-design/"
+            },
+            {
+              "subject_slug": "csc208",
+              "chapter_slug": "microoperations",
+              "title": "Microoperations",
+              "url": "https://hamrocsit.com/note/csc208/microoperations/"
+            }
+          ]
+        },
+        {
+          "name": "Computer Graphics",
+          "code": "CSC214",
+          "url": "https://hamrocsit.com/semester/third/csc209/",
+          "slug": "csc209",
+          "mapped_notes_slug": "csc209",
+          "chapter_count": 10,
+          "chapters": [
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "introduction-of-computer-graphics",
+              "title": "Introduction Of Computer Graphics",
+              "url": "https://hamrocsit.com/note/csc209/introduction-of-computer-graphics/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "introduction-to-opengl",
+              "title": "Introduction To Opengl",
+              "url": "https://hamrocsit.com/note/csc209/introduction-to-opengl/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "introduction-to-virtual-reality",
+              "title": "Introduction To Virtual Reality",
+              "url": "https://hamrocsit.com/note/csc209/introduction-to-virtual-reality/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "illumination-models-and-surface-rendering-technique",
+              "title": "Illumination Models And Surface Rendering Technique",
+              "url": "https://hamrocsit.com/note/csc209/illumination-models-and-surface-rendering-technique/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "visible-surface-detections",
+              "title": "Visible Surface Detections",
+              "url": "https://hamrocsit.com/note/csc209/visible-surface-detections/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "solid-modeling",
+              "title": "Solid Modeling",
+              "url": "https://hamrocsit.com/note/csc209/solid-modeling/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "3d-objects-representation",
+              "title": "3D Objects Representation",
+              "url": "https://hamrocsit.com/note/csc209/3d-objects-representation/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "three-dimensional-geometric-transformation",
+              "title": "Three Dimensional Geometric Transformation",
+              "url": "https://hamrocsit.com/note/csc209/three-dimensional-geometric-transformation/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "two-dimensional-geometric-transformations",
+              "title": "Two Dimensional Geometric Transformations",
+              "url": "https://hamrocsit.com/note/csc209/two-dimensional-geometric-transformations/"
+            },
+            {
+              "subject_slug": "csc209",
+              "chapter_slug": "scan-conversion-algorithm",
+              "title": "Scan Conversion Algorithm",
+              "url": "https://hamrocsit.com/note/csc209/scan-conversion-algorithm/"
+            }
+          ]
+        },
+        {
+          "name": "Statistics II",
+          "code": "STA215",
+          "url": "https://hamrocsit.com/semester/third/stat-ii/",
+          "slug": "stat-ii",
+          "mapped_notes_slug": "stat-ii",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "important-formulas",
+              "title": "Important Formulas",
+              "url": "https://hamrocsit.com/note/stat-ii/important-formulas/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "sampling-distribution-and-estimation",
+              "title": "Sampling Distribution And Estimation",
+              "url": "https://hamrocsit.com/note/stat-ii/sampling-distribution-and-estimation/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "statistics-all-tables",
+              "title": "Statistics All Tables",
+              "url": "https://hamrocsit.com/note/stat-ii/statistics-all-tables/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "non-parametric-test",
+              "title": "Non Parametric Test",
+              "url": "https://hamrocsit.com/note/stat-ii/non-parametric-test/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "testing-of-hypothesis",
+              "title": "Testing Of Hypothesis",
+              "url": "https://hamrocsit.com/note/stat-ii/testing-of-hypothesis/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "multiple-correlation-and-regression",
+              "title": "Multiple Correlation And Regression",
+              "url": "https://hamrocsit.com/note/stat-ii/multiple-correlation-and-regression/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "design-of-experiment",
+              "title": "Design Of Experiment",
+              "url": "https://hamrocsit.com/note/stat-ii/design-of-experiment/"
+            },
+            {
+              "subject_slug": "stat-ii",
+              "chapter_slug": "stochastic-process",
+              "title": "Stochastic Process",
+              "url": "https://hamrocsit.com/note/stat-ii/stochastic-process/"
+            }
+          ]
+        }
+      ]
+    },
+    "fourth": {
+      "slug": "fourth",
+      "title": "Fourth Semester",
+      "description": "Fourth semester of B.Sc. CSIT introduces state machines and their languages, the conception of the pc networks and operating systems, the inspiration of the database management system and a glimpse of underlying principles of artificial intelligence.",
+      "subjects": [
+        {
+          "name": "Theory of Computation",
+          "code": "CSC262",
+          "url": "https://hamrocsit.com/semester/fourth/toc/",
+          "slug": "toc",
+          "mapped_notes_slug": "toc",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "undecidability-and-intractability",
+              "title": "Undecidability And Intractability",
+              "url": "https://hamrocsit.com/note/toc/undecidability-and-intractability/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "turing-machine",
+              "title": "Turing Machine",
+              "url": "https://hamrocsit.com/note/toc/turing-machine/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "push-down-automata",
+              "title": "Push Down Automata",
+              "url": "https://hamrocsit.com/note/toc/push-down-automata/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "context-free-grammar",
+              "title": "Context Free Grammar",
+              "url": "https://hamrocsit.com/note/toc/context-free-grammar/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "regular-expression",
+              "title": "Regular Expression",
+              "url": "https://hamrocsit.com/note/toc/regular-expression/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "introduction-to-finite-automata",
+              "title": "Introduction To Finite Automata",
+              "url": "https://hamrocsit.com/note/toc/introduction-to-finite-automata/"
+            },
+            {
+              "subject_slug": "toc",
+              "chapter_slug": "basic-foundations",
+              "title": "Basic Foundations",
+              "url": "https://hamrocsit.com/note/toc/basic-foundations/"
+            }
+          ]
+        },
+        {
+          "name": "Computer Networks",
+          "code": "CSC263",
+          "url": "https://hamrocsit.com/semester/fourth/cn/",
+          "slug": "cn",
+          "mapped_notes_slug": "cn",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "multimedia-future-networking",
+              "title": "Multimedia Future Networking",
+              "url": "https://hamrocsit.com/note/cn/multimedia-future-networking/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "application-layer",
+              "title": "Application Layer",
+              "url": "https://hamrocsit.com/note/cn/application-layer/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "transport-layer",
+              "title": "Transport Layer",
+              "url": "https://hamrocsit.com/note/cn/transport-layer/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "network-layer",
+              "title": "Network Layer",
+              "url": "https://hamrocsit.com/note/cn/network-layer/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "data-link-layer",
+              "title": "Data Link Layer",
+              "url": "https://hamrocsit.com/note/cn/data-link-layer/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "physical-layer-and-network-media",
+              "title": "Physical Layer And Network Media",
+              "url": "https://hamrocsit.com/note/cn/physical-layer-and-network-media/"
+            },
+            {
+              "subject_slug": "cn",
+              "chapter_slug": "introduction-to-computer-network",
+              "title": "Introduction To Computer Network",
+              "url": "https://hamrocsit.com/note/cn/introduction-to-computer-network/"
+            }
+          ]
+        },
+        {
+          "name": "Database Management System",
+          "code": "CSC265",
+          "url": "https://hamrocsit.com/semester/fourth/dbms/",
+          "slug": "dbms",
+          "mapped_notes_slug": "dbms",
+          "chapter_count": 10,
+          "chapters": [
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "introduction-to-transaction-processing-concepts-and-theory",
+              "title": "Introduction To Transaction Processing Concepts And Theory",
+              "url": "https://hamrocsit.com/note/dbms/introduction-to-transaction-processing-concepts-and-theory/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "sql",
+              "title": "Sql",
+              "url": "https://hamrocsit.com/note/dbms/sql/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "database-recovery-techniques",
+              "title": "Database Recovery Techniques",
+              "url": "https://hamrocsit.com/note/dbms/database-recovery-techniques/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "concurrency-control-techniques",
+              "title": "Concurrency Control Techniques",
+              "url": "https://hamrocsit.com/note/dbms/concurrency-control-techniques/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "relational-database-design",
+              "title": "Relational Database Design",
+              "url": "https://hamrocsit.com/note/dbms/relational-database-design/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "database-and-database-users",
+              "title": "Database And Database Users",
+              "url": "https://hamrocsit.com/note/dbms/database-and-database-users/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "the-relational-algebra-and-relational-calculus",
+              "title": "The Relational Algebra And Relational Calculus",
+              "url": "https://hamrocsit.com/note/dbms/the-relational-algebra-and-relational-calculus/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "the-relational-data-model-and-relational-database-constraints",
+              "title": "The Relational Data Model And Relational Database Constraints",
+              "url": "https://hamrocsit.com/note/dbms/the-relational-data-model-and-relational-database-constraints/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "data-modeling-using-the-entity-relational-model",
+              "title": "Data Modeling Using The Entity Relational Model",
+              "url": "https://hamrocsit.com/note/dbms/data-modeling-using-the-entity-relational-model/"
+            },
+            {
+              "subject_slug": "dbms",
+              "chapter_slug": "database-system-concepts-and-architecture",
+              "title": "Database System Concepts And Architecture",
+              "url": "https://hamrocsit.com/note/dbms/database-system-concepts-and-architecture/"
+            }
+          ]
+        },
+        {
+          "name": "Operating System",
+          "code": "CSC264",
+          "url": "https://hamrocsit.com/semester/fourth/os/",
+          "slug": "os",
+          "mapped_notes_slug": "os",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "os",
+              "chapter_slug": "linux-case-study",
+              "title": "Linux Case Study",
+              "url": "https://hamrocsit.com/note/os/linux-case-study/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "device-management",
+              "title": "Device Management",
+              "url": "https://hamrocsit.com/note/os/device-management/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "file-management",
+              "title": "File Management",
+              "url": "https://hamrocsit.com/note/os/file-management/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "memory-management",
+              "title": "Memory Management",
+              "url": "https://hamrocsit.com/note/os/memory-management/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "process-deadlocks",
+              "title": "Process Deadlocks",
+              "url": "https://hamrocsit.com/note/os/process-deadlocks/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "process-management",
+              "title": "Process Management",
+              "url": "https://hamrocsit.com/note/os/process-management/"
+            },
+            {
+              "subject_slug": "os",
+              "chapter_slug": "operating-system-overview",
+              "title": "Operating System Overview",
+              "url": "https://hamrocsit.com/note/os/operating-system-overview/"
+            }
+          ]
+        },
+        {
+          "name": "Artificial Intelligence",
+          "code": "CSC266",
+          "url": "https://hamrocsit.com/semester/fourth/ai/",
+          "slug": "ai",
+          "mapped_notes_slug": "ai",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "machine-learning",
+              "title": "Machine Learning",
+              "url": "https://hamrocsit.com/note/ai/machine-learning/"
+            },
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "applications-of-ai",
+              "title": "Applications Of Ai",
+              "url": "https://hamrocsit.com/note/ai/applications-of-ai/"
+            },
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "knowledge-representation",
+              "title": "Knowledge Representation",
+              "url": "https://hamrocsit.com/note/ai/knowledge-representation/"
+            },
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "4775",
+              "title": "4775",
+              "url": "https://hamrocsit.com/note/ai/4775/"
+            },
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "intelligent-agents",
+              "title": "Intelligent Agents",
+              "url": "https://hamrocsit.com/note/ai/intelligent-agents/"
+            },
+            {
+              "subject_slug": "ai",
+              "chapter_slug": "introduction-2",
+              "title": "Introduction 2",
+              "url": "https://hamrocsit.com/note/ai/introduction-2/"
+            }
+          ]
+        }
+      ]
+    },
+    "fifth": {
+      "slug": "fifth",
+      "title": "Fifth Semester",
+      "description": "Fifth semester of B.Sc. CSIT is an introduction to basic components of design and analysis of pc algorithms, software development cycle, underlying principles and design of cryptosystems, modeling and simulation of various kinds of systems, elementary ideas of web development, multimedia, and image processing.",
+      "subjects": [
+        {
+          "name": "Design and Analysis of Algorithms",
+          "code": "CSC314",
+          "url": "https://hamrocsit.com/semester/fifth/daa/",
+          "slug": "daa",
+          "mapped_notes_slug": "daa",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "number-theoretic-algorithms",
+              "title": "Number Theoretic Algorithms",
+              "url": "https://hamrocsit.com/note/daa/number-theoretic-algorithms/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "np-completeness",
+              "title": "Np Completeness",
+              "url": "https://hamrocsit.com/note/daa/np-completeness/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "dynamic-programming",
+              "title": "Dynamic Programming",
+              "url": "https://hamrocsit.com/note/daa/dynamic-programming/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "backtracking",
+              "title": "Backtracking",
+              "url": "https://hamrocsit.com/note/daa/backtracking/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "greedy-algorithms",
+              "title": "Greedy Algorithms",
+              "url": "https://hamrocsit.com/note/daa/greedy-algorithms/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "divide-and-conquer-algorithms",
+              "title": "Divide And Conquer Algorithms",
+              "url": "https://hamrocsit.com/note/daa/divide-and-conquer-algorithms/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "iterative-algorithms",
+              "title": "Iterative Algorithms",
+              "url": "https://hamrocsit.com/note/daa/iterative-algorithms/"
+            },
+            {
+              "subject_slug": "daa",
+              "chapter_slug": "foundation-of-algorithm-analysis",
+              "title": "Foundation Of Algorithm Analysis",
+              "url": "https://hamrocsit.com/note/daa/foundation-of-algorithm-analysis/"
+            }
+          ]
+        },
+        {
+          "name": "System Analysis and Design",
+          "code": "CSC315",
+          "url": "https://hamrocsit.com/semester/fifth/sad/",
+          "slug": "sad",
+          "mapped_notes_slug": "sad",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "foundations-for-systems-development",
+              "title": "Foundations For Systems Development",
+              "url": "https://hamrocsit.com/note/sad/foundations-for-systems-development/"
+            },
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "introduction-to-object-oriented-development",
+              "title": "Introduction To Object Oriented Development",
+              "url": "https://hamrocsit.com/note/sad/introduction-to-object-oriented-development/"
+            },
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "implementation-and-maintenance",
+              "title": "Implementation And Maintenance",
+              "url": "https://hamrocsit.com/note/sad/implementation-and-maintenance/"
+            },
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "design",
+              "title": "Design",
+              "url": "https://hamrocsit.com/note/sad/design/"
+            },
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "analysis",
+              "title": "Analysis",
+              "url": "https://hamrocsit.com/note/sad/analysis/"
+            },
+            {
+              "subject_slug": "sad",
+              "chapter_slug": "planning",
+              "title": "Planning",
+              "url": "https://hamrocsit.com/note/sad/planning/"
+            }
+          ]
+        },
+        {
+          "name": "Cryptography",
+          "code": "CSC316",
+          "url": "https://hamrocsit.com/semester/fifth/cryptography/",
+          "slug": "cryptography",
+          "mapped_notes_slug": "cryptography",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "malicious-logic",
+              "title": "Malicious Logic",
+              "url": "https://hamrocsit.com/note/cryptography/malicious-logic/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "network-security-and-public-key-infrastructure",
+              "title": "Network Security And Public Key Infrastructure",
+              "url": "https://hamrocsit.com/note/cryptography/network-security-and-public-key-infrastructure/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "authentication",
+              "title": "Authentication",
+              "url": "https://hamrocsit.com/note/cryptography/authentication/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "cryptographic-hash-functions-and-digital-signatures",
+              "title": "Cryptographic Hash Functions And Digital Signatures",
+              "url": "https://hamrocsit.com/note/cryptography/cryptographic-hash-functions-and-digital-signatures/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "asymmetric-ciphers",
+              "title": "Asymmetric Ciphers",
+              "url": "https://hamrocsit.com/note/cryptography/asymmetric-ciphers/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "symmetric-ciphers",
+              "title": "Symmetric Ciphers",
+              "url": "https://hamrocsit.com/note/cryptography/symmetric-ciphers/"
+            },
+            {
+              "subject_slug": "cryptography",
+              "chapter_slug": "introduction-and-classical-ciphers",
+              "title": "Introduction And Classical Ciphers",
+              "url": "https://hamrocsit.com/note/cryptography/introduction-and-classical-ciphers/"
+            }
+          ]
+        },
+        {
+          "name": "Web Technology",
+          "code": "CSC318",
+          "url": "https://hamrocsit.com/semester/fifth/web-tech/",
+          "slug": "web-tech",
+          "mapped_notes_slug": "web-tech",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "server-side-scripting-using-php",
+              "title": "Server Side Scripting Using Php",
+              "url": "https://hamrocsit.com/note/web-tech/server-side-scripting-using-php/"
+            },
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "ajax-and-xml",
+              "title": "Ajax And Xml",
+              "url": "https://hamrocsit.com/note/web-tech/ajax-and-xml/"
+            },
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "client-side-scripting-with-javascript",
+              "title": "Client Side Scripting With Javascript",
+              "url": "https://hamrocsit.com/note/web-tech/client-side-scripting-with-javascript/"
+            },
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "cascading-style-sheets",
+              "title": "Cascading Style Sheets",
+              "url": "https://hamrocsit.com/note/web-tech/cascading-style-sheets/"
+            },
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "hyper-text-markup-language",
+              "title": "Hyper Text Markup Language",
+              "url": "https://hamrocsit.com/note/web-tech/hyper-text-markup-language/"
+            },
+            {
+              "subject_slug": "web-tech",
+              "chapter_slug": "introduction-3",
+              "title": "Introduction 3",
+              "url": "https://hamrocsit.com/note/web-tech/introduction-3/"
+            }
+          ]
+        },
+        {
+          "name": "Simulation and Modeling",
+          "code": "CSC317",
+          "url": "https://hamrocsit.com/semester/fifth/sm/",
+          "slug": "sm",
+          "mapped_notes_slug": "sm",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "simulation-of-computer-systems",
+              "title": "Simulation Of Computer Systems",
+              "url": "https://hamrocsit.com/note/sm/simulation-of-computer-systems/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "analysis-of-simulation-output",
+              "title": "Analysis Of Simulation Output",
+              "url": "https://hamrocsit.com/note/sm/analysis-of-simulation-output/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "verification-and-validation",
+              "title": "Verification And Validation",
+              "url": "https://hamrocsit.com/note/sm/verification-and-validation/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "random-numbers",
+              "title": "Random Numbers",
+              "url": "https://hamrocsit.com/note/sm/random-numbers/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "markov-chains",
+              "title": "Markov Chains",
+              "url": "https://hamrocsit.com/note/sm/markov-chains/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "queuing-system",
+              "title": "Queuing System",
+              "url": "https://hamrocsit.com/note/sm/queuing-system/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "simulation-of-continuous-and-discrete-system",
+              "title": "Simulation Of Continuous And Discrete System",
+              "url": "https://hamrocsit.com/note/sm/simulation-of-continuous-and-discrete-system/"
+            },
+            {
+              "subject_slug": "sm",
+              "chapter_slug": "introduction-to-simulation",
+              "title": "Introduction To Simulation",
+              "url": "https://hamrocsit.com/note/sm/introduction-to-simulation/"
+            }
+          ]
+        },
+        {
+          "name": "Image Processing",
+          "code": "CSC332",
+          "url": "https://hamrocsit.com/semester/fifth/image-processing/",
+          "slug": "image-processing",
+          "mapped_notes_slug": "fifth",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "representations-description-and-recognition",
+              "title": "Representations Description And Recognition",
+              "url": "https://hamrocsit.com/note/fifth/representations-description-and-recognition/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "image-segmentation",
+              "title": "Image Segmentation",
+              "url": "https://hamrocsit.com/note/fifth/image-segmentation/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "introduction-to-morphological-image-processing",
+              "title": "Introduction To Morphological Image Processing",
+              "url": "https://hamrocsit.com/note/fifth/introduction-to-morphological-image-processing/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "image-restoration-and-compression",
+              "title": "Image Restoration And Compression",
+              "url": "https://hamrocsit.com/note/fifth/image-restoration-and-compression/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "image-enhancement-in-the-frequency-domain",
+              "title": "Image Enhancement In The Frequency Domain",
+              "url": "https://hamrocsit.com/note/fifth/image-enhancement-in-the-frequency-domain/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "image-enhancement-and-filter-in-spatial-domain",
+              "title": "Image Enhancement And Filter In Spatial Domain",
+              "url": "https://hamrocsit.com/note/fifth/image-enhancement-and-filter-in-spatial-domain/"
+            },
+            {
+              "subject_slug": "fifth",
+              "chapter_slug": "introduction-8",
+              "title": "Introduction 8",
+              "url": "https://hamrocsit.com/note/fifth/introduction-8/"
+            }
+          ]
+        },
+        {
+          "name": "Knowledge Management",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/fifth/knowledge-management/",
+          "slug": "knowledge-management",
+          "mapped_notes_slug": "knowledge-management",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Microprocessor Based Design",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/fifth/mpbd/",
+          "slug": "mpbd",
+          "mapped_notes_slug": "mpbd",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Multimedia Computing",
+          "code": "CSC319",
+          "url": "https://hamrocsit.com/semester/fifth/multimedia/",
+          "slug": "multimedia",
+          "mapped_notes_slug": "multimedia",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "multimedia-application",
+              "title": "Multimedia Application",
+              "url": "https://hamrocsit.com/note/multimedia/multimedia-application/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "abstractions-for-programming",
+              "title": "Abstractions For Programming",
+              "url": "https://hamrocsit.com/note/multimedia/abstractions-for-programming/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "data-compression",
+              "title": "Data Compression",
+              "url": "https://hamrocsit.com/note/multimedia/data-compression/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "user-interfaces",
+              "title": "User Interfaces",
+              "url": "https://hamrocsit.com/note/multimedia/user-interfaces/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "video-and-animation",
+              "title": "Video And Animation",
+              "url": "https://hamrocsit.com/note/multimedia/video-and-animation/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "image-and-graphics",
+              "title": "Image And Graphics",
+              "url": "https://hamrocsit.com/note/multimedia/image-and-graphics/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "sound-audio-system",
+              "title": "Sound Audio System",
+              "url": "https://hamrocsit.com/note/multimedia/sound-audio-system/"
+            },
+            {
+              "subject_slug": "multimedia",
+              "chapter_slug": "introduction-to-computers",
+              "title": "Introduction To Computers",
+              "url": "https://hamrocsit.com/note/multimedia/introduction-to-computers/"
+            }
+          ]
+        },
+        {
+          "name": "Society and Ethics in Information Technology",
+          "code": "CSC323",
+          "url": "https://hamrocsit.com/semester/fifth/seit/",
+          "slug": "seit",
+          "mapped_notes_slug": "seit",
+          "chapter_count": 9,
+          "chapters": [
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "new-frontiers-for-computer-ethics",
+              "title": "New Frontiers For Computer Ethics",
+              "url": "https://hamrocsit.com/note/seit/new-frontiers-for-computer-ethics/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "software-issues",
+              "title": "Software Issues",
+              "url": "https://hamrocsit.com/note/seit/software-issues/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "social-context-of-computing",
+              "title": "Social Context Of Computing",
+              "url": "https://hamrocsit.com/note/seit/social-context-of-computing/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "intellectual-property-rights-and-computer-technology",
+              "title": "Intellectual Property Rights And Computer Technology",
+              "url": "https://hamrocsit.com/note/seit/intellectual-property-rights-and-computer-technology/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "ethics-and-ethical-analysis",
+              "title": "Ethics And Ethical Analysis",
+              "url": "https://hamrocsit.com/note/seit/ethics-and-ethical-analysis/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "process-of-transformation",
+              "title": "Process Of Transformation",
+              "url": "https://hamrocsit.com/note/seit/process-of-transformation/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "understanding-development",
+              "title": "Understanding Development",
+              "url": "https://hamrocsit.com/note/seit/understanding-development/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "social-and-cultural-change",
+              "title": "Social And Cultural Change",
+              "url": "https://hamrocsit.com/note/seit/social-and-cultural-change/"
+            },
+            {
+              "subject_slug": "seit",
+              "chapter_slug": "introduction-4",
+              "title": "Introduction 4",
+              "url": "https://hamrocsit.com/note/seit/introduction-4/"
+            }
+          ]
+        },
+        {
+          "name": "Wireless Networking",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/fifth/wn/",
+          "slug": "wn",
+          "mapped_notes_slug": "wn",
+          "chapter_count": 0,
+          "chapters": []
+        }
+      ]
+    },
+    "sixth": {
+      "slug": "sixth",
+      "title": "Sixth Semester",
+      "description": "Sixth Semester of B.Sc. CSIT focuses on developing ideas of software package cycles and testing, style of the compiler, e-governance, .NET framework, technical writing, hardware design, e-commerce, automation, and artificial intelligence.",
+      "subjects": [
+        {
+          "name": "Software Engineering",
+          "code": "CSC364",
+          "url": "https://hamrocsit.com/semester/sixth/se/",
+          "slug": "se",
+          "mapped_notes_slug": "se",
+          "chapter_count": 10,
+          "chapters": [
+            {
+              "subject_slug": "se",
+              "chapter_slug": "software-management",
+              "title": "Software Management",
+              "url": "https://hamrocsit.com/note/se/software-management/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "software-evolution",
+              "title": "Software Evolution",
+              "url": "https://hamrocsit.com/note/se/software-evolution/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "software-testing",
+              "title": "Software Testing",
+              "url": "https://hamrocsit.com/note/se/software-testing/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "design-and-implementation",
+              "title": "Design And Implementation",
+              "url": "https://hamrocsit.com/note/se/design-and-implementation/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "architectural-design",
+              "title": "Architectural Design",
+              "url": "https://hamrocsit.com/note/se/architectural-design/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "system-modeling",
+              "title": "System Modeling",
+              "url": "https://hamrocsit.com/note/se/system-modeling/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "requirements-engineering",
+              "title": "Requirements Engineering",
+              "url": "https://hamrocsit.com/note/se/requirements-engineering/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "agile-software-development",
+              "title": "Agile Software Development",
+              "url": "https://hamrocsit.com/note/se/agile-software-development/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "software-processes",
+              "title": "Software Processes",
+              "url": "https://hamrocsit.com/note/se/software-processes/"
+            },
+            {
+              "subject_slug": "se",
+              "chapter_slug": "introduction-to-software-engineering",
+              "title": "Introduction To Software Engineering",
+              "url": "https://hamrocsit.com/note/se/introduction-to-software-engineering/"
+            }
+          ]
+        },
+        {
+          "name": "E-Governance",
+          "code": "CSC366",
+          "url": "https://hamrocsit.com/semester/sixth/e-governance/",
+          "slug": "e-governance",
+          "mapped_notes_slug": "e-governance",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "case-studies",
+              "title": "Case Studies",
+              "url": "https://hamrocsit.com/note/e-governance/case-studies/"
+            },
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "applications-of-data-warehousing-and-data-mining-in-government",
+              "title": "Applications Of Data Warehousing And Data Mining In Government",
+              "url": "https://hamrocsit.com/note/e-governance/applications-of-data-warehousing-and-data-mining-in-government/"
+            },
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "security-for-e-government",
+              "title": "Security For E Government",
+              "url": "https://hamrocsit.com/note/e-governance/security-for-e-government/"
+            },
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "e-government-infrastructure-development",
+              "title": "E Government Infrastructure Development",
+              "url": "https://hamrocsit.com/note/e-governance/e-government-infrastructure-development/"
+            },
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "models-of-e-governance",
+              "title": "Models Of E Governance",
+              "url": "https://hamrocsit.com/note/e-governance/models-of-e-governance/"
+            },
+            {
+              "subject_slug": "e-governance",
+              "chapter_slug": "introduction-to-e-government-and-e-governance",
+              "title": "Introduction To E Government And E Governance",
+              "url": "https://hamrocsit.com/note/e-governance/introduction-to-e-government-and-e-governance/"
+            }
+          ]
+        },
+        {
+          "name": "NET Centric Computing",
+          "code": "CSC367",
+          "url": "https://hamrocsit.com/semester/sixth/ncc/",
+          "slug": "ncc",
+          "mapped_notes_slug": "ncc",
+          "chapter_count": 9,
+          "chapters": [
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "hosting-and-deploying-asp-net-core-application",
+              "title": "Hosting And Deploying Asp Net Core Application",
+              "url": "https://hamrocsit.com/note/ncc/hosting-and-deploying-asp-net-core-application/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "securing-in-asp-net-core-application",
+              "title": "Securing In Asp Net Core Application",
+              "url": "https://hamrocsit.com/note/ncc/securing-in-asp-net-core-application/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "client-side-development-in-asp-net-core",
+              "title": "Client Side Development In Asp Net Core",
+              "url": "https://hamrocsit.com/note/ncc/client-side-development-in-asp-net-core/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "state-management-on-asp-net-core-application",
+              "title": "State Management On Asp Net Core Application",
+              "url": "https://hamrocsit.com/note/ncc/state-management-on-asp-net-core-application/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "working-with-database",
+              "title": "Working With Database",
+              "url": "https://hamrocsit.com/note/ncc/working-with-database/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "creating-asp-net-core-mvc-applications",
+              "title": "Creating Asp Net Core Mvc Applications",
+              "url": "https://hamrocsit.com/note/ncc/creating-asp-net-core-mvc-applications/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "http-and-asp-net-core",
+              "title": "Http And Asp Net Core",
+              "url": "https://hamrocsit.com/note/ncc/http-and-asp-net-core/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "introduction-to-asp-net",
+              "title": "Introduction To Asp Net",
+              "url": "https://hamrocsit.com/note/ncc/introduction-to-asp-net/"
+            },
+            {
+              "subject_slug": "ncc",
+              "chapter_slug": "language-preliminaries",
+              "title": "Language Preliminaries",
+              "url": "https://hamrocsit.com/note/ncc/language-preliminaries/"
+            }
+          ]
+        },
+        {
+          "name": "Applied Logic",
+          "code": "CSC369",
+          "url": "https://hamrocsit.com/semester/sixth/applied-logic/",
+          "slug": "applied-logic",
+          "mapped_notes_slug": "applied-logic",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Automation and Robotics",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/sixth/ar/",
+          "slug": "ar",
+          "mapped_notes_slug": "ar",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Cognitive Science",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/sixth/cog-science/",
+          "slug": "cog-science",
+          "mapped_notes_slug": "cog-science",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Computer Hardware Design",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/sixth/chd/",
+          "slug": "chd",
+          "mapped_notes_slug": "chd",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "E-Commerce",
+          "code": "CSC370",
+          "url": "https://hamrocsit.com/semester/sixth/e-commerce/",
+          "slug": "e-commerce",
+          "mapped_notes_slug": "e-commerce",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "optimizing-e-commerce-systems",
+              "title": "Optimizing E Commerce Systems",
+              "url": "https://hamrocsit.com/note/e-commerce/optimizing-e-commerce-systems/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "digital-marketing",
+              "title": "Digital Marketing",
+              "url": "https://hamrocsit.com/note/e-commerce/digital-marketing/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "security-in-e-commerce",
+              "title": "Security In E Commerce",
+              "url": "https://hamrocsit.com/note/e-commerce/security-in-e-commerce/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "building-e-commerce-system",
+              "title": "Building E Commerce System",
+              "url": "https://hamrocsit.com/note/e-commerce/building-e-commerce-system/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "electronic-payment-system",
+              "title": "Electronic Payment System",
+              "url": "https://hamrocsit.com/note/e-commerce/electronic-payment-system/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "e-commerce-business-model",
+              "title": "E Commerce Business Model",
+              "url": "https://hamrocsit.com/note/e-commerce/e-commerce-business-model/"
+            },
+            {
+              "subject_slug": "e-commerce",
+              "chapter_slug": "introduction-5",
+              "title": "Introduction 5",
+              "url": "https://hamrocsit.com/note/e-commerce/introduction-5/"
+            }
+          ]
+        },
+        {
+          "name": "Neural Networks",
+          "code": "",
+          "url": "https://hamrocsit.com/semester/sixth/neural-networks/",
+          "slug": "neural-networks",
+          "mapped_notes_slug": "neural-networks",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Technical Writing",
+          "code": "CSC379",
+          "url": "https://hamrocsit.com/semester/sixth/tw/",
+          "slug": "tw",
+          "mapped_notes_slug": "tw",
+          "chapter_count": 12,
+          "chapters": [
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "ethics-in-the-workplace",
+              "title": "Ethics In The Workplace",
+              "url": "https://hamrocsit.com/note/tw/ethics-in-the-workplace/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "proposals",
+              "title": "Proposals",
+              "url": "https://hamrocsit.com/note/tw/proposals/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "recommendation-reports",
+              "title": "Recommendation Reports",
+              "url": "https://hamrocsit.com/note/tw/recommendation-reports/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "presentations",
+              "title": "Presentations",
+              "url": "https://hamrocsit.com/note/tw/presentations/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "employment-communication",
+              "title": "Employment Communication",
+              "url": "https://hamrocsit.com/note/tw/employment-communication/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "information-reports",
+              "title": "Information Reports",
+              "url": "https://hamrocsit.com/note/tw/information-reports/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "writing-for-the-web",
+              "title": "Writing For The Web",
+              "url": "https://hamrocsit.com/note/tw/writing-for-the-web/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "document-design-and-graphics",
+              "title": "Document Design And Graphics",
+              "url": "https://hamrocsit.com/note/tw/document-design-and-graphics/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "brief-correspondence",
+              "title": "Brief Correspondence",
+              "url": "https://hamrocsit.com/note/tw/brief-correspondence/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "writing-process",
+              "title": "Writing Process",
+              "url": "https://hamrocsit.com/note/tw/writing-process/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "audience-and-purpose",
+              "title": "Audience And Purpose",
+              "url": "https://hamrocsit.com/note/tw/audience-and-purpose/"
+            },
+            {
+              "subject_slug": "tw",
+              "chapter_slug": "what-is-technical-writing",
+              "title": "What Is Technical Writing",
+              "url": "https://hamrocsit.com/note/tw/what-is-technical-writing/"
+            }
+          ]
+        },
+        {
+          "name": "Compiler Design and Construction",
+          "code": "CSC365",
+          "url": "https://hamrocsit.com/semester/sixth/cdc/",
+          "slug": "cdc",
+          "mapped_notes_slug": "cdc",
+          "chapter_count": 4,
+          "chapters": [
+            {
+              "subject_slug": "cdc",
+              "chapter_slug": "unit-4",
+              "title": "Unit 4",
+              "url": "https://hamrocsit.com/note/cdc/unit-4/"
+            },
+            {
+              "subject_slug": "cdc",
+              "chapter_slug": "unit-3",
+              "title": "Unit 3",
+              "url": "https://hamrocsit.com/note/cdc/unit-3/"
+            },
+            {
+              "subject_slug": "cdc",
+              "chapter_slug": "unit-2",
+              "title": "Unit 2",
+              "url": "https://hamrocsit.com/note/cdc/unit-2/"
+            },
+            {
+              "subject_slug": "cdc",
+              "chapter_slug": "unit-1",
+              "title": "Unit 1",
+              "url": "https://hamrocsit.com/note/cdc/unit-1/"
+            }
+          ]
+        }
+      ]
+    },
+    "seventh": {
+      "slug": "seventh",
+      "title": "Seventh Semester",
+      "description": "B. Sc. CSIT of Seventh Semester focuses on advance java programming. This semester also focus on Data warehouse, Data Mining and Network Security.",
+      "subjects": [
+        {
+          "name": "Advanced Java Programming",
+          "code": "CSC409",
+          "url": "https://hamrocsit.com/semester/seventh/advanced-java/",
+          "slug": "advanced-java",
+          "mapped_notes_slug": "advanced-java",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "database-connectivity",
+              "title": "Database Connectivity",
+              "url": "https://hamrocsit.com/note/advanced-java/database-connectivity/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "network-programming",
+              "title": "Network Programming",
+              "url": "https://hamrocsit.com/note/advanced-java/network-programming/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "gui-with-javafx",
+              "title": "Gui With Javafx",
+              "url": "https://hamrocsit.com/note/advanced-java/gui-with-javafx/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "servlets-and-java-server-pages",
+              "title": "Servlets And Java Server Pages",
+              "url": "https://hamrocsit.com/note/advanced-java/servlets-and-java-server-pages/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "rmi-and-corba",
+              "title": "Rmi And Corba",
+              "url": "https://hamrocsit.com/note/advanced-java/rmi-and-corba/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "event-handling",
+              "title": "Event Handling",
+              "url": "https://hamrocsit.com/note/advanced-java/event-handling/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "user-interface-components-with-swing",
+              "title": "User Interface Components With Swing",
+              "url": "https://hamrocsit.com/note/advanced-java/user-interface-components-with-swing/"
+            },
+            {
+              "subject_slug": "advanced-java",
+              "chapter_slug": "programming-in-java",
+              "title": "Programming In Java",
+              "url": "https://hamrocsit.com/note/advanced-java/programming-in-java/"
+            }
+          ]
+        },
+        {
+          "name": "Data Warehousing and Data Mining",
+          "code": "CSC410",
+          "url": "https://hamrocsit.com/semester/seventh/data-mining/",
+          "slug": "data-mining",
+          "mapped_notes_slug": "data-mining",
+          "chapter_count": 9,
+          "chapters": [
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "mining-spatial-multimedia-text-and-web-data",
+              "title": "Mining Spatial Multimedia Text And Web Data",
+              "url": "https://hamrocsit.com/note/data-mining/mining-spatial-multimedia-text-and-web-data/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "graph-mining-and-social-network-analysis",
+              "title": "Graph Mining And Social Network Analysis",
+              "url": "https://hamrocsit.com/note/data-mining/graph-mining-and-social-network-analysis/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "cluster-analysis",
+              "title": "Cluster Analysis",
+              "url": "https://hamrocsit.com/note/data-mining/cluster-analysis/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "classification-and-prediction",
+              "title": "Classification And Prediction",
+              "url": "https://hamrocsit.com/note/data-mining/classification-and-prediction/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "mining-frequent-patterns",
+              "title": "Mining Frequent Patterns",
+              "url": "https://hamrocsit.com/note/data-mining/mining-frequent-patterns/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "data-cube-technology",
+              "title": "Data Cube Technology",
+              "url": "https://hamrocsit.com/note/data-mining/data-cube-technology/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "data-preprocessing",
+              "title": "Data Preprocessing",
+              "url": "https://hamrocsit.com/note/data-mining/data-preprocessing/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "introduction-to-data-mining",
+              "title": "Introduction To Data Mining",
+              "url": "https://hamrocsit.com/note/data-mining/introduction-to-data-mining/"
+            },
+            {
+              "subject_slug": "data-mining",
+              "chapter_slug": "introduction-to-data-warehousing",
+              "title": "Introduction To Data Warehousing",
+              "url": "https://hamrocsit.com/note/data-mining/introduction-to-data-warehousing/"
+            }
+          ]
+        },
+        {
+          "name": "Principles of Management",
+          "code": "MGT411",
+          "url": "https://hamrocsit.com/semester/seventh/pom/",
+          "slug": "pom",
+          "mapped_notes_slug": "pom",
+          "chapter_count": 12,
+          "chapters": [
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "management-trends-and-scenario-in-nepal",
+              "title": "Management Trends And Scenario In Nepal",
+              "url": "https://hamrocsit.com/note/pom/management-trends-and-scenario-in-nepal/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "global-context-of-management",
+              "title": "Global Context Of Management",
+              "url": "https://hamrocsit.com/note/pom/global-context-of-management/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "control-and-quality-management",
+              "title": "Control And Quality Management",
+              "url": "https://hamrocsit.com/note/pom/control-and-quality-management/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "communication",
+              "title": "Communication",
+              "url": "https://hamrocsit.com/note/pom/communication/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "motivation",
+              "title": "Motivation",
+              "url": "https://hamrocsit.com/note/pom/motivation/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "leadership-conflict",
+              "title": "Leadership Conflict",
+              "url": "https://hamrocsit.com/note/pom/leadership-conflict/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "organizing-function",
+              "title": "Organizing Function",
+              "url": "https://hamrocsit.com/note/pom/organizing-function/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "planning-and-decision-making",
+              "title": "Planning And Decision Making",
+              "url": "https://hamrocsit.com/note/pom/planning-and-decision-making/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "environmental-context-of-management",
+              "title": "Environmental Context Of Management",
+              "url": "https://hamrocsit.com/note/pom/environmental-context-of-management/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "evolution-of-management-thought",
+              "title": "Evolution Of Management Thought",
+              "url": "https://hamrocsit.com/note/pom/evolution-of-management-thought/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "introduction-to-management",
+              "title": "Introduction To Management",
+              "url": "https://hamrocsit.com/note/pom/introduction-to-management/"
+            },
+            {
+              "subject_slug": "pom",
+              "chapter_slug": "the-nature-of-organizations",
+              "title": "The Nature Of Organizations",
+              "url": "https://hamrocsit.com/note/pom/the-nature-of-organizations/"
+            }
+          ]
+        },
+        {
+          "name": "Project Work",
+          "code": "CSC412",
+          "url": "https://hamrocsit.com/semester/seventh/project-work/",
+          "slug": "project-work",
+          "mapped_notes_slug": "project-work",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Database Administrator",
+          "code": "CSC414",
+          "url": "https://hamrocsit.com/semester/seventh/database-administrator/",
+          "slug": "database-administrator",
+          "mapped_notes_slug": "database-administrator",
+          "chapter_count": 7,
+          "chapters": [
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "database-tuning",
+              "title": "Database Tuning",
+              "url": "https://hamrocsit.com/note/database-administrator/database-tuning/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "multitenant-database-architecture",
+              "title": "Multitenant Database Architecture",
+              "url": "https://hamrocsit.com/note/database-administrator/multitenant-database-architecture/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "database-security-and-auditing",
+              "title": "Database Security And Auditing",
+              "url": "https://hamrocsit.com/note/database-administrator/database-security-and-auditing/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "database-backup-restore-and-recovery",
+              "title": "Database Backup Restore And Recovery",
+              "url": "https://hamrocsit.com/note/database-administrator/database-backup-restore-and-recovery/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "managing-database-objects",
+              "title": "Managing Database Objects",
+              "url": "https://hamrocsit.com/note/database-administrator/managing-database-objects/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "tablespace-and-storage-management",
+              "title": "Tablespace And Storage Management",
+              "url": "https://hamrocsit.com/note/database-administrator/tablespace-and-storage-management/"
+            },
+            {
+              "subject_slug": "database-administrator",
+              "chapter_slug": "introduction-6",
+              "title": "Introduction 6",
+              "url": "https://hamrocsit.com/note/database-administrator/introduction-6/"
+            }
+          ]
+        },
+        {
+          "name": "Digital System Design",
+          "code": "CSC417",
+          "url": "https://hamrocsit.com/semester/seventh/digital-system-design/",
+          "slug": "digital-system-design",
+          "mapped_notes_slug": "digital-system-design",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-8",
+              "title": "Unit 8",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-8/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-7",
+              "title": "Unit 7",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-7/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-6",
+              "title": "Unit 6",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-6/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-5",
+              "title": "Unit 5",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-5/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-4-2",
+              "title": "Unit 4 2",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-4-2/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-3-2",
+              "title": "Unit 3 2",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-3-2/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "unit-2-2",
+              "title": "Unit 2 2",
+              "url": "https://hamrocsit.com/note/digital-system-design/unit-2-2/"
+            },
+            {
+              "subject_slug": "digital-system-design",
+              "chapter_slug": "introduction-of-logic-design-digital-system-and-integration-electronic-design-automation-ic-manufacturing-logic-families-ic-design-techniques-ic-characteristics-fan-out-power-dissipation-prop",
+              "title": "Introduction Of Logic Design Digital System And Integration Electronic Design Automation Ic Manufacturing Logic Families Ic Design Techniques Ic Characteristics Fan Out Power Dissipation Prop",
+              "url": "https://hamrocsit.com/note/digital-system-design/introduction-of-logic-design-digital-system-and-integration-electronic-design-automation-ic-manufacturing-logic-families-ic-design-techniques-ic-characteristics-fan-out-power-dissipation-prop/"
+            }
+          ]
+        },
+        {
+          "name": "Information Retrieval",
+          "code": "CSC413",
+          "url": "https://hamrocsit.com/semester/seventh/information-retrieval/",
+          "slug": "information-retrieval",
+          "mapped_notes_slug": "information-retrieval",
+          "chapter_count": 11,
+          "chapters": [
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "advanced-ir-models",
+              "title": "Advanced Ir Models",
+              "url": "https://hamrocsit.com/note/information-retrieval/advanced-ir-models/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "question-answering",
+              "title": "Question Answering",
+              "url": "https://hamrocsit.com/note/information-retrieval/question-answering/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "recommender-system",
+              "title": "Recommender System",
+              "url": "https://hamrocsit.com/note/information-retrieval/recommender-system/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "text-clustering",
+              "title": "Text Clustering",
+              "url": "https://hamrocsit.com/note/information-retrieval/text-clustering/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "text-categorization",
+              "title": "Text Categorization",
+              "url": "https://hamrocsit.com/note/information-retrieval/text-categorization/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "web-search",
+              "title": "Web Search",
+              "url": "https://hamrocsit.com/note/information-retrieval/web-search/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "query-operations-and-languages",
+              "title": "Query Operations And Languages",
+              "url": "https://hamrocsit.com/note/information-retrieval/query-operations-and-languages/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "evaluation-of-ir",
+              "title": "Evaluation Of Ir",
+              "url": "https://hamrocsit.com/note/information-retrieval/evaluation-of-ir/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "basic-ir-models",
+              "title": "Basic Ir Models",
+              "url": "https://hamrocsit.com/note/information-retrieval/basic-ir-models/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "introduction-to-ir-and-web-search",
+              "title": "Introduction To Ir And Web Search",
+              "url": "https://hamrocsit.com/note/information-retrieval/introduction-to-ir-and-web-search/"
+            },
+            {
+              "subject_slug": "information-retrieval",
+              "chapter_slug": "text-properties-operations-and-preprocessing",
+              "title": "Text Properties Operations And Preprocessing",
+              "url": "https://hamrocsit.com/note/information-retrieval/text-properties-operations-and-preprocessing/"
+            }
+          ]
+        },
+        {
+          "name": "International Marketing",
+          "code": "MGT418",
+          "url": "https://hamrocsit.com/semester/seventh/international-marketing/",
+          "slug": "international-marketing",
+          "mapped_notes_slug": "international-marketing",
+          "chapter_count": 5,
+          "chapters": [
+            {
+              "subject_slug": "international-marketing",
+              "chapter_slug": "nepals-international-trade",
+              "title": "Nepals International Trade",
+              "url": "https://hamrocsit.com/note/international-marketing/nepals-international-trade/"
+            },
+            {
+              "subject_slug": "international-marketing",
+              "chapter_slug": "international-marketing-management",
+              "title": "International Marketing Management",
+              "url": "https://hamrocsit.com/note/international-marketing/international-marketing-management/"
+            },
+            {
+              "subject_slug": "international-marketing",
+              "chapter_slug": "international-marketing-research-global-marketing-information-system",
+              "title": "International Marketing Research Global Marketing Information System",
+              "url": "https://hamrocsit.com/note/international-marketing/international-marketing-research-global-marketing-information-system/"
+            },
+            {
+              "subject_slug": "international-marketing",
+              "chapter_slug": "international-marketing-environment",
+              "title": "International Marketing Environment",
+              "url": "https://hamrocsit.com/note/international-marketing/international-marketing-environment/"
+            },
+            {
+              "subject_slug": "international-marketing",
+              "chapter_slug": "introduction-7",
+              "title": "Introduction 7",
+              "url": "https://hamrocsit.com/note/international-marketing/introduction-7/"
+            }
+          ]
+        },
+        {
+          "name": "Network Security",
+          "code": "CSC416",
+          "url": "https://hamrocsit.com/semester/seventh/network-security/",
+          "slug": "network-security",
+          "mapped_notes_slug": "network-security",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "electronic-mail-security",
+              "title": "Electronic Mail Security",
+              "url": "https://hamrocsit.com/note/network-security/electronic-mail-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "user-authentication",
+              "title": "User Authentication",
+              "url": "https://hamrocsit.com/note/network-security/user-authentication/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "ip-security",
+              "title": "Ip Security",
+              "url": "https://hamrocsit.com/note/network-security/ip-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "cloud-and-internet-of-things-iot-security",
+              "title": "Cloud And Internet Of Things Iot Security",
+              "url": "https://hamrocsit.com/note/network-security/cloud-and-internet-of-things-iot-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "network-endpoint-security",
+              "title": "Network Endpoint Security",
+              "url": "https://hamrocsit.com/note/network-security/network-endpoint-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "wireless-network-security",
+              "title": "Wireless Network Security",
+              "url": "https://hamrocsit.com/note/network-security/wireless-network-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "transport-level-security",
+              "title": "Transport Level Security",
+              "url": "https://hamrocsit.com/note/network-security/transport-level-security/"
+            },
+            {
+              "subject_slug": "network-security",
+              "chapter_slug": "computer-network-security-fundamentals",
+              "title": "Computer Network Security Fundamentals",
+              "url": "https://hamrocsit.com/note/network-security/computer-network-security-fundamentals/"
+            }
+          ]
+        },
+        {
+          "name": "Software Project Management",
+          "code": "CSC415",
+          "url": "https://hamrocsit.com/semester/seventh/software-project-management/",
+          "slug": "software-project-management",
+          "mapped_notes_slug": "software-project-management",
+          "chapter_count": 9,
+          "chapters": [
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "resource-allocation",
+              "title": "Resource Allocation",
+              "url": "https://hamrocsit.com/note/software-project-management/resource-allocation/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "software-configuration-management",
+              "title": "Software Configuration Management",
+              "url": "https://hamrocsit.com/note/software-project-management/software-configuration-management/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "software-quality-assurance-and-testing",
+              "title": "Software Quality Assurance And Testing",
+              "url": "https://hamrocsit.com/note/software-project-management/software-quality-assurance-and-testing/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "managing-contracts-and-people",
+              "title": "Managing Contracts And People",
+              "url": "https://hamrocsit.com/note/software-project-management/managing-contracts-and-people/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "monitoring-and-control",
+              "title": "Monitoring And Control",
+              "url": "https://hamrocsit.com/note/software-project-management/monitoring-and-control/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "risk-management",
+              "title": "Risk Management",
+              "url": "https://hamrocsit.com/note/software-project-management/risk-management/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "activity-planning-and-scheduling",
+              "title": "Activity Planning And Scheduling",
+              "url": "https://hamrocsit.com/note/software-project-management/activity-planning-and-scheduling/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "project-analysis",
+              "title": "Project Analysis",
+              "url": "https://hamrocsit.com/note/software-project-management/project-analysis/"
+            },
+            {
+              "subject_slug": "software-project-management",
+              "chapter_slug": "introduction-to-software-project-management",
+              "title": "Introduction To Software Project Management",
+              "url": "https://hamrocsit.com/note/software-project-management/introduction-to-software-project-management/"
+            }
+          ]
+        }
+      ]
+    },
+    "eight": {
+      "slug": "eight",
+      "title": "Eighth Semester",
+      "description": "The Eight Semester of B. Sc. CSIT focus on advance database management systems and Networking. In this Semester, Student can implement their knowledge to solve real world problems.",
+      "subjects": [
+        {
+          "name": "Advanced Database",
+          "code": "CSC461",
+          "url": "https://hamrocsit.com/semester/eight/advanced-database/",
+          "slug": "advanced-database",
+          "mapped_notes_slug": "advanced-database",
+          "chapter_count": 5,
+          "chapters": [
+            {
+              "subject_slug": "advanced-database",
+              "chapter_slug": "enhanced-entity-relationship-model-and-relational-model",
+              "title": "Enhanced Entity Relationship Model And Relational Model",
+              "url": "https://hamrocsit.com/note/advanced-database/enhanced-entity-relationship-model-and-relational-model/"
+            },
+            {
+              "subject_slug": "advanced-database",
+              "chapter_slug": "object-and-object-relational-databases",
+              "title": "Object And Object Relational Databases",
+              "url": "https://hamrocsit.com/note/advanced-database/object-and-object-relational-databases/"
+            },
+            {
+              "subject_slug": "advanced-database",
+              "chapter_slug": "query-processing-and-optimization",
+              "title": "Query Processing And Optimization",
+              "url": "https://hamrocsit.com/note/advanced-database/query-processing-and-optimization/"
+            },
+            {
+              "subject_slug": "advanced-database",
+              "chapter_slug": "distributed-databases-nosql-systems-and-bigdata",
+              "title": "Distributed Databases Nosql Systems And Bigdata",
+              "url": "https://hamrocsit.com/note/advanced-database/distributed-databases-nosql-systems-and-bigdata/"
+            },
+            {
+              "subject_slug": "advanced-database",
+              "chapter_slug": "advanced-database-models-systems-and-applications",
+              "title": "Advanced Database Models Systems And Applications",
+              "url": "https://hamrocsit.com/note/advanced-database/advanced-database-models-systems-and-applications/"
+            }
+          ]
+        },
+        {
+          "name": "Internship",
+          "code": "CSC462",
+          "url": "https://hamrocsit.com/semester/eight/internship/",
+          "slug": "internship",
+          "mapped_notes_slug": "internship",
+          "chapter_count": 4,
+          "chapters": [
+            {
+              "subject_slug": "internship",
+              "chapter_slug": "internship-sample-presentation",
+              "title": "Internship Sample Presentation",
+              "url": "https://hamrocsit.com/note/internship/internship-sample-presentation/"
+            },
+            {
+              "subject_slug": "internship",
+              "chapter_slug": "internship-report-sample",
+              "title": "Internship Report Sample",
+              "url": "https://hamrocsit.com/note/internship/internship-report-sample/"
+            },
+            {
+              "subject_slug": "internship",
+              "chapter_slug": "internship-report-content",
+              "title": "Internship Report Content",
+              "url": "https://hamrocsit.com/note/internship/internship-report-content/"
+            },
+            {
+              "subject_slug": "internship",
+              "chapter_slug": "internship-guidelines",
+              "title": "Internship Guidelines",
+              "url": "https://hamrocsit.com/note/internship/internship-guidelines/"
+            }
+          ]
+        },
+        {
+          "name": "Advanced Networking with IPV6",
+          "code": "CSC463",
+          "url": "https://hamrocsit.com/semester/eight/advanced-networking-with-ipv6/",
+          "slug": "advanced-networking-with-ipv6",
+          "mapped_notes_slug": "advanced-networking-with-ipv6",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Decision Support System and Expert System",
+          "code": "CSC469",
+          "url": "https://hamrocsit.com/semester/eight/decision-support-system-and-expert-system/",
+          "slug": "decision-support-system-and-expert-system",
+          "mapped_notes_slug": "decision-support-system-and-expert-system",
+          "chapter_count": 5,
+          "chapters": [
+            {
+              "subject_slug": "decision-support-system-and-expert-system",
+              "chapter_slug": "fuzzy-expert-systems",
+              "title": "Fuzzy Expert Systems",
+              "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/fuzzy-expert-systems/"
+            },
+            {
+              "subject_slug": "decision-support-system-and-expert-system",
+              "chapter_slug": "expert-systems",
+              "title": "Expert Systems",
+              "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/expert-systems/"
+            },
+            {
+              "subject_slug": "decision-support-system-and-expert-system",
+              "chapter_slug": "building-dss-systems",
+              "title": "Building Dss Systems",
+              "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/building-dss-systems/"
+            },
+            {
+              "subject_slug": "decision-support-system-and-expert-system",
+              "chapter_slug": "designing-developing-and-evaluating-dss-systems",
+              "title": "Designing Developing And Evaluating Dss Systems",
+              "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/designing-developing-and-evaluating-dss-systems/"
+            },
+            {
+              "subject_slug": "decision-support-system-and-expert-system",
+              "chapter_slug": "business-decision-making",
+              "title": "Business Decision Making",
+              "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/business-decision-making/"
+            }
+          ]
+        },
+        {
+          "name": "Distributed and Object-Oriented Database",
+          "code": "CSC466",
+          "url": "https://hamrocsit.com/semester/eight/distributed-and-object-oriented-database/",
+          "slug": "distributed-and-object-oriented-database",
+          "mapped_notes_slug": "distributed-and-object-oriented-database",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Distributed Networking",
+          "code": "CSC464",
+          "url": "https://hamrocsit.com/semester/eight/distributed-networking/",
+          "slug": "distributed-networking",
+          "mapped_notes_slug": "distributed-networking",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Embedded Systems Programming",
+          "code": "CSC473",
+          "url": "https://hamrocsit.com/semester/eight/embedded-systems-programming/",
+          "slug": "embedded-systems-programming",
+          "mapped_notes_slug": "embedded-systems-programming",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Game Technology",
+          "code": "CSC465",
+          "url": "https://hamrocsit.com/semester/eight/game-technology/",
+          "slug": "game-technology",
+          "mapped_notes_slug": "game-technology",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Geographical Information System",
+          "code": "CSC468",
+          "url": "https://hamrocsit.com/semester/eight/geographical-information-system/",
+          "slug": "geographical-information-system",
+          "mapped_notes_slug": "geographical-information-system",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "International Business Management",
+          "code": "MGT474",
+          "url": "https://hamrocsit.com/semester/eight/international-business-management/",
+          "slug": "international-business-management",
+          "mapped_notes_slug": "international-business-management",
+          "chapter_count": 8,
+          "chapters": [
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "globalization-and-international-business",
+              "title": "Globalization And International Business",
+              "url": "https://hamrocsit.com/note/international-business-management/globalization-and-international-business/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "global-economy-and-regional-economy",
+              "title": "Global Economy And Regional Economy",
+              "url": "https://hamrocsit.com/note/international-business-management/global-economy-and-regional-economy/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "national-differences-in-socio-cultural-environment",
+              "title": "National Differences In Socio Cultural Environment",
+              "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-socio-cultural-environment/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "national-differences-in-political-environment",
+              "title": "National Differences In Political Environment",
+              "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-political-environment/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "national-differences-in-economic-environment",
+              "title": "National Differences In Economic Environment",
+              "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-economic-environment/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "international-financial-environment",
+              "title": "International Financial Environment",
+              "url": "https://hamrocsit.com/note/international-business-management/international-financial-environment/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "strategies-for-ib",
+              "title": "Strategies For Ib",
+              "url": "https://hamrocsit.com/note/international-business-management/strategies-for-ib/"
+            },
+            {
+              "subject_slug": "international-business-management",
+              "chapter_slug": "functional-management-and-operation-of-ib",
+              "title": "Functional Management And Operation Of Ib",
+              "url": "https://hamrocsit.com/note/international-business-management/functional-management-and-operation-of-ib/"
+            }
+          ]
+        },
+        {
+          "name": "Introduction to Cloud Computing",
+          "code": "CSC467",
+          "url": "https://hamrocsit.com/semester/eight/introduction-to-cloud-computing/",
+          "slug": "introduction-to-cloud-computing",
+          "mapped_notes_slug": "introduction-to-cloud-computing",
+          "chapter_count": 6,
+          "chapters": [
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "introduction-to-cloud-computing",
+              "title": "Introduction To Cloud Computing",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/introduction-to-cloud-computing/"
+            },
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "cloud-computing-architecture",
+              "title": "Cloud Computing Architecture",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-computing-architecture/"
+            },
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "cloud-virtualization-technology",
+              "title": "Cloud Virtualization Technology",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-virtualization-technology/"
+            },
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "cloud-programming-models",
+              "title": "Cloud Programming Models",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-programming-models/"
+            },
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "cloud-security",
+              "title": "Cloud Security",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-security/"
+            },
+            {
+              "subject_slug": "introduction-to-cloud-computing",
+              "chapter_slug": "cloud-platforms-and-applications",
+              "title": "Cloud Platforms And Applications",
+              "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-platforms-and-applications/"
+            }
+          ]
+        },
+        {
+          "name": "Mobile Application Development",
+          "code": "CSC470",
+          "url": "https://hamrocsit.com/semester/eight/mobile-application-development/",
+          "slug": "mobile-application-development",
+          "mapped_notes_slug": "mobile-application-development",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Network and System Administration",
+          "code": "CSC472",
+          "url": "https://hamrocsit.com/semester/eight/network-and-system-administration/",
+          "slug": "network-and-system-administration",
+          "mapped_notes_slug": "network-and-system-administration",
+          "chapter_count": 0,
+          "chapters": []
+        },
+        {
+          "name": "Real Time Systems",
+          "code": "CSC471",
+          "url": "https://hamrocsit.com/semester/eight/real-time-systems/",
+          "slug": "real-time-systems",
+          "mapped_notes_slug": "real-time-systems",
+          "chapter_count": 0,
+          "chapters": []
+        }
+      ]
+    }
+  },
+  "total_subjects": 66,
+  "total_chapters": 375
+}
