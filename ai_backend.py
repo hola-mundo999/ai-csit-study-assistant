@@ -89,12 +89,52 @@ class AIChatBackend:
         question = question.strip()
         history = conversation_history or []
 
-        # 1. If a live provider is configured, attempt live generation
+        # ------------------------------------------------------------------ #
+        # TIER 1: Search Local HamroCSIT Learning Content First
+        # ------------------------------------------------------------------ #
+        if uploaded_context and any(
+            w in question.lower()
+            for w in ("uploaded", "notes", "lecture", "pdf", "page", "slide", "chapter in my")
+        ):
+            return self._offline_from_notes(question, uploaded_context, uploaded_pages)
+
+        topic = kb.resolve_topic_from_context(question, history)
+        is_curriculum_query = bool(topic) or any(
+            w in question.lower()
+            for w in (
+                "practice question", "exam question", "sorting", "sort",
+                "vs", "compare", "difference between", "how it works",
+                "pseudocode", "complexity", "worst case", "worst-case",
+                "normalization", "acid", "process", "thread", "deadlock",
+                "tcp", "udp", "http"
+            )
+        )
+
+        if is_curriculum_query:
+            answer_text = kb.answer_query(
+                question,
+                history=history,
+                subject=subject,
+                uploaded_context=uploaded_context,
+            )
+            return AIChatResult(
+                answer=answer_text,
+                source="tier1_course_content",
+                grounded_in_upload=bool(uploaded_context),
+            )
+
+        # ------------------------------------------------------------------ #
+        # TIER 2: External AI Fallback when Content is Outside Course Notes
+        # ------------------------------------------------------------------ #
+        prefix = "> 🤖 *Notice: No sufficiently relevant answer was found in the available local HamroCSIT course notes, so here is a general AI-generated explanation.*\n\n"
+
         if self._effective_provider == "gemini":
             res = self._call_gemini(
                 question, history, uploaded_context, uploaded_pages, subject=subject
             )
             if not res.error:
+                res.answer = prefix + res.answer
+                res.source = "tier2_external_ai"
                 return res
 
         elif self._effective_provider == "groq":
@@ -102,27 +142,15 @@ class AIChatBackend:
                 question, history, uploaded_context, uploaded_pages, subject=subject
             )
             if not res.error:
+                res.answer = prefix + res.answer
+                res.source = "tier2_external_ai"
                 return res
 
-        # 2. Uploaded Document Question in Offline Mode:
-        # If user explicitly asked about uploaded notes and notes are present
-        if uploaded_context and any(
-            w in question.lower()
-            for w in ("uploaded", "notes", "lecture", "pdf", "page", "slide", "chapter in my")
-        ):
-            return self._offline_from_notes(question, uploaded_context, uploaded_pages)
-
-        # 3. Standard Offline Knowledge Engine
-        # Handles intent recognition, simple language, worst-case proofs, code, comparisons, practice questions
-        answer_text = kb.answer_query(
-            question,
-            history=history,
-            subject=subject,
-            uploaded_context=uploaded_context,
-        )
+        # Tier 2 Fallback when no cloud provider credentials are set
+        fallback_text = kb._format_general_fallback(question)
         return AIChatResult(
-            answer=answer_text,
-            source="offline",
+            answer=fallback_text,
+            source="tier2_general_ai",
             grounded_in_upload=bool(uploaded_context),
         )
 

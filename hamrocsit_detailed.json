@@ -1,0 +1,2033 @@
+{
+  "first": [
+    {
+      "name": "Introduction to Information Technology",
+      "code": "CSC114",
+      "url": "https://hamrocsit.com/semester/first/iit/",
+      "description": "This course introduces fundamental concepts of Information Technology and computer science.",
+      "chapters": [
+        {
+          "title": "Introduction to Computer",
+          "url": "https://hamrocsit.com/note/iit/introduction-to-computer/"
+        },
+        {
+          "title": "The Computer System Hardware",
+          "url": "https://hamrocsit.com/note/iit/the-computer-system-hardware/"
+        },
+        {
+          "title": "Computer Memory",
+          "url": "https://hamrocsit.com/note/iit/computer-memory/"
+        },
+        {
+          "title": "Input and Output Devices",
+          "url": "https://hamrocsit.com/note/iit/input-and-output-devices/"
+        },
+        {
+          "title": "Data Representation",
+          "url": "https://hamrocsit.com/note/iit/data-representation/"
+        },
+        {
+          "title": "Computer Software",
+          "url": "https://hamrocsit.com/note/iit/computer-software/"
+        },
+        {
+          "title": "Data Communication and Computer Network",
+          "url": "https://hamrocsit.com/note/iit/data-communication-and-computer-network/"
+        },
+        {
+          "title": "The Internet and Internet Services",
+          "url": "https://hamrocsit.com/note/iit/the-internet-and-internet-services/"
+        },
+        {
+          "title": "Fundamentals of Database",
+          "url": "https://hamrocsit.com/note/iit/fundamentals-of-database/"
+        },
+        {
+          "title": "Multimedia",
+          "url": "https://hamrocsit.com/note/iit/multimedia/"
+        },
+        {
+          "title": "Computer Security",
+          "url": "https://hamrocsit.com/note/iit/computer-security/"
+        }
+      ]
+    },
+    {
+      "name": "C Programming",
+      "code": "CSC115",
+      "url": "https://hamrocsit.com/semester/first/c-program/",
+      "description": "This course is designed to familiarize students to the techniques of programming in C",
+      "chapters": [
+        {
+          "title": "Problem Solving with Computer",
+          "url": "https://hamrocsit.com/note/c-program/problem-solving-computer/"
+        },
+        {
+          "title": "Elements of C",
+          "url": "https://hamrocsit.com/note/c-program/elements-of-c/"
+        },
+        {
+          "title": "Input and Output",
+          "url": "https://hamrocsit.com/note/c-program/input-and-output/"
+        },
+        {
+          "title": "Operators and Expression",
+          "url": "https://hamrocsit.com/note/c-program/operators-and-expression/"
+        },
+        {
+          "title": "Control Statement",
+          "url": "https://hamrocsit.com/note/c-program/control-statement/"
+        },
+        {
+          "title": "Arrays",
+          "url": "https://hamrocsit.com/note/c-program/arrays/"
+        },
+        {
+          "title": "Functions",
+          "url": "https://hamrocsit.com/note/c-program/functions/"
+        },
+        {
+          "title": "Structure and Union",
+          "url": "https://hamrocsit.com/note/c-program/structure-and-union/"
+        },
+        {
+          "title": "Pointers",
+          "url": "https://hamrocsit.com/note/c-program/pointers/"
+        },
+        {
+          "title": "File Handling in C",
+          "url": "https://hamrocsit.com/note/c-program/file-handling-in-c/"
+        },
+        {
+          "title": "Introduction to Graphics",
+          "url": "https://hamrocsit.com/note/c-program/introduction-to-graphics/"
+        }
+      ]
+    },
+    {
+      "name": "Digital Logic",
+      "code": "CSC116",
+      "url": "https://hamrocsit.com/semester/first/dl/",
+      "description": "This course introduces the basic tools for the design of digital circuits and introducing methods and procedures suitable for a variety of digital design applications.",
+      "chapters": [
+        {
+          "title": "Binary Systems",
+          "url": "https://hamrocsit.com/note/dl/binary-systems/"
+        },
+        {
+          "title": "Boolean algebra and Logic Gates",
+          "url": "https://hamrocsit.com/note/dl/boolean-algebra-and-logic-gates/"
+        },
+        {
+          "title": "Simplification of Boolean Functions",
+          "url": "https://hamrocsit.com/note/dl/simplification-of-boolean-functions/"
+        },
+        {
+          "title": "Combinational Logic",
+          "url": "https://hamrocsit.com/note/dl/combinational-logic/"
+        },
+        {
+          "title": "Combinational Logic with MSI and LSI",
+          "url": "https://hamrocsit.com/note/dl/combinational-logic-with-msi-and-lsi/"
+        },
+        {
+          "title": "Synchronous and Asynchronous Sequential Logic",
+          "url": "https://hamrocsit.com/note/dl/synchronous-and-asynchronous-sequential-logic/"
+        },
+        {
+          "title": "Registers and Counters",
+          "url": "https://hamrocsit.com/note/dl/registers-and-counters/"
+        }
+      ]
+    },
+    {
+      "name": "Mathematics I",
+      "code": "MTH117",
+      "url": "https://hamrocsit.com/semester/first/math-i/",
+      "description": "This course makes students able to understand and formulate real-world problems into mathematical statements and also develop solutions to mathematical problems at the level appropriate to the course.",
+      "chapters": [
+        {
+          "title": "Function of One Variable",
+          "url": "https://hamrocsit.com/note/math-i/function-of-one-variable/"
+        },
+        {
+          "title": "Limits and Continuity",
+          "url": "https://hamrocsit.com/note/math-i/limits-and-continuity/"
+        },
+        {
+          "title": "Derivatives",
+          "url": "https://hamrocsit.com/note/math-i/derivatives/"
+        },
+        {
+          "title": "Applications of Derivatives",
+          "url": "https://hamrocsit.com/note/math-i/applications-of-derivatives/"
+        },
+        {
+          "title": "Antiderivatives",
+          "url": "https://hamrocsit.com/note/math-i/antiderivatives/"
+        },
+        {
+          "title": "Applications of Antiderivatives",
+          "url": "https://hamrocsit.com/note/math-i/applications-of-antiderivatives/"
+        },
+        {
+          "title": "Ordinary Differential Equations",
+          "url": "https://hamrocsit.com/note/math-i/ordinary-differential-equations/"
+        },
+        {
+          "title": "Infinite Sequence and Series",
+          "url": "https://hamrocsit.com/note/math-i/infinite-sequence-and-series/"
+        },
+        {
+          "title": "Plain and Space Vectors",
+          "url": "https://hamrocsit.com/note/math-i/plain-and-space-vectors/"
+        },
+        {
+          "title": "Partial Derivatives and Multiple Integration",
+          "url": "https://hamrocsit.com/note/math-i/partial-derivatives-and-multiple-integration/"
+        }
+      ]
+    },
+    {
+      "name": "Physics",
+      "code": "PHY118",
+      "url": "https://hamrocsit.com/semester/first/physics/",
+      "description": "This course provides knowledge in physics and applies this knowledge to computer science and information technology.",
+      "chapters": [
+        {
+          "title": "Rotational Dynamics and Oscillatory Motion",
+          "url": "https://hamrocsit.com/note/physics/rotational-dynamics-and-oscillatory-motion/"
+        },
+        {
+          "title": "Electric and Magnetic Field",
+          "url": "https://hamrocsit.com/note/physics/electric-and-magnetic-field/"
+        },
+        {
+          "title": "Fundamentals of Atomic Theory",
+          "url": "https://hamrocsit.com/note/physics/fundamentals-of-atomic-theory/"
+        },
+        {
+          "title": "Methods of Quantum Mechanics",
+          "url": "https://hamrocsit.com/note/physics/methods-of-quantum-mechanics/"
+        },
+        {
+          "title": "Fundamentals of Solid State Physics",
+          "url": "https://hamrocsit.com/note/physics/fundamentals-of-solid-state-physics/"
+        },
+        {
+          "title": "Semiconductor and Semiconductor devices",
+          "url": "https://hamrocsit.com/note/physics/semiconductor-and-semiconductor-devices/"
+        },
+        {
+          "title": "Universal Gates and Physics of Integrated Circuits",
+          "url": "https://hamrocsit.com/note/physics/universal-gates-and-physics-of-integrated-circuits/"
+        },
+        {
+          "title": "Physic Numericals",
+          "url": "https://hamrocsit.com/note/physics/physic-numericals/"
+        }
+      ]
+    }
+  ],
+  "second": [
+    {
+      "name": "Discrete Structure",
+      "code": "CSC165",
+      "url": "https://hamrocsit.com/semester/second/ds/",
+      "description": "The course covers fundamental concepts of discrete structure like introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.",
+      "chapters": [
+        {
+          "title": "Basic Discrete Structures",
+          "url": "https://hamrocsit.com/note/ds/basic-discrete-structures/"
+        },
+        {
+          "title": "Integers and Matrices",
+          "url": "https://hamrocsit.com/note/ds/integers-and-matrices/"
+        },
+        {
+          "title": "Logic and Proof Methods",
+          "url": "https://hamrocsit.com/note/ds/logic-and-proof-methods/"
+        },
+        {
+          "title": "Induction and Recursion",
+          "url": "https://hamrocsit.com/note/ds/induction-and-recursion/"
+        },
+        {
+          "title": "Counting and Discrete Probability",
+          "url": "https://hamrocsit.com/note/ds/counting-and-discrete-probability/"
+        },
+        {
+          "title": "Relations and Graphs",
+          "url": "https://hamrocsit.com/note/ds/relations-and-graphs/"
+        }
+      ]
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "code": "CSC166",
+      "url": "https://hamrocsit.com/semester/second/oops/",
+      "description": "The course covers the basic concepts of object oriented programming using C++ programming language.",
+      "chapters": [
+        {
+          "title": "Introduction To Object Oriented Programming",
+          "url": "https://hamrocsit.com/note/oops/introduction-to-oops/"
+        },
+        {
+          "title": "Basics of C++ programming",
+          "url": "https://hamrocsit.com/note/oops/basics-of-c-programming/"
+        },
+        {
+          "title": "Classes & Objects",
+          "url": "https://hamrocsit.com/note/oops/classes-objects/"
+        },
+        {
+          "title": "Operator Overloading",
+          "url": "https://hamrocsit.com/note/oops/operator-overloading/"
+        },
+        {
+          "title": "Inheritance",
+          "url": "https://hamrocsit.com/note/oops/inheritance/"
+        },
+        {
+          "title": "Virtual Function, Polymorphism, and miscellaneous C++ Features",
+          "url": "https://hamrocsit.com/note/oops/virtual-function-polymorphism-and-miscellaneous-c-features/"
+        },
+        {
+          "title": "Function Templates and Exception Handling",
+          "url": "https://hamrocsit.com/note/oops/function-templates-and-exception-handling/"
+        },
+        {
+          "title": "File handling",
+          "url": "https://hamrocsit.com/note/oops/file-handling/"
+        }
+      ]
+    },
+    {
+      "name": "Microprocessor",
+      "code": "CSC167",
+      "url": "https://hamrocsit.com/semester/second/microprocessor/",
+      "description": "This course contains of fundamental concepts of computer organization, basic I/O interfaces and Interrupts operations.",
+      "chapters": [
+        {
+          "title": "Introduction to Microprocessor",
+          "url": "https://hamrocsit.com/note/microprocessor/introduction/"
+        },
+        {
+          "title": "Basic Architecture",
+          "url": "https://hamrocsit.com/note/microprocessor/basic-architecture/"
+        },
+        {
+          "title": "Instruction Cycle",
+          "url": "https://hamrocsit.com/note/microprocessor/instruction-cycle/"
+        },
+        {
+          "title": "Assembly Language Programming",
+          "url": "https://hamrocsit.com/note/microprocessor/assembly-language-programming/"
+        },
+        {
+          "title": "Basic I/O, Memory R/W and Interrupt Operations",
+          "url": "https://hamrocsit.com/note/microprocessor/basic-i-o-memory-r-w-and-interrupt-operations/"
+        },
+        {
+          "title": "Input/ Output Interfaces",
+          "url": "https://hamrocsit.com/note/microprocessor/input-output-interfaces/"
+        },
+        {
+          "title": "Advanced Microprocessors",
+          "url": "https://hamrocsit.com/note/microprocessor/advanced-microprocessors/"
+        }
+      ]
+    },
+    {
+      "name": "Mathematics II",
+      "code": "MTH168",
+      "url": "https://hamrocsit.com/semester/second/mathii/",
+      "description": "The course contains concepts and techniques of linear algebra. The course topics include systems of linear equations, determinants, vectors and vector spaces, eigenvalues and eigenvectors and singular value decomposition of matrix.",
+      "chapters": [
+        {
+          "title": "Linear equations in linear Algebra",
+          "url": "https://hamrocsit.com/note/mathii/linear-equations-in-linear-algebra/"
+        },
+        {
+          "title": "Transformations",
+          "url": "https://hamrocsit.com/note/mathii/transformations/"
+        },
+        {
+          "title": "Matrix Algebra",
+          "url": "https://hamrocsit.com/note/mathii/matrix-algebra/"
+        },
+        {
+          "title": "Determinants",
+          "url": "https://hamrocsit.com/note/mathii/determinants/"
+        },
+        {
+          "title": "Vector Spaces",
+          "url": "https://hamrocsit.com/note/mathii/vector-spaces/"
+        },
+        {
+          "title": "Vector Space Continued",
+          "url": "https://hamrocsit.com/note/mathii/vector-space-continued/"
+        },
+        {
+          "title": "Eigenvalues and Eigen Vectors",
+          "url": "https://hamrocsit.com/note/mathii/eigenvalues-and-eigen-vectors/"
+        },
+        {
+          "title": "Orthogonality and Least Squares",
+          "url": "https://hamrocsit.com/note/mathii/orthogonality-and-least-squares/"
+        },
+        {
+          "title": "Groups and Subgroups",
+          "url": "https://hamrocsit.com/note/mathii/groups-and-subgroups/"
+        },
+        {
+          "title": "Rings and Fields",
+          "url": "https://hamrocsit.com/note/mathii/rings-and-fields/"
+        }
+      ]
+    },
+    {
+      "name": "Statistics I",
+      "code": "STA169",
+      "url": "https://hamrocsit.com/semester/second/stat-i/",
+      "description": "This course contains basics of statistics, descriptive statistics, probability, sampling, random variables and mathematical expectations, probability distribution, correlation and regression.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/stat-i/introduction-to-stat-i/"
+        },
+        {
+          "title": "Descriptive Statistics",
+          "url": "https://hamrocsit.com/note/stat-i/descriptive-statistics/"
+        },
+        {
+          "title": "Introduction to Probability",
+          "url": "https://hamrocsit.com/note/stat-i/introduction-to-probability/"
+        },
+        {
+          "title": "Sampling",
+          "url": "https://hamrocsit.com/note/stat-i/sampling/"
+        },
+        {
+          "title": "Random Variables and Mathematical Expectation",
+          "url": "https://hamrocsit.com/note/stat-i/random-variables-and-mathematical-expectation/"
+        },
+        {
+          "title": "Probability Distributions",
+          "url": "https://hamrocsit.com/note/stat-i/probability-distributions/"
+        },
+        {
+          "title": "Correlation and Linear Regression",
+          "url": "https://hamrocsit.com/note/stat-i/correlation-and-linear-regression/"
+        }
+      ]
+    }
+  ],
+  "third": [
+    {
+      "name": "Data Structure and Algorithm",
+      "code": "CSC211",
+      "url": "https://hamrocsit.com/semester/third/dsa/",
+      "description": "This course includes the basic foundations in of data structures and algorithms. This course covers concepts of various data structures like stack, queue, list, tree and graph. Additionally, the course includes idea of sorting and searching.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/dsa/introduction-to-dsa/"
+        },
+        {
+          "title": "Stack",
+          "url": "https://hamrocsit.com/note/dsa/stack/"
+        },
+        {
+          "title": "Queue",
+          "url": "https://hamrocsit.com/note/dsa/queue/"
+        },
+        {
+          "title": "Recursion",
+          "url": "https://hamrocsit.com/note/dsa/recursion/"
+        },
+        {
+          "title": "Lists",
+          "url": "https://hamrocsit.com/note/dsa/lists/"
+        },
+        {
+          "title": "Sorting",
+          "url": "https://hamrocsit.com/note/dsa/sorting/"
+        },
+        {
+          "title": "Searching and Hashing",
+          "url": "https://hamrocsit.com/note/dsa/searching-and-hashing/"
+        },
+        {
+          "title": "Trees and Graphs",
+          "url": "https://hamrocsit.com/note/dsa/trees-and-graphs/"
+        }
+      ]
+    },
+    {
+      "name": "Numerical Method",
+      "code": "CSC212",
+      "url": "https://hamrocsit.com/semester/third/csc207/",
+      "description": "This course contains the concepts of numerical method techniques for solving linear and nonlinear equations, interpolation and regression, differentiation and integration, and partial differential equations. The main objective of the course is to provide the knowledge of numerical method techniques for mathematical modeling.",
+      "chapters": [
+        {
+          "title": "Solution of Nonlinear Equations",
+          "url": "https://hamrocsit.com/note/csc207/solution-of-nonlinear-equations/"
+        },
+        {
+          "title": "Interpolation and Regression",
+          "url": "https://hamrocsit.com/note/csc207/interpolation-and-regression/"
+        },
+        {
+          "title": "Numerical Differentiation and Integration",
+          "url": "https://hamrocsit.com/note/csc207/numerical-differentiation-and-integration/"
+        },
+        {
+          "title": "Solving System of Linear Equations",
+          "url": "https://hamrocsit.com/note/csc207/solving-system-of-linear-equations/"
+        },
+        {
+          "title": "Solution of Ordinary Differential Equations",
+          "url": "https://hamrocsit.com/note/csc207/solution-of-ordinary-differential-equations/"
+        },
+        {
+          "title": "Solution of Partial Differential Equations",
+          "url": "https://hamrocsit.com/note/csc207/solution-of-partial-differential-equations/"
+        }
+      ]
+    },
+    {
+      "name": "Computer Architecture",
+      "code": "CSC213",
+      "url": "https://hamrocsit.com/semester/third/csc208/",
+      "description": "This course includes concepts of instruction set architecture, organization or micro-architecture, and system architecture. The instruction set architecture includes programmer\u2019s abstraction of computer. The micro-architecture consist internal representation of computers at register and functional unit level. The system architecture includes organization of computers at the cache and bus level.",
+      "chapters": [
+        {
+          "title": "Data Representation",
+          "url": "https://hamrocsit.com/note/csc208/data-representation-2/"
+        },
+        {
+          "title": "Register Transfer and Microoperations",
+          "url": "https://hamrocsit.com/note/csc208/microoperations/"
+        },
+        {
+          "title": "Basic Computer Organization and Design",
+          "url": "https://hamrocsit.com/note/csc208/basic-computer-organization-and-design/"
+        },
+        {
+          "title": "Microprogrammed Control",
+          "url": "https://hamrocsit.com/note/csc208/microprogrammed-control/"
+        },
+        {
+          "title": "Central Processing Unit",
+          "url": "https://hamrocsit.com/note/csc208/central-processing-unit/"
+        },
+        {
+          "title": "Pipelining",
+          "url": "https://hamrocsit.com/note/csc208/pipelining/"
+        },
+        {
+          "title": "Computer Arithmetic",
+          "url": "https://hamrocsit.com/note/csc208/computer-arithmetic/"
+        },
+        {
+          "title": "Input Output Organization",
+          "url": "https://hamrocsit.com/note/csc208/input-output-organization/"
+        },
+        {
+          "title": "Memory Organization",
+          "url": "https://hamrocsit.com/note/csc208/memory-organization/"
+        }
+      ]
+    },
+    {
+      "name": "Computer Graphics",
+      "code": "CSC214",
+      "url": "https://hamrocsit.com/semester/third/csc209/",
+      "description": "The course covers concepts of graphics hardware, software, and applications, data structures for representing 2D and 3D geometric objects, drawing algorithms for graphical objects, techniques for representing and manipulating geometric objects, illumination and lighting models, and concept of virtual reality.",
+      "chapters": [
+        {
+          "title": "Introduction of Computer Graphics",
+          "url": "https://hamrocsit.com/note/csc209/introduction-of-computer-graphics/"
+        },
+        {
+          "title": "Scan Conversion Algorithm",
+          "url": "https://hamrocsit.com/note/csc209/scan-conversion-algorithm/"
+        },
+        {
+          "title": "Two-Dimensional Geometric Transformations",
+          "url": "https://hamrocsit.com/note/csc209/two-dimensional-geometric-transformations/"
+        },
+        {
+          "title": "Three-Dimensional Geometric Transformation",
+          "url": "https://hamrocsit.com/note/csc209/three-dimensional-geometric-transformation/"
+        },
+        {
+          "title": "3D Objects Representation",
+          "url": "https://hamrocsit.com/note/csc209/3d-objects-representation/"
+        },
+        {
+          "title": "Solid Modeling",
+          "url": "https://hamrocsit.com/note/csc209/solid-modeling/"
+        },
+        {
+          "title": "Visible Surface Detections",
+          "url": "https://hamrocsit.com/note/csc209/visible-surface-detections/"
+        },
+        {
+          "title": "Illumination Models and Surface Rendering Technique",
+          "url": "https://hamrocsit.com/note/csc209/illumination-models-and-surface-rendering-technique/"
+        },
+        {
+          "title": "Introduction to Virtual Reality",
+          "url": "https://hamrocsit.com/note/csc209/introduction-to-virtual-reality/"
+        },
+        {
+          "title": "Introduction to OpenGL",
+          "url": "https://hamrocsit.com/note/csc209/introduction-to-opengl/"
+        }
+      ]
+    },
+    {
+      "name": "Statistics II",
+      "code": "STA215",
+      "url": "https://hamrocsit.com/semester/third/stat-ii/",
+      "description": "This course contains basics of statistics, descriptive statistics, probability, sampling, random variables and mathematical expectations, probability distribution, correlation and regression",
+      "chapters": [
+        {
+          "title": "Sampling Distribution And Estimation",
+          "url": "https://hamrocsit.com/note/stat-ii/sampling-distribution-and-estimation/"
+        },
+        {
+          "title": "Testing of hypothesis",
+          "url": "https://hamrocsit.com/note/stat-ii/testing-of-hypothesis/"
+        },
+        {
+          "title": "Non Parametric Test",
+          "url": "https://hamrocsit.com/note/stat-ii/non-parametric-test/"
+        },
+        {
+          "title": "Multiple correlation and regression",
+          "url": "https://hamrocsit.com/note/stat-ii/multiple-correlation-and-regression/"
+        },
+        {
+          "title": "Design of experiment",
+          "url": "https://hamrocsit.com/note/stat-ii/design-of-experiment/"
+        },
+        {
+          "title": "Stochastic Process",
+          "url": "https://hamrocsit.com/note/stat-ii/stochastic-process/"
+        },
+        {
+          "title": "Stat All Tables",
+          "url": "https://hamrocsit.com/note/stat-ii/statistics-all-tables/"
+        },
+        {
+          "title": "Important Formulas",
+          "url": "https://hamrocsit.com/note/stat-ii/important-formulas/"
+        }
+      ]
+    }
+  ],
+  "fourth": [
+    {
+      "name": "Theory of Computation",
+      "code": "CSC262",
+      "url": "https://hamrocsit.com/semester/fourth/toc/",
+      "description": "This course presents a study of Finite State Machines and their languages. It covers the details of finite state automata, regular expressions, context free grammars. More, the course includes design of the Push-down automata and Turing Machines. The course also includes basics of undecidability and intractability.",
+      "chapters": [
+        {
+          "title": "Basic Foundations",
+          "url": "https://hamrocsit.com/note/toc/basic-foundations/"
+        },
+        {
+          "title": "Introduction to Finite Automata",
+          "url": "https://hamrocsit.com/note/toc/introduction-to-finite-automata/"
+        },
+        {
+          "title": "Regular Expression",
+          "url": "https://hamrocsit.com/note/toc/regular-expression/"
+        },
+        {
+          "title": "Context Free Grammar",
+          "url": "https://hamrocsit.com/note/toc/context-free-grammar/"
+        },
+        {
+          "title": "Push Down Automata",
+          "url": "https://hamrocsit.com/note/toc/push-down-automata/"
+        },
+        {
+          "title": "Turing Machine",
+          "url": "https://hamrocsit.com/note/toc/turing-machine/"
+        },
+        {
+          "title": "Undecidability and Intractability",
+          "url": "https://hamrocsit.com/note/toc/undecidability-and-intractability/"
+        }
+      ]
+    },
+    {
+      "name": "Computer Networks",
+      "code": "CSC263",
+      "url": "https://hamrocsit.com/semester/fourth/cn/",
+      "description": "The main objective of this course is to introduce the understanding of the concept of computer networking with its layers, topologies, protocols & standards, IPv4/IPv6 addressing, Routing and Latest Networking Standards",
+      "chapters": [
+        {
+          "title": "Introduction to Computer Network",
+          "url": "https://hamrocsit.com/note/cn/introduction-to-computer-network/"
+        },
+        {
+          "title": "Physical Layer and Network Media",
+          "url": "https://hamrocsit.com/note/cn/physical-layer-and-network-media/"
+        },
+        {
+          "title": "Data Link Layer",
+          "url": "https://hamrocsit.com/note/cn/data-link-layer/"
+        },
+        {
+          "title": "Network Layer",
+          "url": "https://hamrocsit.com/note/cn/network-layer/"
+        },
+        {
+          "title": "Transport Layer",
+          "url": "https://hamrocsit.com/note/cn/transport-layer/"
+        },
+        {
+          "title": "Application Layer",
+          "url": "https://hamrocsit.com/note/cn/application-layer/"
+        },
+        {
+          "title": "Multimedia & Future Networking",
+          "url": "https://hamrocsit.com/note/cn/multimedia-future-networking/"
+        }
+      ]
+    },
+    {
+      "name": "Database Management System",
+      "code": "CSC265",
+      "url": "https://hamrocsit.com/semester/fourth/dbms/",
+      "description": "The course covers the basic concepts of databases, database system concepts and architecture, data modeling using ER diagram, relational model, SQL, relational algebra and calculus, normalization, transaction processing, concurrency control, and database recovery.",
+      "chapters": [
+        {
+          "title": "Database and Database Users",
+          "url": "https://hamrocsit.com/note/dbms/database-and-database-users/"
+        },
+        {
+          "title": "Database System \u2013 Concepts and Architecture",
+          "url": "https://hamrocsit.com/note/dbms/database-system-concepts-and-architecture/"
+        },
+        {
+          "title": "Data Modeling Using the Entity-Relational Model",
+          "url": "https://hamrocsit.com/note/dbms/data-modeling-using-the-entity-relational-model/"
+        },
+        {
+          "title": "The Relational Data Model and Relational Database Constraints",
+          "url": "https://hamrocsit.com/note/dbms/the-relational-data-model-and-relational-database-constraints/"
+        },
+        {
+          "title": "The Relational Algebra and Relational Calculus",
+          "url": "https://hamrocsit.com/note/dbms/the-relational-algebra-and-relational-calculus/"
+        },
+        {
+          "title": "SQL",
+          "url": "https://hamrocsit.com/note/dbms/sql/"
+        },
+        {
+          "title": "Relational Database Design",
+          "url": "https://hamrocsit.com/note/dbms/relational-database-design/"
+        },
+        {
+          "title": "Introduction to Transaction Processing Concepts and Theory",
+          "url": "https://hamrocsit.com/note/dbms/introduction-to-transaction-processing-concepts-and-theory/"
+        },
+        {
+          "title": "Concurrency Control Techniques",
+          "url": "https://hamrocsit.com/note/dbms/concurrency-control-techniques/"
+        },
+        {
+          "title": "Database Recovery Techniques",
+          "url": "https://hamrocsit.com/note/dbms/database-recovery-techniques/"
+        }
+      ]
+    },
+    {
+      "name": "Operating System",
+      "code": "CSC264",
+      "url": "https://hamrocsit.com/semester/fourth/os/",
+      "description": "This course includes the basic concepts of operating system components. It consists of process management, deadlocks and process synchronization, memory management techniques, File system implementation, and I/O device management principles. It also includes case study on Linux operating system.",
+      "chapters": [
+        {
+          "title": "Operating System Overview",
+          "url": "https://hamrocsit.com/note/os/operating-system-overview/"
+        },
+        {
+          "title": "Process Management",
+          "url": "https://hamrocsit.com/note/os/process-management/"
+        },
+        {
+          "title": "Process Deadlocks",
+          "url": "https://hamrocsit.com/note/os/process-deadlocks/"
+        },
+        {
+          "title": "Memory Management",
+          "url": "https://hamrocsit.com/note/os/memory-management/"
+        },
+        {
+          "title": "File Management",
+          "url": "https://hamrocsit.com/note/os/file-management/"
+        },
+        {
+          "title": "Device Management",
+          "url": "https://hamrocsit.com/note/os/device-management/"
+        },
+        {
+          "title": "Linux Case Study",
+          "url": "https://hamrocsit.com/note/os/linux-case-study/"
+        }
+      ]
+    },
+    {
+      "name": "Artificial Intelligence",
+      "code": "CSC266",
+      "url": "https://hamrocsit.com/semester/fourth/ai/",
+      "description": "The course introduces the ideas and techniques underlying the principles and design of artificial intelligent systems. The course covers the basics and applications of AI including: design of intelligent agents, problem solving, searching, knowledge representation systems, probabilistic reasoning, neural networks, machine learning and natural language processing.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/ai/introduction-2/"
+        },
+        {
+          "title": "Intelligent Agents",
+          "url": "https://hamrocsit.com/note/ai/intelligent-agents/"
+        },
+        {
+          "title": "Problem Solving by Searching",
+          "url": "https://hamrocsit.com/note/ai/4775/"
+        },
+        {
+          "title": "Knowledge Representation",
+          "url": "https://hamrocsit.com/note/ai/knowledge-representation/"
+        },
+        {
+          "title": "Machine Learning",
+          "url": "https://hamrocsit.com/note/ai/machine-learning/"
+        },
+        {
+          "title": "Applications of AI",
+          "url": "https://hamrocsit.com/note/ai/applications-of-ai/"
+        }
+      ]
+    }
+  ],
+  "fifth": [
+    {
+      "name": "Design and Analysis of Algorithms",
+      "code": "CSC314",
+      "url": "https://hamrocsit.com/semester/fifth/daa/",
+      "description": "This course introduces basic elements of the design and analysis of computer algorithms. Topics include asymptotic notations and analysis, divide and conquer strategy, greedy methods, dynamic programming, basic graph algorithms, NP-completeness, and approximation algorithms. For each topic, beside in-depth coverage, one or more representative problems and their algorithms shall be discussed.",
+      "chapters": [
+        {
+          "title": "Foundation of Algorithm Analysis",
+          "url": "https://hamrocsit.com/note/daa/foundation-of-algorithm-analysis/"
+        },
+        {
+          "title": "Iterative Algorithms",
+          "url": "https://hamrocsit.com/note/daa/iterative-algorithms/"
+        },
+        {
+          "title": "Divide and Conquer Algorithms",
+          "url": "https://hamrocsit.com/note/daa/divide-and-conquer-algorithms/"
+        },
+        {
+          "title": "Greedy Algorithms",
+          "url": "https://hamrocsit.com/note/daa/greedy-algorithms/"
+        },
+        {
+          "title": "Dynamic Programming",
+          "url": "https://hamrocsit.com/note/daa/dynamic-programming/"
+        },
+        {
+          "title": "Backtracking",
+          "url": "https://hamrocsit.com/note/daa/backtracking/"
+        },
+        {
+          "title": "Number Theoretic Algorithms",
+          "url": "https://hamrocsit.com/note/daa/number-theoretic-algorithms/"
+        },
+        {
+          "title": "NP Completeness",
+          "url": "https://hamrocsit.com/note/daa/np-completeness/"
+        }
+      ]
+    },
+    {
+      "name": "System Analysis and Design",
+      "code": "CSC315",
+      "url": "https://hamrocsit.com/semester/fifth/sad/",
+      "description": "The system Analysis and Design course familiarize students with the concepts of information systems development including the systems development life cycle, different approaches to systems development, project management, planning, analysis, design, implementation, and maintenance. This course also covers some fundamental concepts of object-oriented systems analysis and design.",
+      "chapters": [
+        {
+          "title": "Foundations for Systems Development",
+          "url": "https://hamrocsit.com/note/sad/foundations-for-systems-development/"
+        },
+        {
+          "title": "Planning",
+          "url": "https://hamrocsit.com/note/sad/planning/"
+        },
+        {
+          "title": "Analysis",
+          "url": "https://hamrocsit.com/note/sad/analysis/"
+        },
+        {
+          "title": "Design",
+          "url": "https://hamrocsit.com/note/sad/design/"
+        },
+        {
+          "title": "Implementation and Maintenance",
+          "url": "https://hamrocsit.com/note/sad/implementation-and-maintenance/"
+        },
+        {
+          "title": "Introduction to Object-Oriented Development",
+          "url": "https://hamrocsit.com/note/sad/introduction-to-object-oriented-development/"
+        }
+      ]
+    },
+    {
+      "name": "Cryptography",
+      "code": "CSC316",
+      "url": "https://hamrocsit.com/semester/fifth/cryptography/",
+      "description": "The course introduces the underlying the principles and design of cryptosystems. The course covers the basics concepts of cryptography including: traditional ciphers, block ciphers, stream ciphers, public and private key cryptosystems. The course also includes the theory of hash functions, authentication systems, network security protocols and malicious logic.",
+      "chapters": [
+        {
+          "title": "Introduction and Classical Ciphers",
+          "url": "https://hamrocsit.com/note/cryptography/introduction-and-classical-ciphers/"
+        },
+        {
+          "title": "Symmetric Ciphers",
+          "url": "https://hamrocsit.com/note/cryptography/symmetric-ciphers/"
+        },
+        {
+          "title": "Asymmetric Ciphers",
+          "url": "https://hamrocsit.com/note/cryptography/asymmetric-ciphers/"
+        },
+        {
+          "title": "Cryptographic Hash Functions and Digital Signatures",
+          "url": "https://hamrocsit.com/note/cryptography/cryptographic-hash-functions-and-digital-signatures/"
+        },
+        {
+          "title": "Authentication",
+          "url": "https://hamrocsit.com/note/cryptography/authentication/"
+        },
+        {
+          "title": "Network Security and Public Key Infrastructure",
+          "url": "https://hamrocsit.com/note/cryptography/network-security-and-public-key-infrastructure/"
+        },
+        {
+          "title": "Malicious Logic",
+          "url": "https://hamrocsit.com/note/cryptography/malicious-logic/"
+        }
+      ]
+    },
+    {
+      "name": "Web Technology",
+      "code": "CSC318",
+      "url": "https://hamrocsit.com/semester/fifth/web-tech/",
+      "description": "Web Technology covers the fundamental concepts of HTML, CSS, JavaScript, XML, and PHP. The main objective of this course is to provide basic knowledge of web design using HTML and CSS, client-side scripting using JavaScript, handling web data using XML, and server-side scripting using PHP.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/web-tech/introduction-3/"
+        },
+        {
+          "title": "Hyper Text Markup Language",
+          "url": "https://hamrocsit.com/note/web-tech/hyper-text-markup-language/"
+        },
+        {
+          "title": "Cascading Style Sheets",
+          "url": "https://hamrocsit.com/note/web-tech/cascading-style-sheets/"
+        },
+        {
+          "title": "Client Side Scripting with JavaScript",
+          "url": "https://hamrocsit.com/note/web-tech/client-side-scripting-with-javascript/"
+        },
+        {
+          "title": "AJAX and XML",
+          "url": "https://hamrocsit.com/note/web-tech/ajax-and-xml/"
+        },
+        {
+          "title": "Server Side Scripting using PHP",
+          "url": "https://hamrocsit.com/note/web-tech/server-side-scripting-using-php/"
+        }
+      ]
+    },
+    {
+      "name": "Simulation and Modeling",
+      "code": "CSC317",
+      "url": "https://hamrocsit.com/semester/fifth/sm/",
+      "description": "Simulation and Modeling course consists of an introduction to systems, modeling, and simulation of different types of systems. It includes the modeling of systems, their validation, verification, and analysis of simulation output. It comprises the concept of queuing theory, random number generation as well as the study of some simulation languages.",
+      "chapters": [
+        {
+          "title": "Introduction to Simulation",
+          "url": "https://hamrocsit.com/note/sm/introduction-to-simulation/"
+        },
+        {
+          "title": "Simulation of Continuous and Discrete System",
+          "url": "https://hamrocsit.com/note/sm/simulation-of-continuous-and-discrete-system/"
+        },
+        {
+          "title": "Queuing System",
+          "url": "https://hamrocsit.com/note/sm/queuing-system/"
+        },
+        {
+          "title": "Markov Chains",
+          "url": "https://hamrocsit.com/note/sm/markov-chains/"
+        },
+        {
+          "title": "Random Numbers",
+          "url": "https://hamrocsit.com/note/sm/random-numbers/"
+        },
+        {
+          "title": "Verification and Validation",
+          "url": "https://hamrocsit.com/note/sm/verification-and-validation/"
+        },
+        {
+          "title": "Analysis of Simulation Output",
+          "url": "https://hamrocsit.com/note/sm/analysis-of-simulation-output/"
+        },
+        {
+          "title": "Simulation of Computer Systems",
+          "url": "https://hamrocsit.com/note/sm/simulation-of-computer-systems/"
+        }
+      ]
+    },
+    {
+      "name": "Image Processing",
+      "code": "CSC332",
+      "url": "https://hamrocsit.com/semester/fifth/image-processing/",
+      "description": "",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/fifth/introduction-8/"
+        },
+        {
+          "title": "Image Enhancement and Filter in Spatial Domain",
+          "url": "https://hamrocsit.com/note/fifth/image-enhancement-and-filter-in-spatial-domain/"
+        },
+        {
+          "title": "Image Enhancement in the Frequency Domain",
+          "url": "https://hamrocsit.com/note/fifth/image-enhancement-in-the-frequency-domain/"
+        },
+        {
+          "title": "Image Restoration and Compression",
+          "url": "https://hamrocsit.com/note/fifth/image-restoration-and-compression/"
+        },
+        {
+          "title": "Introduction to Morphological Image Processing",
+          "url": "https://hamrocsit.com/note/fifth/introduction-to-morphological-image-processing/"
+        },
+        {
+          "title": "Image Segmentation",
+          "url": "https://hamrocsit.com/note/fifth/image-segmentation/"
+        },
+        {
+          "title": "Representations, Description and Recognition",
+          "url": "https://hamrocsit.com/note/fifth/representations-description-and-recognition/"
+        }
+      ]
+    },
+    {
+      "name": "Knowledge Management",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/knowledge-management/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Microprocessor Based Design",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/mpbd/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Multimedia Computing",
+      "code": "CSC319",
+      "url": "https://hamrocsit.com/semester/fifth/multimedia/",
+      "description": "This course covers three main objectives on multimedia system these are devices, systems and applications.",
+      "chapters": [
+        {
+          "title": "Introduction to Computers",
+          "url": "https://hamrocsit.com/note/multimedia/introduction-to-computers/"
+        },
+        {
+          "title": "Sound/Audio System",
+          "url": "https://hamrocsit.com/note/multimedia/sound-audio-system/"
+        },
+        {
+          "title": "Image and Graphics",
+          "url": "https://hamrocsit.com/note/multimedia/image-and-graphics/"
+        },
+        {
+          "title": "Video and Animation",
+          "url": "https://hamrocsit.com/note/multimedia/video-and-animation/"
+        },
+        {
+          "title": "Data Compression",
+          "url": "https://hamrocsit.com/note/multimedia/data-compression/"
+        },
+        {
+          "title": "User Interfaces",
+          "url": "https://hamrocsit.com/note/multimedia/user-interfaces/"
+        },
+        {
+          "title": "Abstractions for Programming",
+          "url": "https://hamrocsit.com/note/multimedia/abstractions-for-programming/"
+        },
+        {
+          "title": "Multimedia Application",
+          "url": "https://hamrocsit.com/note/multimedia/multimedia-application/"
+        }
+      ]
+    },
+    {
+      "name": "Society and Ethics in Information Technology",
+      "code": "CSC323",
+      "url": "https://hamrocsit.com/semester/fifth/seit/",
+      "description": "This course covers different concepts related with sociology, and social and ethical issues related with the use of Information Technology. This course also covers social context of computing, software issues and new frontiers of computer ethics.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/seit/introduction-4/"
+        },
+        {
+          "title": "Social and cultural change",
+          "url": "https://hamrocsit.com/note/seit/social-and-cultural-change/"
+        },
+        {
+          "title": "Understanding development",
+          "url": "https://hamrocsit.com/note/seit/understanding-development/"
+        },
+        {
+          "title": "Process of transformation",
+          "url": "https://hamrocsit.com/note/seit/process-of-transformation/"
+        },
+        {
+          "title": "Ethics and Ethical Analysis",
+          "url": "https://hamrocsit.com/note/seit/ethics-and-ethical-analysis/"
+        },
+        {
+          "title": "Intellectual Property Rights and Computer Technology",
+          "url": "https://hamrocsit.com/note/seit/intellectual-property-rights-and-computer-technology/"
+        },
+        {
+          "title": "Social Context of Computing",
+          "url": "https://hamrocsit.com/note/seit/social-context-of-computing/"
+        },
+        {
+          "title": "Software Issues",
+          "url": "https://hamrocsit.com/note/seit/software-issues/"
+        },
+        {
+          "title": "New Frontiers for Computer Ethics",
+          "url": "https://hamrocsit.com/note/seit/new-frontiers-for-computer-ethics/"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Networking",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/fifth/wn/",
+      "description": "",
+      "chapters": []
+    }
+  ],
+  "sixth": [
+    {
+      "name": "Software Engineering",
+      "code": "CSC364",
+      "url": "https://hamrocsit.com/semester/sixth/se/",
+      "description": "This course familiarizes students with different concepts of software engineering mainly focusing on software process models, agile development, requirements engineering, models, design, implementation, testing, evolution, and software project management.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/se/introduction-to-software-engineering/"
+        },
+        {
+          "title": "Software Processes",
+          "url": "https://hamrocsit.com/note/se/software-processes/"
+        },
+        {
+          "title": "Agile Software Development",
+          "url": "https://hamrocsit.com/note/se/agile-software-development/"
+        },
+        {
+          "title": "Requirements Engineering",
+          "url": "https://hamrocsit.com/note/se/requirements-engineering/"
+        },
+        {
+          "title": "System Modeling",
+          "url": "https://hamrocsit.com/note/se/system-modeling/"
+        },
+        {
+          "title": "Architectural Design",
+          "url": "https://hamrocsit.com/note/se/architectural-design/"
+        },
+        {
+          "title": "Design and Implementation",
+          "url": "https://hamrocsit.com/note/se/design-and-implementation/"
+        },
+        {
+          "title": "Software Testing",
+          "url": "https://hamrocsit.com/note/se/software-testing/"
+        },
+        {
+          "title": "Software Evolution",
+          "url": "https://hamrocsit.com/note/se/software-evolution/"
+        },
+        {
+          "title": "Software Management",
+          "url": "https://hamrocsit.com/note/se/software-management/"
+        }
+      ]
+    },
+    {
+      "name": "E-Governance",
+      "code": "CSC366",
+      "url": "https://hamrocsit.com/semester/sixth/e-governance/",
+      "description": "This course familiarizes students with different concepts of E-Government and E-Governance, different E-Governance models and infrastructure development, E-government security, and data warehousing and data mining for e-governance.",
+      "chapters": [
+        {
+          "title": "Introduction to E-Government and E-Governance",
+          "url": "https://hamrocsit.com/note/e-governance/introduction-to-e-government-and-e-governance/"
+        },
+        {
+          "title": "Models of E-Governance",
+          "url": "https://hamrocsit.com/note/e-governance/models-of-e-governance/"
+        },
+        {
+          "title": "E-Government Infrastructure Development",
+          "url": "https://hamrocsit.com/note/e-governance/e-government-infrastructure-development/"
+        },
+        {
+          "title": "Security for e-Government",
+          "url": "https://hamrocsit.com/note/e-governance/security-for-e-government/"
+        },
+        {
+          "title": "Applications of Data Warehousing and Data Mining in Government",
+          "url": "https://hamrocsit.com/note/e-governance/applications-of-data-warehousing-and-data-mining-in-government/"
+        },
+        {
+          "title": "Case Studies",
+          "url": "https://hamrocsit.com/note/e-governance/case-studies/"
+        }
+      ]
+    },
+    {
+      "name": "NET Centric Computing",
+      "code": "CSC367",
+      "url": "https://hamrocsit.com/semester/sixth/ncc/",
+      "description": "The course covers the concepts of cross-platform web application development using the ASP.NET Core MVC framework using C# programming Language.",
+      "chapters": [
+        {
+          "title": "Language Preliminaries",
+          "url": "https://hamrocsit.com/note/ncc/language-preliminaries/"
+        },
+        {
+          "title": "Introduction to ASP.NET",
+          "url": "https://hamrocsit.com/note/ncc/introduction-to-asp-net/"
+        },
+        {
+          "title": "HTTP and ASP.NET Core",
+          "url": "https://hamrocsit.com/note/ncc/http-and-asp-net-core/"
+        },
+        {
+          "title": "Creating ASP.NET core MVC applications",
+          "url": "https://hamrocsit.com/note/ncc/creating-asp-net-core-mvc-applications/"
+        },
+        {
+          "title": "Working with Database",
+          "url": "https://hamrocsit.com/note/ncc/working-with-database/"
+        },
+        {
+          "title": "State Management on ASP.NET Core Application",
+          "url": "https://hamrocsit.com/note/ncc/state-management-on-asp-net-core-application/"
+        },
+        {
+          "title": "Client-side Development in ASP.NET Core",
+          "url": "https://hamrocsit.com/note/ncc/client-side-development-in-asp-net-core/"
+        },
+        {
+          "title": "Securing in ASP.NET Core Application",
+          "url": "https://hamrocsit.com/note/ncc/securing-in-asp-net-core-application/"
+        },
+        {
+          "title": "Hosting and Deploying ASP.NET Core Application",
+          "url": "https://hamrocsit.com/note/ncc/hosting-and-deploying-asp-net-core-application/"
+        }
+      ]
+    },
+    {
+      "name": "Applied Logic",
+      "code": "CSC369",
+      "url": "https://hamrocsit.com/semester/sixth/applied-logic/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Automation and Robotics",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/ar/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Cognitive Science",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/cog-science/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Computer Hardware Design",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/chd/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "E-Commerce",
+      "code": "CSC370",
+      "url": "https://hamrocsit.com/semester/sixth/e-commerce/",
+      "description": "This course covers the fundamental concepts of E-commerce and E-business models, and components of E-commerce system.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/e-commerce/introduction-5/"
+        },
+        {
+          "title": "E-commerce Business Model",
+          "url": "https://hamrocsit.com/note/e-commerce/e-commerce-business-model/"
+        },
+        {
+          "title": "Electronic Payment System",
+          "url": "https://hamrocsit.com/note/e-commerce/electronic-payment-system/"
+        },
+        {
+          "title": "Building E-commerce System",
+          "url": "https://hamrocsit.com/note/e-commerce/building-e-commerce-system/"
+        },
+        {
+          "title": "Security in E-Commerce",
+          "url": "https://hamrocsit.com/note/e-commerce/security-in-e-commerce/"
+        },
+        {
+          "title": "Digital Marketing",
+          "url": "https://hamrocsit.com/note/e-commerce/digital-marketing/"
+        },
+        {
+          "title": "Optimizing E-commerce Systems",
+          "url": "https://hamrocsit.com/note/e-commerce/optimizing-e-commerce-systems/"
+        }
+      ]
+    },
+    {
+      "name": "Neural Networks",
+      "code": "",
+      "url": "https://hamrocsit.com/semester/sixth/neural-networks/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Technical Writing",
+      "code": "CSC379",
+      "url": "https://hamrocsit.com/semester/sixth/tw/",
+      "description": "This course is designed to develop acquaintance with fundamental concepts of compiler design. The course starts with the basic concepts and also includes different phases of compilers like lexical analysis, syntax analysis, syntax-directed translation, type checking etc. in detail.",
+      "chapters": [
+        {
+          "title": "What Is Technical Writing",
+          "url": "https://hamrocsit.com/note/tw/what-is-technical-writing/"
+        },
+        {
+          "title": "Audience and Purpose",
+          "url": "https://hamrocsit.com/note/tw/audience-and-purpose/"
+        },
+        {
+          "title": "Writing Process",
+          "url": "https://hamrocsit.com/note/tw/writing-process/"
+        },
+        {
+          "title": "Brief Correspondence",
+          "url": "https://hamrocsit.com/note/tw/brief-correspondence/"
+        },
+        {
+          "title": "Document Design and Graphics",
+          "url": "https://hamrocsit.com/note/tw/document-design-and-graphics/"
+        },
+        {
+          "title": "Writing for the Web",
+          "url": "https://hamrocsit.com/note/tw/writing-for-the-web/"
+        },
+        {
+          "title": "Information Reports",
+          "url": "https://hamrocsit.com/note/tw/information-reports/"
+        },
+        {
+          "title": "Employment Communication",
+          "url": "https://hamrocsit.com/note/tw/employment-communication/"
+        },
+        {
+          "title": "Presentations",
+          "url": "https://hamrocsit.com/note/tw/presentations/"
+        },
+        {
+          "title": "Recommendation Reports",
+          "url": "https://hamrocsit.com/note/tw/recommendation-reports/"
+        },
+        {
+          "title": "Proposals",
+          "url": "https://hamrocsit.com/note/tw/proposals/"
+        },
+        {
+          "title": "Ethics in the Workplace",
+          "url": "https://hamrocsit.com/note/tw/ethics-in-the-workplace/"
+        }
+      ]
+    },
+    {
+      "name": "Compiler Design and Construction",
+      "code": "CSC365",
+      "url": "https://hamrocsit.com/semester/sixth/cdc/",
+      "description": "This course is designed to develop acquaintance with fundamental concepts of compiler design. The course starts with the basic concepts and also includes different phases of compilers like lexical analysis, syntax analysis, syntax-directed translation, type checking etc. in detail.",
+      "chapters": [
+        {
+          "title": "Introduction to Compiler",
+          "url": "https://hamrocsit.com/note/cdc/unit-1/"
+        },
+        {
+          "title": "Lexical Analyzer",
+          "url": "https://hamrocsit.com/note/cdc/unit-2/"
+        },
+        {
+          "title": "Symbol Table Design and Runtime Storage Management",
+          "url": "https://hamrocsit.com/note/cdc/unit-3/"
+        },
+        {
+          "title": "Intermediate Code Generator, Code Generator, Optimization and Case studies",
+          "url": "https://hamrocsit.com/note/cdc/unit-4/"
+        }
+      ]
+    }
+  ],
+  "seventh": [
+    {
+      "name": "Advanced Java Programming",
+      "code": "CSC409",
+      "url": "https://hamrocsit.com/semester/seventh/advanced-java/",
+      "description": "This course familiarizes students with basic as well as advanced features of Java Programming Emphasis will be given to GUI and event-driven programming, Database Connectivity, Socket Programming, Servlets and JSP Technology, and Distributed Programming.",
+      "chapters": [
+        {
+          "title": "Programming in Java",
+          "url": "https://hamrocsit.com/note/advanced-java/programming-in-java/"
+        },
+        {
+          "title": "User Interface Components with Swing",
+          "url": "https://hamrocsit.com/note/advanced-java/user-interface-components-with-swing/"
+        },
+        {
+          "title": "Event Handling",
+          "url": "https://hamrocsit.com/note/advanced-java/event-handling/"
+        },
+        {
+          "title": "Database Connectivity",
+          "url": "https://hamrocsit.com/note/advanced-java/database-connectivity/"
+        },
+        {
+          "title": "Network Programming",
+          "url": "https://hamrocsit.com/note/advanced-java/network-programming/"
+        },
+        {
+          "title": "GUI with JavaFX",
+          "url": "https://hamrocsit.com/note/advanced-java/gui-with-javafx/"
+        },
+        {
+          "title": "Servlets and Java Server pages",
+          "url": "https://hamrocsit.com/note/advanced-java/servlets-and-java-server-pages/"
+        },
+        {
+          "title": "RMI and CORBA",
+          "url": "https://hamrocsit.com/note/advanced-java/rmi-and-corba/"
+        }
+      ]
+    },
+    {
+      "name": "Data Warehousing and Data Mining",
+      "code": "CSC410",
+      "url": "https://hamrocsit.com/semester/seventh/data-mining/",
+      "description": "This course introduces advanced aspects of data warehousing and data mining, encompassing the principles, research results and commercial application of the current technologies.",
+      "chapters": [
+        {
+          "title": "Introduction to Data Warehousing",
+          "url": "https://hamrocsit.com/note/data-mining/introduction-to-data-warehousing/"
+        },
+        {
+          "title": "Introduction to Data Mining",
+          "url": "https://hamrocsit.com/note/data-mining/introduction-to-data-mining/"
+        },
+        {
+          "title": "Data Preprocessing",
+          "url": "https://hamrocsit.com/note/data-mining/data-preprocessing/"
+        },
+        {
+          "title": "Data Cube Technology",
+          "url": "https://hamrocsit.com/note/data-mining/data-cube-technology/"
+        },
+        {
+          "title": "Mining Frequent Patterns",
+          "url": "https://hamrocsit.com/note/data-mining/mining-frequent-patterns/"
+        },
+        {
+          "title": "Classification and Prediction",
+          "url": "https://hamrocsit.com/note/data-mining/classification-and-prediction/"
+        },
+        {
+          "title": "Cluster Analysis",
+          "url": "https://hamrocsit.com/note/data-mining/cluster-analysis/"
+        },
+        {
+          "title": "Graph Mining and Social Network Analysis",
+          "url": "https://hamrocsit.com/note/data-mining/graph-mining-and-social-network-analysis/"
+        },
+        {
+          "title": "Mining Spatial, Multimedia, Text and Web Data",
+          "url": "https://hamrocsit.com/note/data-mining/mining-spatial-multimedia-text-and-web-data/"
+        }
+      ]
+    },
+    {
+      "name": "Principles of Management",
+      "code": "MGT411",
+      "url": "https://hamrocsit.com/semester/seventh/pom/",
+      "description": "This course contains The Nature of Organizations, Introduction to Management, Evolution of Management Thought, Environmental Context of Management, Planning and Decision Making, Organizing Function, Leadership, Motivation, Communication, Control and Quality Management, Global Context of Management, Management Trends and Scenario in Nepal.",
+      "chapters": [
+        {
+          "title": "The Nature of Organizations",
+          "url": "https://hamrocsit.com/note/pom/the-nature-of-organizations/"
+        },
+        {
+          "title": "Introduction to Management",
+          "url": "https://hamrocsit.com/note/pom/introduction-to-management/"
+        },
+        {
+          "title": "Evolution of Management Thought",
+          "url": "https://hamrocsit.com/note/pom/evolution-of-management-thought/"
+        },
+        {
+          "title": "Environmental Context of Management",
+          "url": "https://hamrocsit.com/note/pom/environmental-context-of-management/"
+        },
+        {
+          "title": "Planning and Decision Making",
+          "url": "https://hamrocsit.com/note/pom/planning-and-decision-making/"
+        },
+        {
+          "title": "Organizing Function",
+          "url": "https://hamrocsit.com/note/pom/organizing-function/"
+        },
+        {
+          "title": "Leadership & Conflict",
+          "url": "https://hamrocsit.com/note/pom/leadership-conflict/"
+        },
+        {
+          "title": "Motivation",
+          "url": "https://hamrocsit.com/note/pom/motivation/"
+        },
+        {
+          "title": "Communication",
+          "url": "https://hamrocsit.com/note/pom/communication/"
+        },
+        {
+          "title": "Control and Quality Management",
+          "url": "https://hamrocsit.com/note/pom/control-and-quality-management/"
+        },
+        {
+          "title": "Global Context of Management",
+          "url": "https://hamrocsit.com/note/pom/global-context-of-management/"
+        },
+        {
+          "title": "Management Trends and Scenario in Nepal",
+          "url": "https://hamrocsit.com/note/pom/management-trends-and-scenario-in-nepal/"
+        }
+      ]
+    },
+    {
+      "name": "Project Work",
+      "code": "CSC412",
+      "url": "https://hamrocsit.com/semester/seventh/project-work/",
+      "description": "This course covers theoretical and practical concepts needed to develop a real world software system. The course focuses on enabling students with the skills related to software development. The course includes practicing the abilities pertaining to the planning, analysis, design, implementation and testing of software applications.",
+      "chapters": []
+    },
+    {
+      "name": "Database Administrator",
+      "code": "CSC414",
+      "url": "https://hamrocsit.com/semester/seventh/database-administrator/",
+      "description": "This course familiarizes students with different concepts of database administration including DBA Roles and responsibilities, tablespace and storage management, DB backup, restoration and recovery, security, multitenant, and performance tuning.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/database-administrator/introduction-6/"
+        },
+        {
+          "title": "Tablespace and Storage management",
+          "url": "https://hamrocsit.com/note/database-administrator/tablespace-and-storage-management/"
+        },
+        {
+          "title": "Managing Database Objects",
+          "url": "https://hamrocsit.com/note/database-administrator/managing-database-objects/"
+        },
+        {
+          "title": "Database Backup, Restore, and Recovery",
+          "url": "https://hamrocsit.com/note/database-administrator/database-backup-restore-and-recovery/"
+        },
+        {
+          "title": "Database Security and Auditing",
+          "url": "https://hamrocsit.com/note/database-administrator/database-security-and-auditing/"
+        },
+        {
+          "title": "Multitenant Database Architecture",
+          "url": "https://hamrocsit.com/note/database-administrator/multitenant-database-architecture/"
+        },
+        {
+          "title": "Database Tuning",
+          "url": "https://hamrocsit.com/note/database-administrator/database-tuning/"
+        }
+      ]
+    },
+    {
+      "name": "Digital System Design",
+      "code": "CSC417",
+      "url": "https://hamrocsit.com/semester/seventh/digital-system-design/",
+      "description": "This course contains the introductory part of combinational Logic along with the clear concepts of K-Maps and Quine- Mc Cluskey Method. It also introduces sequential networks with flip flops and FSM. Another concept includes FPGA and VHDL and also testing and verification.",
+      "chapters": [
+        {
+          "title": "Unit 1",
+          "url": "https://hamrocsit.com/note/digital-system-design/introduction-of-logic-design-digital-system-and-integration-electronic-design-automation-ic-manufacturing-logic-families-ic-design-techniques-ic-characteristics-fan-out-power-dissipation-prop/"
+        },
+        {
+          "title": "Unit 2",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-2-2/"
+        },
+        {
+          "title": "Unit 3",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-3-2/"
+        },
+        {
+          "title": "Unit 4",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-4-2/"
+        },
+        {
+          "title": "Unit 5",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-5/"
+        },
+        {
+          "title": "Unit 6",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-6/"
+        },
+        {
+          "title": "Unit 7",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-7/"
+        },
+        {
+          "title": "Unit 8",
+          "url": "https://hamrocsit.com/note/digital-system-design/unit-8/"
+        }
+      ]
+    },
+    {
+      "name": "Information Retrieval",
+      "code": "CSC413",
+      "url": "https://hamrocsit.com/semester/seventh/information-retrieval/",
+      "description": "This course familiarizes students with different concepts of information retrieval techniques mainly focused on clustering, classification, search engine, ranking and query operations techniques.",
+      "chapters": [
+        {
+          "title": "Introduction to IR and Web Search",
+          "url": "https://hamrocsit.com/note/information-retrieval/introduction-to-ir-and-web-search/"
+        },
+        {
+          "title": "Text properties, operations and preprocessing",
+          "url": "https://hamrocsit.com/note/information-retrieval/text-properties-operations-and-preprocessing/"
+        },
+        {
+          "title": "Basic IR Models",
+          "url": "https://hamrocsit.com/note/information-retrieval/basic-ir-models/"
+        },
+        {
+          "title": "Evaluation of IR",
+          "url": "https://hamrocsit.com/note/information-retrieval/evaluation-of-ir/"
+        },
+        {
+          "title": "Query Operations and Languages",
+          "url": "https://hamrocsit.com/note/information-retrieval/query-operations-and-languages/"
+        },
+        {
+          "title": "Web Search",
+          "url": "https://hamrocsit.com/note/information-retrieval/web-search/"
+        },
+        {
+          "title": "Text Categorization",
+          "url": "https://hamrocsit.com/note/information-retrieval/text-categorization/"
+        },
+        {
+          "title": "Text Clustering",
+          "url": "https://hamrocsit.com/note/information-retrieval/text-clustering/"
+        },
+        {
+          "title": "Recommender System",
+          "url": "https://hamrocsit.com/note/information-retrieval/recommender-system/"
+        },
+        {
+          "title": "Question Answering",
+          "url": "https://hamrocsit.com/note/information-retrieval/question-answering/"
+        },
+        {
+          "title": "Advanced IR Models",
+          "url": "https://hamrocsit.com/note/information-retrieval/advanced-ir-models/"
+        }
+      ]
+    },
+    {
+      "name": "International Marketing",
+      "code": "MGT418",
+      "url": "https://hamrocsit.com/semester/seventh/international-marketing/",
+      "description": "This course aims to provide an understanding of the process and dynamism of marketing practiced across the international markets.",
+      "chapters": [
+        {
+          "title": "Introduction",
+          "url": "https://hamrocsit.com/note/international-marketing/introduction-7/"
+        },
+        {
+          "title": "International Marketing Environment",
+          "url": "https://hamrocsit.com/note/international-marketing/international-marketing-environment/"
+        },
+        {
+          "title": "International Marketing Research Global Marketing Information System",
+          "url": "https://hamrocsit.com/note/international-marketing/international-marketing-research-global-marketing-information-system/"
+        },
+        {
+          "title": "International Marketing Management",
+          "url": "https://hamrocsit.com/note/international-marketing/international-marketing-management/"
+        },
+        {
+          "title": "Nepal\u2019s International Trade",
+          "url": "https://hamrocsit.com/note/international-marketing/nepals-international-trade/"
+        }
+      ]
+    },
+    {
+      "name": "Network Security",
+      "code": "CSC416",
+      "url": "https://hamrocsit.com/semester/seventh/network-security/",
+      "description": "This course covers the fundamental concepts of network security protocols, wireless security concepts, basics of security in cloud and IoT.",
+      "chapters": [
+        {
+          "title": "Computer Network Security Fundamentals",
+          "url": "https://hamrocsit.com/note/network-security/computer-network-security-fundamentals/"
+        },
+        {
+          "title": "User Authentication",
+          "url": "https://hamrocsit.com/note/network-security/user-authentication/"
+        },
+        {
+          "title": "Transport Level Security",
+          "url": "https://hamrocsit.com/note/network-security/transport-level-security/"
+        },
+        {
+          "title": "Wireless Network Security",
+          "url": "https://hamrocsit.com/note/network-security/wireless-network-security/"
+        },
+        {
+          "title": "Electronic Mail Security",
+          "url": "https://hamrocsit.com/note/network-security/electronic-mail-security/"
+        },
+        {
+          "title": "IP Security",
+          "url": "https://hamrocsit.com/note/network-security/ip-security/"
+        },
+        {
+          "title": "Network Endpoint Security",
+          "url": "https://hamrocsit.com/note/network-security/network-endpoint-security/"
+        },
+        {
+          "title": "Cloud and Internet of Things (IOT) Security",
+          "url": "https://hamrocsit.com/note/network-security/cloud-and-internet-of-things-iot-security/"
+        }
+      ]
+    },
+    {
+      "name": "Software Project Management",
+      "code": "CSC415",
+      "url": "https://hamrocsit.com/semester/seventh/software-project-management/",
+      "description": "This course familiarizes students with different concepts of software project management mainly focusing on project analysis, scheduling, resource allocation, risk analysis, monitoring, control and software configuration management.",
+      "chapters": [
+        {
+          "title": "Introduction to Software Project Management",
+          "url": "https://hamrocsit.com/note/software-project-management/introduction-to-software-project-management/"
+        },
+        {
+          "title": "Project Analysis",
+          "url": "https://hamrocsit.com/note/software-project-management/project-analysis/"
+        },
+        {
+          "title": "Activity Planning and Scheduling",
+          "url": "https://hamrocsit.com/note/software-project-management/activity-planning-and-scheduling/"
+        },
+        {
+          "title": "Risk Management",
+          "url": "https://hamrocsit.com/note/software-project-management/risk-management/"
+        },
+        {
+          "title": "Resource Allocation",
+          "url": "https://hamrocsit.com/note/software-project-management/resource-allocation/"
+        },
+        {
+          "title": "Monitoring and Control",
+          "url": "https://hamrocsit.com/note/software-project-management/monitoring-and-control/"
+        },
+        {
+          "title": "Managing Contracts and people",
+          "url": "https://hamrocsit.com/note/software-project-management/managing-contracts-and-people/"
+        },
+        {
+          "title": "Software quality assurance and testing",
+          "url": "https://hamrocsit.com/note/software-project-management/software-quality-assurance-and-testing/"
+        },
+        {
+          "title": "Software Configuration Management",
+          "url": "https://hamrocsit.com/note/software-project-management/software-configuration-management/"
+        }
+      ]
+    }
+  ],
+  "eight": [
+    {
+      "name": "Advanced Database",
+      "code": "CSC461",
+      "url": "https://hamrocsit.com/semester/eight/advanced-database/",
+      "description": "This course includes advanced concept of database system. The main topics covered are advanced concept of relational data model, Extended E-R model, new database management technologies, query optimization, NoSQL database and big data processing techniques.",
+      "chapters": [
+        {
+          "title": "Enhanced Entity Relationship Model and Relational Model",
+          "url": "https://hamrocsit.com/note/advanced-database/enhanced-entity-relationship-model-and-relational-model/"
+        },
+        {
+          "title": "Object and Object Relational Databases",
+          "url": "https://hamrocsit.com/note/advanced-database/object-and-object-relational-databases/"
+        },
+        {
+          "title": "Query Processing and Optimization",
+          "url": "https://hamrocsit.com/note/advanced-database/query-processing-and-optimization/"
+        },
+        {
+          "title": "Distributed Databases, NOSQL Systems, and BigData",
+          "url": "https://hamrocsit.com/note/advanced-database/distributed-databases-nosql-systems-and-bigdata/"
+        },
+        {
+          "title": "Advanced Database Models, Systems, and Applications",
+          "url": "https://hamrocsit.com/note/advanced-database/advanced-database-models-systems-and-applications/"
+        }
+      ]
+    },
+    {
+      "name": "Internship",
+      "code": "CSC462",
+      "url": "https://hamrocsit.com/semester/eight/internship/",
+      "description": "This course covers the real-world practice in industry. It includes using theoretical and practical knowledge while working in industry together with the understanding of industry culture.",
+      "chapters": [
+        {
+          "title": "Internship Guidelines",
+          "url": "https://hamrocsit.com/note/internship/internship-guidelines/"
+        },
+        {
+          "title": "Internship Report Content",
+          "url": "https://hamrocsit.com/note/internship/internship-report-content/"
+        },
+        {
+          "title": "Internship Report Sample",
+          "url": "https://hamrocsit.com/note/internship/internship-report-sample/"
+        },
+        {
+          "title": "Internship Sample Presentation",
+          "url": "https://hamrocsit.com/note/internship/internship-sample-presentation/"
+        }
+      ]
+    },
+    {
+      "name": "Advanced Networking with IPV6",
+      "code": "CSC463",
+      "url": "https://hamrocsit.com/semester/eight/advanced-networking-with-ipv6/",
+      "description": "The course covers principles underlying IPv6 Network Design, Internet routing protocols (unicast, multicast and unidirectional) with IPv6, algorithmic issues related to the Internet, IPv6 Migration, measurement and performance, next generation Internet (IPv6, QoS) and applications.",
+      "chapters": [
+        {
+          "title": "Event Handling",
+          "url": "https://hamrocsit.com/note/advanced-java/event-handling/"
+        }
+      ]
+    },
+    {
+      "name": "Decision Support System and Expert System",
+      "code": "CSC469",
+      "url": "https://hamrocsit.com/semester/eight/decision-support-system-and-expert-system/",
+      "description": "This course is a study uses of artificial intelligence in business decision making. Emphasis will be given in business decision making process, design and development of decision support systems and expert systems.",
+      "chapters": [
+        {
+          "title": "Business Decision Making",
+          "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/business-decision-making/"
+        },
+        {
+          "title": "Designing, Developing, and Evaluating DSS Systems",
+          "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/designing-developing-and-evaluating-dss-systems/"
+        },
+        {
+          "title": "Building DSS Systems",
+          "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/building-dss-systems/"
+        },
+        {
+          "title": "Expert Systems",
+          "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/expert-systems/"
+        },
+        {
+          "title": "Fuzzy Expert Systems",
+          "url": "https://hamrocsit.com/note/decision-support-system-and-expert-system/fuzzy-expert-systems/"
+        }
+      ]
+    },
+    {
+      "name": "Distributed and Object-Oriented Database",
+      "code": "CSC466",
+      "url": "https://hamrocsit.com/semester/eight/distributed-and-object-oriented-database/",
+      "description": "This course aims to discuss concepts of distributed and object oriented database management systems. Main focus is given to basic concepts of DDBMS, distributed database design, distributed query processing, distributed concurrency control, concepts of OODBMS, and language and design of object oriented database.",
+      "chapters": []
+    },
+    {
+      "name": "Distributed Networking",
+      "code": "CSC464",
+      "url": "https://hamrocsit.com/semester/eight/distributed-networking/",
+      "description": "The course covers overview of distributed networking model, client server model, communication models, internetworking, interprocess communication, fault tolerance, reliability, replication, security issues and new developments in distributed networking.",
+      "chapters": []
+    },
+    {
+      "name": "Embedded Systems Programming",
+      "code": "CSC473",
+      "url": "https://hamrocsit.com/semester/eight/embedded-systems-programming/",
+      "description": "The course covers ARM based embedded system overview \u2013 assembly level programming, efficient C programming and embedded OS.",
+      "chapters": []
+    },
+    {
+      "name": "Game Technology",
+      "code": "CSC465",
+      "url": "https://hamrocsit.com/semester/eight/game-technology/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Geographical Information System",
+      "code": "CSC468",
+      "url": "https://hamrocsit.com/semester/eight/geographical-information-system/",
+      "description": "The course covers about spatial data structure, modeling and database design, different techniques for capturing the real world, spatial data manipulation, analysis and visualization, spatial data infrastructure and data standardization, overview of open GIS and open source GIS data.",
+      "chapters": []
+    },
+    {
+      "name": "International Business Management",
+      "code": "MGT474",
+      "url": "https://hamrocsit.com/semester/eight/international-business-management/",
+      "description": "This course contains globalization and international business, global economy and regional, international trade and investment theories and practices, national difference in political, economic and socio-cultural environment, strategies for international business and international financial environment to provide the basic knowledge to students.",
+      "chapters": [
+        {
+          "title": "Globalization and International Business",
+          "url": "https://hamrocsit.com/note/international-business-management/globalization-and-international-business/"
+        },
+        {
+          "title": "Global Economy and Regional Economy",
+          "url": "https://hamrocsit.com/note/international-business-management/global-economy-and-regional-economy/"
+        },
+        {
+          "title": "National Differences in Socio-cultural Environment",
+          "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-socio-cultural-environment/"
+        },
+        {
+          "title": "National Differences in Political Environment",
+          "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-political-environment/"
+        },
+        {
+          "title": "National Differences in Economic Environment",
+          "url": "https://hamrocsit.com/note/international-business-management/national-differences-in-economic-environment/"
+        },
+        {
+          "title": "International Financial Environment",
+          "url": "https://hamrocsit.com/note/international-business-management/international-financial-environment/"
+        },
+        {
+          "title": "Strategies for IB",
+          "url": "https://hamrocsit.com/note/international-business-management/strategies-for-ib/"
+        },
+        {
+          "title": "Functional Management and Operation of IB",
+          "url": "https://hamrocsit.com/note/international-business-management/functional-management-and-operation-of-ib/"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Cloud Computing",
+      "code": "CSC467",
+      "url": "https://hamrocsit.com/semester/eight/introduction-to-cloud-computing/",
+      "description": "This course covers different concepts of cloud computing including introduction, architectures, cloud virtualization, programming models, security, and platforms and applications of cloud computing.",
+      "chapters": [
+        {
+          "title": "Introduction to Cloud Computing",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/introduction-to-cloud-computing/"
+        },
+        {
+          "title": "Cloud Computing Architecture",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-computing-architecture/"
+        },
+        {
+          "title": "Cloud Virtualization Technology",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-virtualization-technology/"
+        },
+        {
+          "title": "Cloud Programming Models",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-programming-models/"
+        },
+        {
+          "title": "Cloud Security",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-security/"
+        },
+        {
+          "title": "Cloud Platforms and Applications",
+          "url": "https://hamrocsit.com/note/introduction-to-cloud-computing/cloud-platforms-and-applications/"
+        }
+      ]
+    },
+    {
+      "name": "Mobile Application Development",
+      "code": "CSC470",
+      "url": "https://hamrocsit.com/semester/eight/mobile-application-development/",
+      "description": "",
+      "chapters": []
+    },
+    {
+      "name": "Network and System Administration",
+      "code": "CSC472",
+      "url": "https://hamrocsit.com/semester/eight/network-and-system-administration/",
+      "description": "The course covers different concepts of network and system administration including subjects ranging from initial installation of OS to day-to-day administrative tasks such as Network and Server Configurations, management of user accounts and disk space, and even imparting the trouble-shooting skills future system administrators will need to cope with unexpected behavior.",
+      "chapters": []
+    },
+    {
+      "name": "Real Time Systems",
+      "code": "CSC471",
+      "url": "https://hamrocsit.com/semester/eight/real-time-systems/",
+      "description": "This course familiarizes students with different concepts of real time systems mainly focusing on scheduling, access control, memory management, optimization, and real time communications.",
+      "chapters": []
+    }
+  ]
+}

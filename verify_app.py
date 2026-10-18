@@ -22,7 +22,7 @@ def verify_all():
     # ------------------------------------------------------------------ #
     print("\n[TEST 1] Testing 'quick sort' without an API key...")
     res1 = chat_backend.answer("quick sort", [])
-    assert res1.source == "offline", f"Expected offline source, got {res1.source}"
+    assert "tier1" in res1.source or res1.source == "offline", f"Expected tier1/offline source, got {res1.source}"
     assert not res1.error, "Unexpected error in response"
     
     # Assertions on required content
@@ -31,12 +31,13 @@ def verify_all():
     assert "QUICKSORT" in res1.answer or "def quicksort" in res1.answer, "Missing pseudocode"
     assert "O(n log n)" in res1.answer, "Missing O(n log n) complexity"
     assert "O(n²)" in res1.answer or "O(n^2)" in res1.answer, "Missing O(n^2) worst-case"
+    assert "HamroCSIT" in res1.answer, "Missing HamroCSIT source citation"
     
     # Assertions on absence of placeholders
     assert "No API key is configured" not in res1.answer, "Leaked API key message"
     assert "Demo Mode" not in res1.answer or "TU CSIT Study Assistant" in res1.answer, "Returned placeholder template"
     assert "Select Google Gemini or Groq" not in res1.answer, "Leaked provider selector instructions"
-    print(" -> PASS: QuickSort returned rich educational response without placeholders.")
+    print(" -> PASS: QuickSort returned rich educational response with HamroCSIT source citation.")
 
     # ------------------------------------------------------------------ #
     # Gate 2: Intent-specific questions

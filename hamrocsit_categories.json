@@ -1,0 +1,342 @@
+{
+  "advanced-database": {
+    "id": 112,
+    "name": "Advanced Database",
+    "count": 55
+  },
+  "advanced-java": {
+    "id": 113,
+    "name": "Advanced Java Programming",
+    "count": 99
+  },
+  "advanced-networking-with-ipv6": {
+    "id": 114,
+    "name": "Advanced Networking with IPV6",
+    "count": 2
+  },
+  "applied-logic": {
+    "id": 154,
+    "name": "Applied Logic",
+    "count": 1
+  },
+  "ai": {
+    "id": 115,
+    "name": "Artificial Intelligence",
+    "count": 109
+  },
+  "c-program": {
+    "id": 116,
+    "name": "C Programming",
+    "count": 134
+  },
+  "cdc": {
+    "id": 117,
+    "name": "Compiler Design and Construction",
+    "count": 104
+  },
+  "csc208": {
+    "id": 118,
+    "name": "Computer Architecture",
+    "count": 117
+  },
+  "csc209": {
+    "id": 119,
+    "name": "Computer Graphics",
+    "count": 102
+  },
+  "cn": {
+    "id": 120,
+    "name": "Computer Networks",
+    "count": 142
+  },
+  "cryptography": {
+    "id": 121,
+    "name": "Cryptography",
+    "count": 102
+  },
+  "dsa": {
+    "id": 122,
+    "name": "Data Structure and Algorithm",
+    "count": 135
+  },
+  "data-mining": {
+    "id": 123,
+    "name": "Data Warehousing and Data Mining",
+    "count": 67
+  },
+  "database-administrator": {
+    "id": 158,
+    "name": "Database Administrator",
+    "count": 10
+  },
+  "dbms": {
+    "id": 124,
+    "name": "Database Management System",
+    "count": 132
+  },
+  "decision-support-system-and-expert-system": {
+    "id": 125,
+    "name": "Decision Support System and Expert System",
+    "count": 31
+  },
+  "daa": {
+    "id": 126,
+    "name": "Design and Analysis of Algorithms",
+    "count": 85
+  },
+  "dl": {
+    "id": 127,
+    "name": "Digital Logic",
+    "count": 99
+  },
+  "digital-system-design": {
+    "id": 159,
+    "name": "Digital System Design",
+    "count": 20
+  },
+  "ds": {
+    "id": 128,
+    "name": "Discrete Structure",
+    "count": 109
+  },
+  "distributed-and-object-oriented-database": {
+    "id": 129,
+    "name": "Distributed and Object-Oriented Database",
+    "count": 2
+  },
+  "distributed-networking": {
+    "id": 130,
+    "name": "Distributed Networking",
+    "count": 3
+  },
+  "e-commerce": {
+    "id": 160,
+    "name": "E-Commerce",
+    "count": 72
+  },
+  "e-governance": {
+    "id": 131,
+    "name": "E-Governance",
+    "count": 100
+  },
+  "eight": {
+    "id": 83,
+    "name": "Eight Semester",
+    "count": 149
+  },
+  "elective-i": {
+    "id": 132,
+    "name": "Elective I",
+    "count": 1
+  },
+  "embedded-systems-programming": {
+    "id": 86,
+    "name": "Embedded Systems Programming",
+    "count": 1
+  },
+  "fifth": {
+    "id": 87,
+    "name": "Fifth Semester",
+    "count": 210
+  },
+  "first": {
+    "id": 8,
+    "name": "First Semester",
+    "count": 264
+  },
+  "fourth": {
+    "id": 88,
+    "name": "Fourth Semester",
+    "count": 339
+  },
+  "game-technology": {
+    "id": 89,
+    "name": "Game Technology",
+    "count": 2
+  },
+  "geographical-information-system": {
+    "id": 90,
+    "name": "Geographical Information System",
+    "count": 2
+  },
+  "image-processing": {
+    "id": 135,
+    "name": "Image Processing",
+    "count": 47
+  },
+  "information-retrieval": {
+    "id": 136,
+    "name": "Information Retrieval",
+    "count": 25
+  },
+  "international-business-management": {
+    "id": 91,
+    "name": "International Business Management",
+    "count": 91
+  },
+  "international-marketing": {
+    "id": 137,
+    "name": "International Marketing",
+    "count": 85
+  },
+  "internship": {
+    "id": 92,
+    "name": "Internship",
+    "count": 5
+  },
+  "introduction-to-cloud-computing": {
+    "id": 93,
+    "name": "Introduction to Cloud Computing",
+    "count": 73
+  },
+  "iit": {
+    "id": 94,
+    "name": "Introduction to Information Technology",
+    "count": 109
+  },
+  "math-i": {
+    "id": 95,
+    "name": "Mathematics I",
+    "count": 152
+  },
+  "mathii": {
+    "id": 139,
+    "name": "Mathematics II",
+    "count": 134
+  },
+  "microprocessor": {
+    "id": 140,
+    "name": "Microprocessor",
+    "count": 88
+  },
+  "mobile-application-development": {
+    "id": 96,
+    "name": "Mobile Application Development",
+    "count": 1
+  },
+  "multimedia": {
+    "id": 142,
+    "name": "Multimedia Computing",
+    "count": 52
+  },
+  "ncc": {
+    "id": 143,
+    "name": "NET Centric Computing",
+    "count": 85
+  },
+  "network-and-system-administration": {
+    "id": 97,
+    "name": "Network and System Administration",
+    "count": 1
+  },
+  "network-security": {
+    "id": 144,
+    "name": "Network Security",
+    "count": 36
+  },
+  "csc207": {
+    "id": 146,
+    "name": "Numerical Method",
+    "count": 108
+  },
+  "oops": {
+    "id": 147,
+    "name": "Object-Oriented Programming",
+    "count": 106
+  },
+  "os": {
+    "id": 314,
+    "name": "Operating System",
+    "count": 157
+  },
+  "physics": {
+    "id": 99,
+    "name": "Physics",
+    "count": 138
+  },
+  "pom": {
+    "id": 148,
+    "name": "Principles of Management",
+    "count": 103
+  },
+  "project-work": {
+    "id": 149,
+    "name": "Project Work",
+    "count": 1
+  },
+  "real-time-systems": {
+    "id": 100,
+    "name": "Real Time Systems",
+    "count": 1
+  },
+  "second": {
+    "id": 101,
+    "name": "Second Semester",
+    "count": 167
+  },
+  "seventh": {
+    "id": 102,
+    "name": "Seventh Semester",
+    "count": 386
+  },
+  "sm": {
+    "id": 103,
+    "name": "Simulation and Modeling",
+    "count": 99
+  },
+  "sixth": {
+    "id": 104,
+    "name": "Sixth Semester",
+    "count": 475
+  },
+  "seit": {
+    "id": 150,
+    "name": "Society and Ethics in Information Technology",
+    "count": 48
+  },
+  "se": {
+    "id": 105,
+    "name": "Software Engineering",
+    "count": 109
+  },
+  "software-project-management": {
+    "id": 151,
+    "name": "Software Project Management",
+    "count": 76
+  },
+  "stat-i": {
+    "id": 106,
+    "name": "Statistics I",
+    "count": 108
+  },
+  "stat-ii": {
+    "id": 152,
+    "name": "Statistics II",
+    "count": 115
+  },
+  "sad": {
+    "id": 107,
+    "name": "System Analysis and Design",
+    "count": 90
+  },
+  "tw": {
+    "id": 108,
+    "name": "Technical Writing",
+    "count": 125
+  },
+  "toc": {
+    "id": 109,
+    "name": "Theory of Computation",
+    "count": 121
+  },
+  "third": {
+    "id": 110,
+    "name": "Third Semester",
+    "count": 193
+  },
+  "web-tech": {
+    "id": 111,
+    "name": "Web Technology",
+    "count": 96
+  }
+}
