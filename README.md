@@ -1,6 +1,6 @@
-# 🎓 AI CSIT Study & Lecture Notes Assistant
+# 🎓 TU BSc CSIT Study Assistant & Learning Platform
 
-An intelligent study companion engineered for **BSc CSIT students** (Tribhuvan University) to analyze lecture notes, summarize syllabi, generate practice exam question papers, and query course concepts using modern Large Language Models (LLMs).
+A comprehensive, student-friendly learning platform for **Tribhuvan University (TU) BSc CSIT students**, inspired by the information architecture, curriculum hierarchy, and usefulness of [HamroCSIT](https://hamrocsit.com/).
 
 Developed by **[Samyog Sapkota](https://github.com/hola-mundo999)** · *BSc CSIT, Prime College · PR Director, Prime IT Club*.
 
@@ -8,18 +8,23 @@ Developed by **[Samyog Sapkota](https://github.com/hola-mundo999)** · *BSc CSIT
 
 ## 🌟 Key Features
 
-1. **📄 PDF Lecture Parsing & Chunking:**
-   - Extracts and structures text from semester lecture PDFs, syllabus documents, and past board question papers.
-2. **💬 Context-Grounded Q&A Chat:**
-   - Answers student queries based strictly on the provided lecture context to avoid hallucinations.
-   - Generates code snippets in **C**, **C++**, and **Python** with complexity analysis.
-3. **📝 TU-Style Exam Paper Generator:**
-   - Automatically generates 5+ practice exam questions with complete **Model Answers**, marking rubrics, and step-by-step solutions.
-   - Includes one-click download of the exam paper as a `.txt` study sheet.
-4. **⚡ Rapid Revision & Flashcard Engine:**
-   - Summarizes high-yield definitions, mathematical formulas, and algorithmic time/space complexities ($\mathcal{O}(n)$).
-5. **🔌 Multi-Model AI Routing:**
-   - Seamlessly switch between **Google Gemini (2.5 Flash)**, **Groq (Llama-3.3-70B)**, or an instant offline **Demo Mode**.
+1. **📚 Semester & Course Curriculum (Semesters 1 to 8):**
+   - Full TU course breakdown across all 8 semesters with official course codes (`CSC206`, `CSC260`, etc.), credit hours, and syllabi.
+2. **📖 Curated High-Yield Study Guides:**
+   - Academic explanations with definitions, step-by-step algorithms, worked numerical examples, pseudocode, Python/C++ implementations, time/space complexity proofs, and TU exam preparation points.
+3. **💬 Persistent Floating AI Study Tutor:**
+   - Accessible from the bottom-right corner across all views.
+   - Provides instant academic explanations, simple language (ELI5) analogies, mathematical worst-case derivations, side-by-side concept comparisons, and model TU exam practice questions.
+   - Preserves conversational context across follow-up queries.
+4. **🔒 Secure Server-Side AI Architecture:**
+   - Zero API key configuration exposed to students.
+   - Automatically utilizes server-side AI providers (Google Gemini or Groq) when configured by administrators via environment variables.
+   - Features a rich, deterministic offline knowledge engine that answers CSIT queries out-of-the-box without requiring any API keys.
+5. **📝 TU Board Exam Question Bank & Prep Generator:**
+   - Authentic past board exam questions from TU examinations.
+   - One-click practice exam generator with model answers, rubrics, and downloadable study sheets (`.txt`).
+6. **📄 Lecture Document Parsing & Chunking:**
+   - Upload semester lecture PDFs or notes to extract text, inspect page statistics, and receive context-grounded answers with page citations.
 
 ---
 
@@ -28,10 +33,12 @@ Developed by **[Samyog Sapkota](https://github.com/hola-mundo999)** · *BSc CSIT
 ```mermaid
 flowchart TD
     User["👨‍🎓 CSIT Student"] --> UI["Streamlit Frontend (app.py)"]
-    UI --> PDF["PDF Processor (pdf_processor.py)<br>pypdf text extraction & chunking"]
-    PDF --> Engine["AI Engine (ai_engine.py)<br>Academic Prompt Engineering"]
-    Engine --> LLM["LLM Providers<br>(Google Gemini / Groq Llama 3 / Demo)"]
-    LLM --> UI
+    UI --> Nav["Semester & Subject Explorer (Sem 1-8)<br>Course Codes, Syllabi & Past Papers"]
+    UI --> FloatChat["Floating AI Study Chatbox<br>(Bottom-Right Corner)"]
+    FloatChat --> Backend["AI Backend (ai_backend.py)<br>Secure Server-Side Routing"]
+    Backend -->|Key Present| CloudLLM["Server-Side LLMs<br>(Google Gemini / Groq)"]
+    Backend -->|No Key / Fallback| KB["Curated CSIT Knowledge Base (knowledge_base.py)<br>Intent Recognition & Context Engine"]
+    UI --> PDF["PDF Processor (pdf_processor.py)<br>pypdf Extraction & Page Citations"]
 ```
 
 ---
@@ -42,7 +49,7 @@ flowchart TD
 - **Frontend / Framework:** [Streamlit](https://streamlit.io/)
 - **Document Processing:** [pypdf](https://pypi.org/project/pypdf/)
 - **AI Integrations:** Google GenAI SDK (`google-genai`), Groq SDK (`groq`)
-- **Version Control:** Git & GitHub
+- **Testing:** [pytest](https://pytest.org/)
 
 ---
 
@@ -75,27 +82,37 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The application will launch in your browser at `http://localhost:8501`.
+The application will launch at `http://localhost:8501`.
 
 ---
 
-## 🔑 API Keys (Optional)
-The application includes a built-in **Demo Mode** out of the box! To enable live generation:
-- Get a free Gemini key at: [Google AI Studio](https://aistudio.google.com/)
-- Get a free Groq key at: [Groq Console](https://console.groq.com/)
-- Paste the key directly in the sidebar settings.
+## ⚙️ Server-Side AI Configuration (Optional)
+
+The application works completely **offline out-of-the-box** using its built-in CSIT knowledge engine. Students never need to provide personal API keys.
+
+To enable live LLM generation on the server or deployment host:
+
+```bash
+# Linux / macOS
+export GEMINI_API_KEY="your-gemini-key"
+# or
+export GROQ_API_KEY="your-groq-key"
+
+# Windows PowerShell
+$env:GEMINI_API_KEY="your-gemini-key"
+# or
+$env:GROQ_API_KEY="your-groq-key"
+```
 
 ---
 
 ## 🧪 Testing
 
+Run the automated test suite covering PDF processing, offline fallback, QuickSort regression, intent recognition, and conversational context retention:
+
 ```bash
-pip install -r requirements.txt
 pytest
 ```
-
-The test suite covers PDF extraction, text chunking, deterministic Demo Mode responses,
-keyword-based context selection with page citations, and exam/flashcard generation.
 
 ---
 
@@ -105,6 +122,4 @@ keyword-based context selection with page citations, and exam/flashcard generati
 - **GitHub:** [@hola-mundo999](https://github.com/hola-mundo999)
 - **LinkedIn:** [linkedin.com/in/samyogsapkota](https://www.linkedin.com/in/samyogsapkota/)
 - **College:** Prime College, Khusibu, Kathmandu
-## Demo
-
-[Live Demo (Streamlit)](https://ai-csit-study-assistant.streamlit.app)
+- **Live Demo:** [https://ai-csit-study-assistant.streamlit.app](https://ai-csit-study-assistant.streamlit.app)

@@ -1,13 +1,13 @@
-"""Secure AI backend for the CSIT Study Assistant.
+"""Secure AI backend for the TU BSc CSIT Study Assistant.
 
-Handles model selection and credentials entirely server-side. Provider secrets are
-read from environment variables only and are never returned to the frontend. The
-student-facing UI never sees an API key input, provider selector, or any raw
-exception.
+Handles model selection, server-side credential management, and graceful offline fallback.
+Provider secrets are read strictly from server-side environment variables and are never
+returned to the client or embedded in client bundles. The student-facing UI never sees
+raw developer configuration, API key input fields, or raw tracebacks.
 """
 
 import os
-from typing import Optional, Tuple
+from typing import List, Optional
 
 from knowledge_base import kb
 
@@ -16,12 +16,12 @@ class AIChatResult:
     def __init__(
         self,
         answer: str,
-        source: str,
+        source: str,  # 'offline', 'gemini', 'groq', 'error'
         grounded_in_upload: bool = False,
         error: bool = False,
     ):
         self.answer = answer
-        self.source = source  # 'offline', 'gemini', 'groq', 'error'
+        self.source = source
         self.grounded_in_upload = grounded_in_upload
         self.error = error
 
@@ -31,166 +31,275 @@ class AIChatBackend:
     Server-side AI chat backend.
 
     Responsibilities:
-      - Route to the configured provider (Gemini / Groq) using server-side env vars.
-      - Fall back to the offline knowledge base when no provider is configured or
-        when the provider is unavailable.
-      - Never leak provider credentials, raw exceptions, or env-var names to the UI.
-      - Keep conversation context for follow-up questions.
+      - Route to live AI providers (Google Gemini / Groq) using server-side env vars only.
+      - Seamlessly fall back to the curated offline knowledge base when no provider is
+        configured or if the live provider encounters rate limits or connection errors.
+      - Never expose provider secrets, internal exceptions, or environment variable names.
+      - Maintain conversational context for follow-up questions.
     """
 
     def __init__(self):
-        self.provider = os.getenv("CSIT_AI_PROVIDER", "offline").lower()
         self.gemini_api_key = os.getenv("GEMINI_API_KEY")
         self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.preferred_provider = os.getenv("CSIT_AI_PROVIDER", "").lower()
+        self._effective_provider = self._resolve_provider()
+
+    def reload_config(self):
+        """Reload configuration from environment variables."""
+        self.gemini_api_key = os.getenv("GEMINI_API_KEY")
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.preferred_provider = os.getenv("CSIT_AI_PROVIDER", "").lower()
         self._effective_provider = self._resolve_provider()
 
     def _resolve_provider(self) -> str:
-        if self.provider == "gemini" and self.gemini_api_key:
+        if self.preferred_provider == "gemini" and self.gemini_api_key:
             return "gemini"
-        if self.provider == "groq" and self.groq_api_key:
+        if self.preferred_provider == "groq" and self.groq_api_key:
+            return "groq"
+        # Auto-detect if preference not explicitly set
+        if self.gemini_api_key:
+            return "gemini"
+        if self.groq_api_key:
             return "groq"
         return "offline"
 
     def is_live(self) -> bool:
         return self._effective_provider in ("gemini", "groq")
 
-    def configured_provider_label(self) -> Optional[str]:
-        labels = {"gemini": "Google Gemini", "groq": "Groq"}
-        return labels.get(self._effective_provider)
+    def provider_status_label(self) -> str:
+        if self._effective_provider == "gemini":
+            return "Google Gemini (Server-side)"
+        if self._effective_provider == "groq":
+            return "Groq Llama 3 (Server-side)"
+        return "Offline Knowledge Engine (Active)"
 
     def answer(
         self,
         question: str,
-        conversation_history: list,
+        conversation_history: Optional[List[dict]] = None,
         uploaded_context: Optional[str] = None,
         uploaded_pages: Optional[list] = None,
+        subject: str = "General CSIT",
     ) -> AIChatResult:
         if not question or not question.strip():
             return AIChatResult(
-                "Please type a question.", source="error", error=True
+                "Please type a question before submitting.", source="error", error=True
             )
 
         question = question.strip()
+        history = conversation_history or []
 
-        # 1. Try offline knowledge base first for common CSIT topics.
-        topic = kb.search_topics(question)
-        topic = topic[0] if topic else None
-        if topic:
-            answer = self._format_topic(topic, uploaded_context=uploaded_context)
-            return AIChatResult(
-                answer=answer,
-                source="offline",
-                grounded_in_upload=bool(uploaded_context),
-            )
-
-        # 2. If the user uploaded notes, ground the answer in them via the live
-        #    provider (or offline keyword matching if provider unavailable).
-        if uploaded_context:
-            if self._effective_provider == "gemini":
-                return self._call_gemini(
-                    question, conversation_history, uploaded_context, uploaded_pages
-                )
-            if self._effective_provider == "groq":
-                return self._call_groq(
-                    question, conversation_history, uploaded_context, uploaded_pages
-                )
-            # No provider: answer from uploaded notes using simple keyword matching.
-            return self._offline_from_notes(
-                question, uploaded_context, uploaded_pages
-            )
-
-        # 3. No topic match and no upload: try live provider if configured.
+        # 1. If a live provider is configured, attempt live generation
         if self._effective_provider == "gemini":
-            return self._call_gemini(question, conversation_history)
-        if self._effective_provider == "groq":
-            return self._call_groq(question, conversation_history)
+            res = self._call_gemini(
+                question, history, uploaded_context, uploaded_pages, subject=subject
+            )
+            if not res.error:
+                return res
 
-        # 4. Final fallback: honest, useful offline response.
+        elif self._effective_provider == "groq":
+            res = self._call_groq(
+                question, history, uploaded_context, uploaded_pages, subject=subject
+            )
+            if not res.error:
+                return res
+
+        # 2. Uploaded Document Question in Offline Mode:
+        # If user explicitly asked about uploaded notes and notes are present
+        if uploaded_context and any(
+            w in question.lower()
+            for w in ("uploaded", "notes", "lecture", "pdf", "page", "slide", "chapter in my")
+        ):
+            return self._offline_from_notes(question, uploaded_context, uploaded_pages)
+
+        # 3. Standard Offline Knowledge Engine
+        # Handles intent recognition, simple language, worst-case proofs, code, comparisons, practice questions
+        answer_text = kb.answer_query(
+            question,
+            history=history,
+            subject=subject,
+            uploaded_context=uploaded_context,
+        )
         return AIChatResult(
-            answer=self._offline_general(question),
+            answer=answer_text,
             source="offline",
+            grounded_in_upload=bool(uploaded_context),
         )
 
-    # ------------------------------------------------------------------ #
-    # Offline topic formatting
-    # ------------------------------------------------------------------ #
-    def _format_topic(self, topic, uploaded_context: Optional[str] = None) -> str:
+    def generate_exam_prep(
+        self,
+        subject: str = "Data Structures and Algorithms",
+        num_questions: int = 5,
+        uploaded_context: Optional[str] = None,
+        uploaded_pages: Optional[list] = None,
+    ) -> str:
+        """Generates TU-style practice examination questions with rubrics and model answers."""
+        num_questions = max(3, min(8, int(num_questions)))
+
+        if self._effective_provider == "gemini":
+            try:
+                from google import genai
+
+                client = genai.Client(api_key=self.gemini_api_key)
+                prompt = (
+                    f"You are a Tribhuvan University BSc CSIT professor for {subject}. "
+                    f"Create a practice exam paper with exactly {num_questions} questions, "
+                    f"including model answers, mark distributions (e.g. [6 Marks]), and step-by-step solutions.\n\n"
+                    f"Context:\n{uploaded_context[:8000] if uploaded_context else 'Standard TU CSIT Syllabus'}"
+                )
+                resp = client.models.generate_content(
+                    model="gemini-2.5-flash", contents=prompt
+                )
+                if resp.text:
+                    return resp.text + "\n\n---\n*Generated by Google Gemini (Server-side)*"
+            except Exception:
+                pass
+
+        if self._effective_provider == "groq":
+            try:
+                from groq import Groq
+
+                client = Groq(api_key=self.groq_api_key)
+                prompt = (
+                    f"You are a Tribhuvan University BSc CSIT professor for {subject}. "
+                    f"Create a practice exam paper with exactly {num_questions} questions, "
+                    f"including model answers, mark distributions, and step-by-step solutions."
+                )
+                chat = client.chat.completions.create(
+                    model="llama-3.3-70b-versatile",
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.3,
+                )
+                if chat.choices[0].message.content:
+                    return chat.choices[0].message.content + "\n\n---\n*Generated by Groq (Server-side)*"
+            except Exception:
+                pass
+
+        # Offline exam generator
+        return kb._generate_sorting_practice_questions()
+
+    def generate_flashcards(
+        self,
+        subject: str = "Data Structures and Algorithms",
+        uploaded_context: Optional[str] = None,
+    ) -> str:
+        """Generates rapid revision notes and flashcards."""
         lines = [
-            f"# {topic.title}",
+            f"# Rapid Revision Flashcards — {subject}",
             "",
-            f"**Subject:** {topic.subject}  ·  **Semester:** {topic.semester}",
+            "**Curated TU BSc CSIT Flashcards**",
             "",
-            "## Definition",
-            topic.definition,
-        ]
-
-        if topic.how_it_works:
-            lines += ["", "## How It Works"]
-            for step in topic.how_it_works:
-                lines.append(f"- {step}")
-
-        if topic.example:
-            lines += ["", "## Worked Example"]
-            lines.append(f"```text\n{topic.example}\n```")
-
-        if topic.pseudocode:
-            lines += ["", "## Pseudocode"]
-            lines.append(f"```text\n{topic.pseudocode}\n```")
-
-        if topic.code:
-            lines += ["", "## Code Example (Python)"]
-            lines.append(f"```python\n{topic.code}\n```")
-
-        if topic.complexity:
-            lines += ["", "## Complexity"]
-            lines.append("| Case | Time Complexity |")
-            lines.append("|------|-----------------|")
-            for case, comp in topic.complexity.items():
-                lines.append(f"| {case} | {comp} |")
-            if topic.space_complexity:
-                lines.append("")
-                lines.append(f"**Space:** {topic.space_complexity}")
-
-        if topic.properties:
-            lines += ["", "## Key Points"]
-            for prop in topic.properties:
-                lines.append(f"- {prop}")
-
-        if topic.exam_points:
-            lines += ["", "## Exam Preparation"]
-            for point in topic.exam_points:
-                lines.append(f"- {point}")
-
-        if topic.practice_question:
-            lines += ["", "## Practice Question"]
-            lines.append(topic.practice_question)
-            lines.append("")
-            lines.append("> **Suggested answer:** " + (topic.practice_answer or "Try it yourself first, then check your notes."))
-
-        if topic.related:
-            lines += ["", "## Related Topics"]
-            lines.append(", ".join(topic.related))
-
-        if uploaded_context:
-            lines += [
-                "",
-                "---",
-                "Note: Your uploaded notes were detected, but this topic explanation "
-                "comes from the built-in study guide. For answers grounded specifically "
-                "in your notes, configure a live AI provider (server-side) if available.",
-            ]
-
-        lines += [
+            "### Flashcard 1: Quick Sort Complexity",
+            "**Q:** What is the average and worst-case time complexity of Quick Sort?",
+            "**A:** Average case is O(n log n). Worst case is O(n²) when the pivot chosen is consistently the extreme (smallest/largest) element.",
+            "",
+            "### Flashcard 2: Merge Sort Stability",
+            "**Q:** Why is Merge Sort preferred when stability is required in sorting?",
+            "**A:** Merge Sort maintains the original relative order of records with equal keys during the merge step, unlike standard in-place Quick Sort.",
+            "",
+            "### Flashcard 3: Binary Search Prerequisite",
+            "**Q:** What is the fundamental condition required before performing Binary Search?",
+            "**A:** The target collection or array must be sorted in ascending or descending order.",
+            "",
+            "### Flashcard 4: Database ACID Properties",
+            "**Q:** Which ACID property ensures committed data survives a sudden power outage?",
+            "**A:** Durability (guaranteed by write-ahead logging to non-volatile disk).",
+            "",
+            "### Flashcard 5: Process vs Thread",
+            "**Q:** Why is context switching between threads faster than between processes?",
+            "**A:** Threads share the same virtual memory space, so page tables and TLB caches do not need to be flushed on context switch.",
             "",
             "---",
-            "_TU CSIT Study Assistant · Built-in study guide_",
+            "*TU CSIT Study Assistant · Offline Revision Bank*",
         ]
         return "\n".join(lines)
+
+    # ------------------------------------------------------------------ #
+    # Live Providers (Server-side Only)
+    # ------------------------------------------------------------------ #
+    def _call_gemini(
+        self,
+        question: str,
+        history: List[dict],
+        context: Optional[str],
+        pages: Optional[list],
+        subject: str,
+    ) -> AIChatResult:
+        try:
+            from google import genai
+
+            client = genai.Client(api_key=self.gemini_api_key)
+            system_prompt = (
+                f"You are a friendly, patient BSc CSIT tutor at Tribhuvan University teaching {subject}. "
+                "Explain concepts clearly for university students with examples, pseudocode, and complexity analysis. "
+                "Format in clean GitHub-style Markdown."
+            )
+            history_prompt = ""
+            if history:
+                history_prompt = "CONVERSATION HISTORY:\n" + "\n".join(
+                    f"{m.get('role', 'user').upper()}: {m.get('content', '')}"
+                    for m in history[-5:]
+                ) + "\n\n"
+
+            context_prompt = ""
+            if context:
+                context_prompt = f"UPLOADED NOTES CONTEXT:\n{context[:7000]}\n\n"
+
+            prompt = f"{system_prompt}\n\n{context_prompt}{history_prompt}STUDENT QUESTION:\n{question}"
+            response = client.models.generate_content(
+                model="gemini-2.5-flash", contents=prompt
+            )
+            text = response.text or ""
+            text += "\n\n---\n*Answer generated by Google Gemini (Server-side AI)*"
+            return AIChatResult(answer=text, source="gemini", grounded_in_upload=bool(context))
+        except Exception:
+            # Fall back safely without leaking secrets or errors
+            return AIChatResult(answer="", source="error", error=True)
+
+    def _call_groq(
+        self,
+        question: str,
+        history: List[dict],
+        context: Optional[str],
+        pages: Optional[list],
+        subject: str,
+    ) -> AIChatResult:
+        try:
+            from groq import Groq
+
+            client = Groq(api_key=self.groq_api_key)
+            messages = [
+                {
+                    "role": "system",
+                    "content": (
+                        f"You are an expert TU BSc CSIT academic tutor in {subject}. "
+                        "Provide comprehensive, student-friendly explanations with worked examples, "
+                        "pseudocode, and time/space complexity analysis."
+                    ),
+                }
+            ]
+            for m in history[-4:]:
+                messages.append({"role": m.get("role", "user"), "content": m.get("content", "")})
+            user_content = question
+            if context:
+                user_content = f"Context from notes:\n{context[:6000]}\n\nQuestion:\n{question}"
+            messages.append({"role": "user", "content": user_content})
+
+            chat = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=messages,
+                temperature=0.3,
+            )
+            text = chat.choices[0].message.content or ""
+            text += "\n\n---\n*Answer generated by Groq (Server-side AI)*"
+            return AIChatResult(answer=text, source="groq", grounded_in_upload=bool(context))
+        except Exception:
+            return AIChatResult(answer="", source="error", error=True)
 
     def _offline_from_notes(
         self, question: str, context: str, pages: Optional[list]
     ) -> AIChatResult:
-        """Best-effort answer grounded in uploaded notes without a live provider."""
+        """Best-effort relevance extraction from uploaded document in offline mode."""
         import re
 
         q_tokens = set(t for t in re.findall(r"[a-z0-9]+", question.lower()) if len(t) > 2)
@@ -206,29 +315,29 @@ class AIChatBackend:
             matches.append((len(q_tokens), None, context))
 
         matches.sort(key=lambda x: x[0], reverse=True)
-
         lines = [
-            "# Answer (from your uploaded notes)",
+            "# Answer Grounded in Your Uploaded Notes",
             "",
-            "No live AI provider is configured, so here is the most relevant passage "
-            "from your uploaded document:",
+            "Here are the most relevant sections identified from your uploaded document:",
         ]
-        shown = False
+        found = False
         for overlap, page_num, text in matches[:3]:
-            snippet = text[:900]
+            snippet = text[:800].strip()
+            page_label = f"Page {page_num}" if page_num else "Document Section"
             lines += [
                 "",
-                f"### {'[Page %d] ' % page_num if page_num else ''}Relevant passage",
+                f"### 📄 {page_label}",
                 f"```text\n{snippet}\n```",
             ]
-            shown = True
-        if not shown:
-            lines.append("")
-            lines.append("No relevant passage was found in your uploaded notes.")
+            found = True
+
+        if not found:
+            lines.append("\nNo exact keyword match was found in the uploaded text.")
 
         lines += [
             "",
-            "To get AI-generated explanations from your notes, a live AI provider can be configured server-side by the administrator.",
+            "---",
+            "*TU CSIT Study Assistant · Document Retrieval*",
         ]
         return AIChatResult(
             answer="\n".join(lines),
@@ -236,176 +345,6 @@ class AIChatBackend:
             grounded_in_upload=True,
         )
 
-    def _offline_general(self, question: str) -> str:
-        return (
-            "# I can help with CSIT topics\n\n"
-            "I don't have a specific explanation for that topic in the built-in "
-            "study guide yet.\n\n"
-            "Try asking about one of these instead: Quick Sort, Merge Sort, Binary "
-            "Search, Big-O Notation, Linked List, Stack, Queue, Database "
-            "Normalization, ACID Properties, Process vs Thread, Deadlock, TCP vs "
-            "UDP, HTTP GET vs POST.\n\n"
-            "You can also browse Notes & Resources or upload your lecture notes.\n"
-        )
 
-    # ------------------------------------------------------------------ #
-    # Live providers (server-side only; credentials never leave this module)
-    # ------------------------------------------------------------------ #
-    def _call_gemini(
-        self,
-        question: str,
-        conversation_history: list,
-        context: Optional[str] = None,
-        pages: Optional[list] = None,
-    ) -> AIChatResult:
-        try:
-            from google import genai
-
-            if not self.gemini_api_key:
-                return AIChatResult(
-                    answer=self._offline_general(question),
-                    source="offline",
-                )
-
-            client = genai.Client(api_key=self.gemini_api_key)
-
-            system_prompt = self._gemini_system_prompt(context is not None)
-            user_prompt = self._gemini_user_prompt(
-                question, context, pages, conversation_history
-            )
-
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=f"{system_prompt}\n\n{user_prompt}",
-            )
-            text = response.text or ""
-
-            if context:
-                text += (
-                    "\n\n---\n\n*Grounded in your uploaded notes. "
-                    "Answer generated by Google Gemini (server-side).*"  # noqa: E501
-                )
-            else:
-                text += (
-                    "\n\n---\n\n*Answer generated by Google Gemini (server-side).*"  # noqa: E501
-                )
-
-            return AIChatResult(
-                answer=text,
-                source="gemini",
-                grounded_in_upload=bool(context),
-            )
-        except Exception:
-            # Never leak raw exceptions to the student.
-            if context:
-                return self._offline_from_notes(question, context, pages)
-            return AIChatResult(
-                answer=self._offline_general(question),
-                source="offline",
-            )
-
-    def _call_groq(
-        self,
-        question: str,
-        conversation_history: list,
-        context: Optional[str] = None,
-        pages: Optional[list] = None,
-    ) -> AIChatResult:
-        try:
-            from groq import Groq
-
-            if not self.groq_api_key:
-                return AIChatResult(
-                    answer=self._offline_general(question),
-                    source="offline",
-                )
-
-            client = Groq(api_key=self.groq_api_key)
-
-            messages = [{"role": "system", "content": self._groq_system_prompt(context is not None)}]
-            for role, content in conversation_history[-6:]:
-                messages.append({"role": role, "content": content})
-            messages.append({"role": "user", "content": self._groq_user_prompt(question, context)})
-
-            chat = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=messages,
-                temperature=0.3,
-            )
-            text = chat.choices[0].message.content or ""
-
-            if context:
-                text += (
-                    "\n\n---\n\n*Grounded in your uploaded notes. "
-                    "Answer generated by Groq (server-side).*"
-                )
-            else:
-                text += "\n\n---\n\n*Answer generated by Groq (server-side).*"
-
-            return AIChatResult(
-                answer=text,
-                source="groq",
-                grounded_in_upload=bool(context),
-            )
-        except Exception:
-            if context:
-                return self._offline_from_notes(question, context, pages)
-            return AIChatResult(
-                answer=self._offline_general(question),
-                source="offline",
-            )
-
-    # ------------------------------------------------------------------ #
-    # Prompts (no secrets included)
-    # ------------------------------------------------------------------ #
-    @staticmethod
-    def _gemini_system_prompt(has_context: bool) -> str:
-        source_rule = (
-            "Base your answer on the provided lecture notes and cite page numbers "
-            "(e.g., [Page 3]) where relevant."
-        ) if has_context else (
-            "Answer from general CSIT knowledge. Be clear when the built-in guide "
-            "does not cover a topic."
-        )
-        return (
-            "You are a friendly, patient BSc CSIT tutor at Tribhuvan University. "
-            "Explain concepts clearly for university students. "
-            f"{source_rule} "
-            "Use Markdown. Include examples, pseudocode, and complexity where useful. "
-            "Keep answers concise but complete."
-        )
-
-    @staticmethod
-    def _gemini_user_prompt(
-        question: str,
-        context: Optional[str],
-        pages: Optional[list],
-        history: list,
-    ) -> str:
-        context_block = ""
-        if context:
-            page_refs = ", ".join(str(p["page_num"]) for p in pages) if pages else "unknown"
-            context_block = (
-                f"\n\nLECTURE NOTES (pages: {page_refs}):\n{context}\n"
-            )
-        history_block = ""
-        if history:
-            history_block = "\n\nPREVIOUS CONVERSATION:\n" + "\n".join(
-                f"{role}: {content}" for role, content in history[-6:]
-            )
-        return (
-            "STUDENT QUESTION:\n" + question + context_block + history_block +
-            "\n\nNow answer the student's question."
-        )
-
-    @staticmethod
-    def _groq_system_prompt(has_context: bool) -> str:
-        return AIChatBackend._gemini_system_prompt(has_context)
-
-    @staticmethod
-    def _groq_user_prompt(question: str, context: Optional[str]) -> str:
-        return AIChatBackend._gemini_user_prompt(question, context, None, [])
-
-
-# Module-level singleton (server-side)
+# Singleton server-side backend instance
 chat_backend = AIChatBackend()
