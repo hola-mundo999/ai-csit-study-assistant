@@ -1,12 +1,19 @@
 [theme]
 base = "light"
-primaryColor = "#00af92"
+primaryColor = "#4f46e5"
 backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#fbfcfe"
-textColor = "#202029"
+secondaryBackgroundColor = "#f8fafc"
+textColor = "#0f172a"
 font = "sans serif"
 
 [server]
 headless = true
 enableCORS = false
 enableXsrfProtection = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = false
+
+[ui]
+hideTopBar = true
