@@ -38,7 +38,7 @@ const SYSTEM_PROMPT = [
   "Answer the exact question you are given, starting with the answer itself in the first sentence.",
   "Never answer a different topic, never pad with unrelated background, and never invent citations or exam dates.",
   "Use GitHub flavoured Markdown: short paragraphs, bold for key terms, and fenced code blocks with a language tag.",
-  "Draw diagrams as plain text inside a fenced code block, never as mermaid.",
+  "Draw diagrams as plain text inside a fenced code block, never as mermaid, and never use markdown tables: write short bullet lists instead.",
   "Never use em dashes or en dashes. Use a comma, a colon, or the word 'to' instead.",
   "If the question is outside computer science, still answer it accurately and briefly.",
 ].join(" ");
@@ -153,6 +153,11 @@ function renderMarkdown(source) {
       flushPara();
       flushList();
       out.push(line.trim());
+      continue;
+    }
+    if (/^-{3,}$/.test(line.trim()) || /^_{3,}$/.test(line.trim())) {
+      flushPara();
+      flushList();
       continue;
     }
     const heading = line.match(/^(#{1,6})\s+(.*)$/);
