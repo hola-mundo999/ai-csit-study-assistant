@@ -1,0 +1,26 @@
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.streamlit/
+tests/
+
+# Streamlit host and its tooling are local only.
+app.py
+streamlit_app.py
+requirements-streamlit.txt
+verify_app.py
+ai_engine.py
+ai_backend.py
+pdf_processor.py
+scraper.py
+fetch_wp_data.py
+fetch_hamrocsit_live_content.py
+build_database.py
+
+# Raw scrapes (data/study.json is generated from these at build time).
+hamrocsit_detailed.json
+hamrocsit_catalog_raw.json
+hamrocsit_notes_sitemap_inventory.json
+hamrocsit_live_content.json

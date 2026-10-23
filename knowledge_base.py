@@ -1759,6 +1759,11 @@ class KnowledgeBase:
                 "queue": "queue",
                 "normalization": "normalization",
                 "normal form": "normalization",
+                "1nf": "normalization",
+                "2nf": "normalization",
+                "3nf": "normalization",
+                "bcnf": "normalization",
+                "functional dependency": "normalization",
                 "acid": "acid",
                 "transaction": "acid",
                 "process": "process-vs-thread",
@@ -1809,7 +1814,9 @@ class KnowledgeBase:
                 if tok in topic.definition.lower():
                     score += 2
 
-            if score > 0:
+            # A single incidental word in a definition is not a topic match; it made
+            # questions like "3NF vs BCNF" resolve to AVL trees.
+            if score >= 4:
                 scored.append((score, topic))
 
         scored.sort(key=lambda x: x[0], reverse=True)
