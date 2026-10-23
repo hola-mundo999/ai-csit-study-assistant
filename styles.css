@@ -854,7 +854,15 @@ select {
   .tutor-layout { grid-template-columns: 1fr; }
   .tutor-side { position: static; }
   .tutor-main { min-height: auto; }
-  .chat-log { max-height: none; min-height: 320px; }
+  .chat-log { max-height: none; min-height: 260px; }
+  /* Keep the question box reachable while the conversation scrolls. */
+  .composer {
+    position: sticky;
+    bottom: 12px;
+    z-index: 6;
+    background: var(--paper);
+    box-shadow: 0 6px 20px rgba(29, 26, 23, 0.08);
+  }
   .courses-layout { grid-template-columns: 1fr; }
   .semester-rail { position: static; }
   .sem-list { flex-direction: row; flex-wrap: wrap; }
