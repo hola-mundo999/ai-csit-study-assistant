@@ -4,7 +4,8 @@
   "cleanUrls": true,
   "functions": {
     "api/tutor.py": {
-      "maxDuration": 45
+      "maxDuration": 45,
+      "includeFiles": "knowledge_base.py"
     }
   }
 }
