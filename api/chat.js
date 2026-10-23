@@ -66,6 +66,9 @@ export default async function handler(request) {
         temperature: 0.35,
         max_tokens: maxTokens,
         private: true,
+        // The anonymous model is a reasoning model. Low effort keeps the visible
+        // answer from waiting on a long private chain of thought.
+        reasoning_effort: "low",
       };
 
   const headers = { "Content-Type": "application/json" };
