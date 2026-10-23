@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSIT Pulse: TU BSc CSIT Notes, Questions and AI Tutor</title>
+<meta name="description" content="A free study desk for Tribhuvan University BSc CSIT: all eight semesters, official syllabi, past board questions with worked solutions, and an AI tutor that answers any computer science question." />
+<meta name="theme-color" content="#f7f3ec" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1a17'/%3E%3Cpath d='M9 21V11l7 6 7-6v10' stroke='%23d97746' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="#tutor" aria-label="CSIT Pulse home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-text">
+        <strong>CSIT Pulse</strong>
+        <small>TU BSc CSIT study desk</small>
+      </span>
+    </a>
+
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab is-active" data-view="tutor" type="button">
+        <span class="tab-num" aria-hidden="true">01</span> Tutor
+      </button>
+      <button class="tab" data-view="courses" type="button">
+        <span class="tab-num" aria-hidden="true">02</span> Curriculum
+      </button>
+      <button class="tab" data-view="questions" type="button">
+        <span class="tab-num" aria-hidden="true">03</span> Past questions
+      </button>
+    </nav>
+
+    <div class="masthead-meta">
+      <span class="dot" id="statusDot" aria-hidden="true"></span>
+      <span id="statusText">Loading</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ======================================================== tutor -->
+  <section class="view is-active" id="view-tutor" aria-label="AI tutor">
+    <div class="tutor-layout">
+
+      <aside class="panel tutor-side" aria-label="How to use the tutor">
+        <h1 class="display">Ask anything<br /><em>and get a real answer.</em></h1>
+        <p class="lede">
+          Every subject in the TU BSc CSIT programme, from digital logic to
+          compiler design. Free, no account, no key.
+        </p>
+
+        <div class="control">
+          <span class="control-label" id="lenLabel">Answer depth</span>
+          <div class="chips" role="radiogroup" aria-labelledby="lenLabel" id="lenChips">
+            <button class="chip" role="radio" data-len="very_short" type="button" aria-checked="false">Very short</button>
+            <button class="chip is-on" role="radio" data-len="short" type="button" aria-checked="true">Short</button>
+            <button class="chip" role="radio" data-len="long" type="button" aria-checked="false">Long</button>
+            <button class="chip" role="radio" data-len="very_long" type="button" aria-checked="false">Exam guide</button>
+          </div>
+          <p class="control-hint" id="lenHint">Around 150 words, one clear mechanism.</p>
+        </div>
+
+        <ul class="notes">
+          <li>Answers cite complexity where it matters.</li>
+          <li>Code comes with the reasoning, not just the snippet.</li>
+          <li>Follow-up questions keep the thread.</li>
+        </ul>
+      </aside>
+
+      <div class="panel tutor-main">
+        <div class="chat-log" id="chatLog" role="log" aria-live="polite" aria-label="Conversation"></div>
+
+        <div class="suggest" id="suggest">
+          <button class="suggest-item" type="button">Explain Dijkstra with a worked example</button>
+          <button class="suggest-item" type="button">Difference between 3NF and BCNF</button>
+          <button class="suggest-item" type="button">Why is TCP three way handshake needed</button>
+          <button class="suggest-item" type="button">Solve a past question on page replacement</button>
+        </div>
+
+        <form class="composer" id="askForm">
+          <label class="sr-only" for="askInput">Your question</label>
+          <textarea id="askInput" rows="1" placeholder="Ask about any CSIT topic or paste a past question" maxlength="4000"></textarea>
+          <button class="send" id="sendBtn" type="submit" aria-label="Send question">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <p class="composer-note">
+          Free and unlimited. <button class="linkish" id="clearChat" type="button">Clear conversation</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== curriculum -->
+  <section class="view" id="view-courses" aria-label="Curriculum">
+    <div class="courses-layout">
+      <aside class="panel semester-rail" aria-label="Semesters">
+        <h2 class="rail-title">Semesters</h2>
+        <div class="sem-list" id="semList" role="tablist" aria-label="Semester"></div>
+      </aside>
+
+      <div class="panel courses-main">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow" id="semEyebrow">Semester 1</p>
+            <h2 class="display-sm" id="semTitle">Foundations</h2>
+          </div>
+          <div class="course-meta">
+            <span id="courseCount">0 subjects</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span id="creditCount">0 credits</span>
+          </div>
+        </div>
+
+        <p class="sem-summary" id="semSummary"></p>
+        <div class="course-list" id="courseList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================== questions -->
+  <section class="view" id="view-questions" aria-label="Past questions">
+    <div class="panel questions-main">
+      <div class="panel-head questions-head">
+        <div>
+          <p class="eyebrow">Verified solutions</p>
+          <h2 class="display-sm">Past board questions</h2>
+          <p class="lede small">Worked out step by step, no paywall, every subject.</p>
+        </div>
+        <div class="filters">
+          <label class="search">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="qSearch" placeholder="Search questions" aria-label="Search past questions" />
+          </label>
+          <select id="qSubject" aria-label="Filter by subject"></select>
+        </div>
+      </div>
+      <div class="q-list" id="qList"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Built by <a href="https://github.com/hola-mundo999" target="_blank" rel="noreferrer">Samyog Sapkota</a> for BSc CSIT at Prime College. Syllabus data follows the TU IOST curriculum.</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
