@@ -2,10 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "cleanUrls": true,
-  "functions": {
-    "api/tutor.py": {
-      "maxDuration": 45,
-      "includeFiles": "knowledge_base.py"
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
     }
-  }
+  ]
 }
