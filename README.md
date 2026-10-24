@@ -6,20 +6,20 @@ Built by [Samyog Sapkota](https://github.com/hola-mundo999), BSc CSIT at Prime C
 
 ## What is inside
 
-- **Curriculum**: every semester with official course codes and each subject's chapters. Clicking a chapter opens its saved note inline, with worked key points, complexity and a button to ask a follow-up.
+- **Curriculum**: every semester with official course codes and each subject's chapters. Clicking a chapter opens its saved note inline, with worked key points, complexity and a button to ask a follow-up. Chapters whose hamrocsit page only carries a scanned PDF open with a clear note and a one click "explain this chapter" instead of an empty panel.
+- **Saved notes**: `data/notes/<subject>.json` holds the chapter notes. They come from the real hamrocsit note pages where that page has text, and from generated study notes where it does not.
 - **Past questions**: 278 questions from the public question archive, filterable by subject and searchable by keyword. Each one solves itself inline, streamed, from the model.
 - **Tutor**: four answer depths, from a 70 word definition to a full exam guide. Tokens stream into the page as they arrive, conversation context is kept, and answers are cached in the browser for a week.
 
 ## How the tutor works
 
-The page calls `https://text.pollinations.ai/openai`, an OpenAI compatible endpoint that needs no key and no signup, directly from the browser. That means:
+Questions go to `api/chat`, a small edge function that forwards them to `https://text.pollinations.ai/openai`, an OpenAI compatible endpoint that needs no key. If that proxy is missing or out of quota, the page calls the provider directly, so each visitor falls back to their own quota instead of sharing one server IP.
 
-- Each visitor uses their own quota instead of sharing one server IP.
-- No serverless cold start sits between the question and the first token.
 - Answers stream as they are written, so the first words show up in about a second.
-- The endpoint is rate limited to roughly one reply every 30 seconds per IP. When that happens the page shows a countdown and retries once, then offers a retry button. It never substitutes a different answer.
+- The provider is rate limited to roughly one reply every 30 seconds per IP. When that happens the page shows a countdown and retries once, then offers a retry button. It never substitutes a different answer. This limit, not the page, is what makes a second question feel slow.
+- Set `GROQ_API_KEY` on the deployment to route through Groq instead. `api/chat` picks it up automatically and answers are much faster, with no anonymous quota.
 
-For CSIT topics that exist in `data/topics.json`, a short reference block (definition, mechanism, complexity) is attached to the prompt so the answer is grounded in the syllabus rather than guessed.
+Comparison questions ("difference between process and thread") are answered locally from `data/comparisons.json` and `data/topics.json`, so they return a checked table immediately without touching the model. For other CSIT topics in `data/topics.json`, a short reference block (definition, mechanism, complexity) is attached to the prompt so the answer is grounded in the syllabus rather than guessed.
 
 Nothing is sent to a server of ours. There is no function to deploy, so there is no cold start and nothing to keep warm.
 
@@ -27,9 +27,15 @@ Nothing is sent to a server of ours. There is no function to deploy, so there is
 
 Static HTML, CSS and vanilla JavaScript. No build step, no framework, no backend.
 
-- `data/study.json`: 66 subjects, 375 chapters, 278 questions (76 KB).
-- `data/topics.json`: 26 study notes used as model context (27 KB).
+- `data/study.json`: 66 subjects, 375 chapters, 278 questions, each chapter with its hamrocsit URL.
+- `data/topics.json`: 26 study notes used as model context.
+- `data/comparisons.json`: 15 checked comparison tables answered without a model.
+- `data/notes/`: the saved chapter notes, one file per subject.
 - `build_study_data.py`: regenerates `study.json` from the curriculum and question scrapes.
+- `import_hamrocsit.py`: imports the text of each hamrocsit note page into `data/notes/`.
+- `generate_chapter_notes.py`: writes a study note for chapters whose page has no text.
+- `verify_chapter_links.py`: checks that every chapter URL still opens the right page.
+- `merge_notes.py`, `notes_report.py`: merge stray notes and report coverage.
 
 ## Run locally
 
