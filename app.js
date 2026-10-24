@@ -1065,6 +1065,22 @@ function drawQuestionList() {
       toggle.textContent = open ? "Hide solution" : "Show solution";
       if (!open || solution.dataset.loaded) return;
       solution.dataset.loaded = "1";
+
+      /* A board question that asks for a difference is answered from the
+         checked table, the same as in the tutor, instead of from the model. */
+      const table = localComparison(q.title);
+      if (table) {
+        const body = el("div", "answer");
+        body.innerHTML = renderMarkdown(table);
+        solution.innerHTML = "";
+        solution.appendChild(body);
+        const tag = el("div", "answer-meta");
+        tag.appendChild(el("span", "tag", "From saved notes"));
+        tag.appendChild(el("span", "tag", q.code || q.subject));
+        solution.appendChild(tag);
+        return;
+      }
+
       solution.innerHTML = '<p class="typing"><span></span><span></span><span></span></p>';
       const started = Date.now();
       let text = "";
