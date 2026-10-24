@@ -39,6 +39,8 @@ const SYSTEM_PROMPT = [
   "Never answer a different topic, never pad with unrelated background, and never invent citations or exam dates.",
   "Use GitHub flavoured Markdown: short paragraphs, bold for key terms, and fenced code blocks with a language tag.",
   "When the question asks for a difference, comparison, or anything with parallel attributes, put the answer in a Markdown table, then explain the table in one short paragraph.",
+  "Answer from the TU BSc CSIT syllabus and the study notes you are given. When asked for a roadmap, study plan or preparation strategy, name this programme's own chapters in order and give a schedule for them.",
+  "Never recommend Coursera, Udemy, YouTube channels, LinkedIn Learning, external books or any course outside the TU curriculum. If the answer needs material the syllabus does not cover, say which chapter of the syllabus to read instead.",
   "Draw diagrams as plain text inside a fenced code block, never as mermaid.",
   "Never use em dashes or en dashes. Use a comma, a colon, or the word 'to' instead.",
   "If the question is outside computer science, still answer it accurately and briefly.",
@@ -54,6 +56,7 @@ const state = {
   comparisons: [],
   subjectNotes: {},
   semIndex: 0,
+  lastSubject: null,
   qFilter: { text: "", subject: "all" },
 };
 
@@ -495,8 +498,9 @@ async function openStream(messages, signal) {
 async function streamAnswer(question, { signal, onDelta, onStatus }) {
   const topic = topicFor(question);
   const reference = referenceBlock(topic);
+  const context = syllabusContext(question);
   const messages = [
-    { role: "system", content: `${SYSTEM_PROMPT} ${LENGTHS[state.length].rule}` },
+    { role: "system", content: `${SYSTEM_PROMPT} ${context} ${LENGTHS[state.length].rule}` },
     ...state.history.slice(-4).map((m) => ({ role: m.role, content: m.content })),
     {
       role: "user",
@@ -691,6 +695,18 @@ async function submitQuestion(raw) {
   }
 
   try {
+    /* A request for a plan is answered from the syllabus in this page, so it
+       names this programme's chapters instead of generic study advice. */
+    const plan = await roadmapMarkdown(question);
+    if (plan) {
+      render(plan);
+      writeCache(answerCacheKey(question), plan);
+      bubble.finish({ seconds: 0, cached: true });
+      state.history.push({ role: "user", content: question });
+      state.history.push({ role: "assistant", content: plan });
+      return;
+    }
+
     const answer = await streamAnswer(question, {
       signal: state.controller.signal,
       onDelta: render,
@@ -799,6 +815,8 @@ async function subjectNotes(subjectSlug) {
 
 function chapterNote(subject, chapter) {
   const chapterTitle = chapter.title;
+  // Opening a chapter is how the reader says "this subject".
+  state.lastSubject = subject;
   const panel = el("div", "chapter-panel");
   const code = el("span", "chapter-panel__code", subject.code || "CSIT");
   const head = el("div", "chapter-panel__head");
@@ -883,6 +901,227 @@ function chapterNote(subject, chapter) {
   });
 
   return panel;
+}
+
+/* ---------------------------------------------------------- semester guide */
+
+/* "Roadmap for this subject" used to go to a generic model answer that sent
+   the reader to Coursera. The syllabus is already loaded, so the plan is
+   written from the TU curriculum itself: the chapters in order, a schedule
+   that fits their number, the saved notes, and the past questions this
+   subject has actually been asked in. */
+const ROADMAP_INTENT =
+  /(roadmap|study plan|study roadmap|plan of study|exam plan|revision plan|how (do|should|can) i (study|prepare|learn|start|revise)|what (do|should|can) i (study|read|learn|prepare)|where (do|should|can) i start|how to prepare|preparation strategy|prepare for .*exam|syllabus|guide me|guidance|week by week|day by day|in \d+ (days|weeks))/i;
+
+/* Nicknames students type instead of the full course name. */
+const SUBJECT_NICKNAMES = {
+  dbms: "database management",
+  os: "operating system",
+  dsa: "data structure",
+  oops: "object oriented",
+  toc: "theory of computation",
+  daa: "design and analysis",
+  cg: "computer graphics",
+  dss: "decision support",
+};
+
+function significantWords(text) {
+  return String(text || "")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((word) => word.length > 3 && !new Set(["the", "and", "for", "with", "from", "this", "that"]).has(word));
+}
+
+function semesterOf(subject) {
+  if (!state.data) return null;
+  for (const semester of state.data.semesters) {
+    if (semester.subjects.includes(subject)) return semester;
+  }
+  return null;
+}
+
+function findSubjectFor(question) {
+  if (!state.data) return null;
+  const q = String(question || "").toLowerCase();
+  // "this subject" means the one the reader just had open in the curriculum.
+  const aboutThisOne = /\b(this|my|that|current)\b.{0,14}\b(subject|course|paper|class|sem(ester)?)\b/.test(q);
+  if (aboutThisOne && state.lastSubject) {
+    const semester = semesterOf(state.lastSubject);
+    if (semester) return { subject: state.lastSubject, semester };
+  }
+  let best = null;
+  let bestScore = 0;
+  for (const semester of state.data.semesters) {
+    for (const subject of semester.subjects) {
+      if (!subject.chapters || !subject.chapters.length) continue;
+      let score = 0;
+      const name = subject.name.toLowerCase();
+      if (subject.code && q.includes(String(subject.code).toLowerCase())) score += 25;
+      if (q.includes(name)) score += 30;
+      const wanted = significantWords(name);
+      const shared = wanted.filter((word) => q.includes(word)).length;
+      if (wanted.length && shared / wanted.length >= 0.6) score += 10 + shared * 2;
+      for (const [nick, hint] of Object.entries(SUBJECT_NICKNAMES)) {
+        const token = new RegExp(`(^|[^a-z0-9])${nick}([^a-z0-9]|$)`);
+        if (token.test(q) && (name.includes(hint) || String(subject.code || "").toLowerCase() === nick)) score += 20;
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        best = { subject, semester };
+      }
+    }
+  }
+  return bestScore >= 12 ? best : null;
+}
+
+function pastQuestionsFor(subject) {
+  const questions = (state.data && state.data.questions) || [];
+  return questions.filter(
+    (q) =>
+      (subject.code && q.code === subject.code) ||
+      q.subject.toLowerCase() === subject.name.toLowerCase()
+  );
+}
+
+function subjectRoadmapMarkdown(subject, semester, notes) {
+  const chapters = subject.chapters || [];
+  const titles = chapters.map((chapter) => chapter.title);
+  const withNote = chapters.filter((chapter) => notes && notes[chapter.slug]).length;
+  const past = pastQuestionsFor(subject);
+  const phases = Math.min(4, Math.max(1, Math.ceil(chapters.length / 2)));
+  const perPhase = Math.ceil(chapters.length / phases);
+  const lines = [];
+
+  lines.push(`## Roadmap: ${subject.name} (${subject.code || "CSIT"})`);
+  lines.push("");
+  lines.push(
+    `**Where it sits.** ${subject.name} is one of ${semester.subjects.length} subjects in the **${semester.title}** of the TU BSc CSIT syllabus, with **${chapters.length} chapters**. Study it in the chapter order below, not in the order of a random playlist.`
+  );
+  lines.push("");
+  lines.push("### Chapters, in the order to study them");
+  lines.push("");
+  titles.forEach((title, index) => {
+    const chapter = chapters[index];
+    const mark = notes && notes[chapter.slug] ? "ready note" : "ask the tutor";
+    lines.push(`${index + 1}. ${title} *(${mark})*`);
+  });
+  lines.push("");
+
+  if (chapters.length) {
+    lines.push(`### A ${phases} step plan`);
+    lines.push("");
+    for (let phase = 0; phase < phases; phase += 1) {
+      const start = phase * perPhase;
+      const slice = titles.slice(start, start + perPhase);
+      if (!slice.length) continue;
+      const names = slice.join(", ");
+      lines.push(
+        `- **Step ${phase + 1}:** ${names}. Read the note, then ask the tutor to explain the chapter with one worked example, then write the key points in your own words.`
+      );
+    }
+    lines.push(
+      `- **Finish each step** with the past questions below for those chapters. TU asks from the same chapter titles every year.`
+    );
+    lines.push("");
+  }
+
+  if (past.length) {
+    lines.push(`### What the exam has actually asked (${past.length} questions in the bank)`);
+    lines.push("");
+    past.slice(0, 6).forEach((q) => lines.push(`- ${q.title} *(${q.year || "past paper"}, ${q.subject})*`));
+    if (past.length > 6) lines.push(`- ${past.length - 6} more in the Past questions tab, filtered to ${subject.code || subject.name}.`);
+    lines.push("");
+  }
+
+  lines.push("### What you have right now");
+  lines.push("");
+  lines.push(
+    `- ${withNote} of ${chapters.length} chapters already have a written note on this site.`
+  );
+  lines.push(
+    `- Every other chapter opens with a one click **Explain this chapter now**, which streams the tutor's answer from the syllabus.`
+  );
+  lines.push(
+    `- Next in the programme: ${nextSemesterSummary(semester)}.`
+  );
+  return lines.join("\n");
+}
+
+function nextSemesterSummary(semester) {
+  if (!state.data) return "the rest of the programme";
+  const index = state.data.semesters.indexOf(semester);
+  const next = state.data.semesters[index + 1];
+  if (!next) return "the final semester, then internship and project work";
+  const chapters = next.subjects.reduce((sum, s) => sum + s.chapters.length, 0);
+  return `${next.title}, ${next.subjects.length} subjects and ${chapters} chapters`;
+}
+
+function semesterRoadmapMarkdown(semester) {
+  const chapters = semester.subjects.reduce((sum, s) => sum + s.chapters.length, 0);
+  const rows = semester.subjects
+    .map((subject) => {
+      const past = pastQuestionsFor(subject).length;
+      return `| ${subject.name} | ${subject.code || "-"} | ${subject.chapters.length} | ${past} |`;
+    })
+    .join("\n");
+  const lines = [
+    `## Roadmap: ${semester.title} of BSc CSIT`,
+    "",
+    semester.description || "",
+    "",
+    `**${semester.subjects.length} subjects, ${chapters} chapters.** Below is what this semester contains, with the past questions available for each subject.`,
+    "",
+    "| Subject | Code | Chapters | Past questions |",
+    "| --- | --- | --- | --- |",
+    rows,
+    "",
+    "### Order to take them",
+    "",
+  ];
+  semester.subjects.forEach((subject, index) => {
+    const past = pastQuestionsFor(subject).length;
+    lines.push(
+      `${index + 1}. **${subject.name}** (${subject.code || "no code"}): ${subject.chapters.length} chapters${past ? `, ${past} past questions in the bank` : ""}. Ask me for "roadmap for ${subject.name}" to get its chapter by chapter plan.`
+    );
+  });
+  lines.push("");
+  lines.push(
+    "Open a chapter in the Curriculum tab to read its note. Anything without a note is explained by the tutor in one click."
+  );
+  return lines.join("\n");
+}
+
+async function roadmapMarkdown(question) {
+  if (!state.data || !ROADMAP_INTENT.test(String(question || ""))) return "";
+  const match = findSubjectFor(question);
+  if (!match) {
+    // Only an overall request gets the semester table. A question about one
+    // topic with no subject named still goes to the model for an answer.
+    const overall = /(roadmap|study plan|exam plan|plan|guide|guidance|syllabus|programme|program|whole|all subjects|my semester|this semester|current semester|bsc csit|tu csit|prepare|\bexam\b)/i.test(
+      question
+    );
+    if (!overall) return "";
+    const semester = state.data.semesters[state.semIndex] || state.data.semesters[0];
+    return semesterRoadmapMarkdown(semester);
+  }
+  const notes = await subjectNotes(match.subject.slug);
+  return subjectRoadmapMarkdown(match.subject, match.semester, notes);
+}
+
+/* The syllabus the model is being asked about: the matched subject when there
+   is one, otherwise the semester the reader is looking at. The wording matters:
+   a bare "reader is on first semester" makes the model answer a fifth semester
+   question about the wrong year. */
+function syllabusContext(question) {
+  if (!state.data) return "";
+  const match = findSubjectFor(question);
+  if (match) {
+    const chapters = match.subject.chapters.map((c) => c.title).join(", ");
+    return `SYLLABUS CONTEXT: this is ${match.subject.name} (${match.subject.code || "no code"}) in the ${match.semester.title} of the TU BSc CSIT programme. Its chapters are: ${chapters}. Answer about these chapters.`;
+  }
+  const semester = state.data.semesters[state.semIndex] || state.data.semesters[0];
+  const list = semester.subjects.map((s) => `${s.name} (${s.code || "no code"})`).join(", ");
+  return `SYLLABUS CONTEXT: the reader currently has ${semester.title} open: ${list}. Treat that as the default year only when the question names no subject or semester.`;
 }
 
 /* ------------------------------------------------------------------- views */
