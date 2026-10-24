@@ -455,22 +455,13 @@ function rateLimitSeconds(message) {
    quota of its own. */
 async function openStream(messages, signal) {
   const budget = LENGTHS[state.length].budget;
-  let response = await fetch("api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ messages, max_tokens: budget }),
-    signal,
-  });
 
-  const needsDirect =
-    response.status === 404 ||
-    response.status === 405 ||
-    response.status === 402 ||
-    response.status === 429 ||
-    response.status >= 500;
-
-  if (needsDirect) {
-    response = await fetch(MODEL_ENDPOINT, {
+  /* The provider counts one free reply every 30 seconds per IP. Calling it from
+     the browser gives each visitor that quota, and it removes a hop, so answers
+     start sooner. The proxy is the fallback for networks that block the provider
+     or hide it behind CORS, because there the server IP is the only option. */
+  try {
+    const direct = await fetch(MODEL_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -486,8 +477,19 @@ async function openStream(messages, signal) {
       }),
       signal,
     });
+    /* A quota error is real and worth showing. Anything else (blocked, offline,
+       no CORS) means this path cannot work, so try our own origin. */
+    if (direct.ok || direct.status === 402 || direct.status === 429) return direct;
+  } catch (error) {
+    if (error.name === "AbortError") throw error;
   }
-  return response;
+
+  return fetch("api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages, max_tokens: budget }),
+    signal,
+  });
 }
 
 async function streamAnswer(question, { signal, onDelta, onStatus }) {
