@@ -44,7 +44,11 @@ def main() -> None:
         subjects = []
         for subj in sem.get("subjects", []):
             chapters = [
-                {"title": clean(ch.get("title", ""))}
+                {
+                    "title": clean(ch.get("title", "")),
+                    "slug": ch.get("chapter_slug", ""),
+                    "url": ch.get("url", ""),
+                }
                 for ch in subj.get("chapters", [])
                 if clean(ch.get("title", ""))
             ]

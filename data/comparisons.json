@@ -1,0 +1,230 @@
+[
+  {
+    "a": "3NF",
+    "b": "BCNF",
+    "aliasesA": ["3nf", "third normal form"],
+    "aliasesB": ["bcnf", "boyce codd normal form", "boyce-codd normal form"],
+    "subject": "Database Management Systems",
+    "rows": [
+      ["Exact rule", "For every non trivial X to Y, either X is a super key or Y is a prime attribute", "For every non trivial X to Y, X must be a super key"],
+      ["Dependency removed", "Partial and transitive dependency on a key", "Every remaining functional dependency that is not on a super key"],
+      ["Strength", "Weaker, easier to satisfy", "Stronger, strictly stricter than 3NF"],
+      ["Redundancy", "Some redundancy can remain", "Removes the redundancy that 3NF leaves behind"],
+      ["Decomposition", "Always lossless and dependency preserving", "Lossless, but may lose a dependency"],
+      ["Relation", "Every BCNF relation is in 3NF", "A 3NF relation is not necessarily in BCNF"]
+    ]
+  },
+  {
+    "a": "Data",
+    "b": "Information",
+    "aliasesA": ["data"],
+    "aliasesB": ["information"],
+    "subject": "Introduction to Information Technology",
+    "rows": [
+      ["Meaning", "Raw, unprocessed facts and figures with no context", "Processed data that has been given context, meaning and purpose"],
+      ["Form", "Numbers, text, symbols, measurements, images", "Reports, summaries, charts, decisions, answers"],
+      ["Usefulness", "Meaningless on its own, cannot drive a decision", "Meaningful, directly supports decisions and actions"],
+      ["Dependency", "Input to the system, collected first", "Output of the system, produced after processing"],
+      ["Example", "Marks of every student: 78, 65, 91, 54", "Class average is 72 and 3 students failed"],
+      ["Relation", "Data is the raw material", "Information is the finished product made from data"]
+    ]
+  },
+  {
+    "a": "Process",
+    "b": "Thread",
+    "aliasesA": ["process"],
+    "aliasesB": ["thread"],
+    "subject": "Operating Systems",
+    "rows": [
+      ["Definition", "A program in execution with its own address space", "A lightweight execution unit inside a process"],
+      ["Memory", "Separate, isolated address space", "Shares code, data and heap with sibling threads"],
+      ["Own state", "PCB, page table, file descriptors, registers", "Thread ID, program counter, registers, private stack"],
+      ["Creation cost", "Heavy, new address space and resources", "Light, only a stack and register set"],
+      ["Context switch", "Slow, page tables and TLB must be reloaded", "Fast, only registers and stack pointer change"],
+      ["Communication", "IPC: pipes, sockets, shared memory", "Direct read and write of shared variables"],
+      ["Fault isolation", "One crashing process does not affect others", "A crashing thread can bring down the whole process"]
+    ]
+  },
+  {
+    "a": "TCP",
+    "b": "UDP",
+    "aliasesA": ["tcp"],
+    "aliasesB": ["udp"],
+    "subject": "Computer Networks",
+    "rows": [
+      ["Connection", "Connection oriented, three-way handshake first", "Connectionless, sends immediately"],
+      ["Reliability", "Reliable: sequence numbers, ACKs and retransmission", "Unreliable: no acknowledgement, no retransmission"],
+      ["Ordering", "Packets arrive in order", "Packets may arrive out of order or be lost"],
+      ["Header size", "20 to 60 bytes", "8 bytes"],
+      ["Speed and overhead", "Slower, more overhead, flow and congestion control", "Faster, minimal overhead"],
+      ["Use cases", "HTTP, HTTPS, email, file transfer, SSH", "DNS, DHCP, VoIP, video streaming, online games"]
+    ]
+  },
+  {
+    "a": "Stack",
+    "b": "Queue",
+    "aliasesA": ["stack"],
+    "aliasesB": ["queue"],
+    "subject": "Data Structures and Algorithms",
+    "rows": [
+      ["Principle", "LIFO, last in first out", "FIFO, first in first out"],
+      ["Insert", "Push at the top", "Enqueue at the rear"],
+      ["Delete", "Pop from the top", "Dequeue from the front"],
+      ["Pointers", "One pointer, top", "Two pointers, front and rear"],
+      ["Time complexity", "Push, pop and peek are O(1)", "Enqueue and dequeue are O(1)"],
+      ["Applications", "Function calls, undo, expression conversion", "CPU scheduling, printer queue, BFS"]
+    ]
+  },
+  {
+    "a": "Primary Memory",
+    "b": "Secondary Memory",
+    "aliasesA": ["primary memory", "main memory", "primary storage"],
+    "aliasesB": ["secondary memory", "secondary storage", "auxiliary memory"],
+    "subject": "Computer Fundamentals",
+    "rows": [
+      ["Definition", "Memory the CPU accesses directly for execution", "Storage that holds data permanently until deleted"],
+      ["Examples", "RAM, ROM, cache", "Hard disk, SSD, pen drive, DVD"],
+      ["Volatility", "RAM is volatile, contents vanish on power off", "Non volatile, contents survive power off"],
+      ["Access speed", "Very fast, nanoseconds", "Slower, milliseconds"],
+      ["Cost per bit", "Expensive", "Cheap"],
+      ["Capacity", "Small", "Large"],
+      ["Role", "Holds the program currently running", "Holds programs and files for the long term"]
+    ]
+  },
+  {
+    "a": "Compiler",
+    "b": "Interpreter",
+    "aliasesA": ["compiler"],
+    "aliasesB": ["interpreter"],
+    "subject": "Programming Concepts",
+    "rows": [
+      ["Translation", "Translates the whole program at once", "Translates and runs one statement at a time"],
+      ["Output", "Produces an object file or executable", "Produces no intermediate file"],
+      ["Errors", "Reports all errors together after scanning the whole program", "Stops at the first error it meets"],
+      ["Speed of execution", "Fast, machine code runs directly", "Slow, translation repeats on every run"],
+      ["Memory", "Needs more memory for the object code", "Needs less memory"],
+      ["Examples", "C, C++, Java compiler", "Python, JavaScript, BASIC"]
+    ]
+  },
+  {
+    "a": "DBMS",
+    "b": "File System",
+    "aliasesA": ["dbms", "database management system", "database"],
+    "aliasesB": ["file system", "file processing system", "files"],
+    "subject": "Database Management Systems",
+    "rows": [
+      ["Data redundancy", "Controlled through normalization", "High, the same data is repeated in many files"],
+      ["Consistency", "Maintained by constraints and transactions", "Hard to keep consistent"],
+      ["Concurrent access", "Supported with locking and isolation", "No proper concurrency control"],
+      ["Security", "Role and privilege based access", "Only operating system file permissions"],
+      ["Query", "SQL allows ad hoc queries", "Separate programs must be written"],
+      ["Backup and recovery", "Built in through logs and checkpoints", "Manual copying"]
+    ]
+  },
+  {
+    "a": "Primary Key",
+    "b": "Foreign Key",
+    "aliasesA": ["primary key"],
+    "aliasesB": ["foreign key"],
+    "subject": "Database Management Systems",
+    "rows": [
+      ["Definition", "Attribute that uniquely identifies each row", "Attribute that refers to the primary key of another table"],
+      ["Uniqueness", "Must be unique, no duplicates", "May repeat, many rows can share the same value"],
+      ["Null", "Cannot be null", "Can be null when the relation is optional"],
+      ["Number per table", "Only one per table", "Many allowed"],
+      ["Purpose", "Entity integrity", "Referential integrity, links two tables"],
+      ["Example", "student_id in the student table", "student_id inside the marks table"]
+    ]
+  },
+  {
+    "a": "Paging",
+    "b": "Segmentation",
+    "aliasesA": ["paging"],
+    "aliasesB": ["segmentation"],
+    "subject": "Operating Systems",
+    "rows": [
+      ["Division", "Fixed size pages and frames", "Variable size logical segments"],
+      ["Size", "Same size for all pages", "Different size for each segment"],
+      ["Fragmentation", "Internal fragmentation", "External fragmentation"],
+      ["Address", "Page number plus offset", "Segment number plus offset"],
+      ["Visibility to programmer", "Invisible, handled by hardware", "Visible, matches program structure"],
+      ["Table", "One page table per process", "Segment table with base and limit"]
+    ]
+  },
+  {
+    "a": "Deadlock",
+    "b": "Starvation",
+    "aliasesA": ["deadlock"],
+    "aliasesB": ["starvation"],
+    "subject": "Operating Systems",
+    "rows": [
+      ["Definition", "Processes wait forever in a circular chain of resource holding", "A process waits indefinitely while others keep overtaking it"],
+      ["Progress", "No process in the cycle can proceed", "Other processes keep running"],
+      ["Cause", "All four Coffman conditions hold", "Unfair scheduling or priority policy"],
+      ["Detection", "Resource allocation graph cycle", "Observed through waiting time of a process"],
+      ["Solution", "Prevention, avoidance, detection and recovery", "Aging, increasing the priority of waiting processes"]
+    ]
+  },
+  {
+    "a": "Hub",
+    "b": "Switch",
+    "aliasesA": ["hub"],
+    "aliasesB": ["switch"],
+    "subject": "Computer Networks",
+    "rows": [
+      ["Layer", "Physical layer device", "Data link layer device"],
+      ["Transmission", "Broadcasts to every port", "Forwards only to the destination port"],
+      ["Collision", "One collision domain, collisions common", "Each port is its own collision domain"],
+      ["Addressing", "No MAC address table", "Learns MAC addresses in a table"],
+      ["Bandwidth", "Shared among all devices", "Dedicated per port"],
+      ["Duplex", "Half duplex", "Full duplex"]
+    ]
+  },
+  {
+    "a": "IPv4",
+    "b": "IPv6",
+    "aliasesA": ["ipv4"],
+    "aliasesB": ["ipv6"],
+    "subject": "Computer Networks",
+    "rows": [
+      ["Address size", "32 bit", "128 bit"],
+      ["Format", "Dotted decimal, 192.168.1.1", "Hexadecimal with colons, 2001:db8::1"],
+      ["Address space", "About 4.3 billion addresses", "Practically unlimited"],
+      ["Header", "Variable, 20 to 60 bytes", "Fixed 40 bytes"],
+      ["Checksum", "Header checksum present", "No header checksum"],
+      ["NAT", "Needed because addresses are scarce", "Not needed"],
+      ["Configuration", "Manual or DHCP", "Stateless autoconfiguration built in"]
+    ]
+  },
+  {
+    "a": "Analog Signal",
+    "b": "Digital Signal",
+    "aliasesA": ["analog signal", "analog"],
+    "aliasesB": ["digital signal", "digital"],
+    "subject": "Computer Fundamentals",
+    "rows": [
+      ["Values", "Continuous range of values", "Only discrete values, 0 and 1"],
+      ["Representation", "Sine wave", "Square wave"],
+      ["Noise", "Noise is hard to remove once added", "Noise is easy to remove and regenerate"],
+      ["Transmission", "Degrades over distance, needs amplifiers", "Survives distance, uses repeaters"],
+      ["Bandwidth", "Low", "High"],
+      ["Example", "Human voice, old radio", "Computer data, fibre optic, CD"]
+    ]
+  },
+  {
+    "a": "GET",
+    "b": "POST",
+    "aliasesA": ["get", "get method"],
+    "aliasesB": ["post", "post method"],
+    "subject": "Web Technologies",
+    "rows": [
+      ["Data location", "In the URL query string", "In the request body"],
+      ["Visibility", "Visible in the address bar and history", "Not visible in the URL"],
+      ["Length limit", "Limited by URL length, about 2 KB", "Practically unlimited"],
+      ["Idempotent", "Yes, repeating it changes nothing", "No, repeating may create duplicates"],
+      ["Caching", "Cacheable and bookmarkable", "Not cached or bookmarkable"],
+      ["Security", "Never use for passwords, it leaks in logs", "Safer for sensitive data over HTTPS"],
+      ["Use case", "Search, filters, reading a page", "Login, file upload, form submission"]
+    ]
+  }
+]

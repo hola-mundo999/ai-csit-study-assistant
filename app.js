@@ -38,7 +38,8 @@ const SYSTEM_PROMPT = [
   "Answer the exact question you are given, starting with the answer itself in the first sentence.",
   "Never answer a different topic, never pad with unrelated background, and never invent citations or exam dates.",
   "Use GitHub flavoured Markdown: short paragraphs, bold for key terms, and fenced code blocks with a language tag.",
-  "Draw diagrams as plain text inside a fenced code block, never as mermaid, and never use markdown tables: write short bullet lists instead.",
+  "When the question asks for a difference, comparison, or anything with parallel attributes, put the answer in a Markdown table, then explain the table in one short paragraph.",
+  "Draw diagrams as plain text inside a fenced code block, never as mermaid.",
   "Never use em dashes or en dashes. Use a comma, a colon, or the word 'to' instead.",
   "If the question is outside computer science, still answer it accurately and briefly.",
 ].join(" ");
@@ -50,6 +51,8 @@ const state = {
   controller: null,
   data: null,
   topics: [],
+  comparisons: [],
+  subjectNotes: {},
   semIndex: 0,
   qFilter: { text: "", subject: "all" },
 };
@@ -110,6 +113,59 @@ function writeCache(key, answer) {
 }
 
 /* Markdown: escape first, then apply a small, predictable subset. */
+/* Parse a GitHub style table starting at lines[index]. Returns the rendered
+   table and the index of its last line, or null when the lines are not a
+   table. Cells may contain inline formatting, which is already applied. */
+function parseTable(lines, index) {
+  const splitRow = (row) =>
+    row
+      .trim()
+      .replace(/^\|/, "")
+      .replace(/\|$/, "")
+      .split("|")
+      .map((cell) => cell.trim());
+
+  const headerRow = lines[index];
+  if (!headerRow.trim().startsWith("|")) return null;
+  const ruleRow = (lines[index + 1] || "").trim();
+  if (!/^\|?\s*:?-{1,}:?\s*(\|\s*:?-{1,}:?\s*)+\|?$/.test(ruleRow)) return null;
+
+  const headers = splitRow(headerRow);
+  if (!headers.length || headers.every((cell) => !cell)) return null;
+
+  const bodyRows = [];
+  let last = index + 1;
+  for (let i = index + 2; i < lines.length; i++) {
+    const row = lines[i].trim();
+    if (!row.startsWith("|")) break;
+    const cells = splitRow(row);
+    // A line holding only "|" closes the table, it is not an empty row.
+    // Consume it so it cannot leak into the paragraph after the table.
+    if (!cells.some((cell) => cell)) {
+      last = i;
+      break;
+    }
+    bodyRows.push(cells);
+    last = i;
+  }
+  if (!bodyRows.length) return null;
+
+  const html =
+    `<div class="table-wrap"><table>` +
+    `<thead><tr>${headers.map((h) => `<th>${h || ""}</th>`).join("")}</tr></thead>` +
+    `<tbody>${bodyRows
+      .map(
+        (row) =>
+          `<tr>${headers
+            .map((_, col) => `<td>${row[col] || "<span class=\"cell-empty\">\u00b7</span>"}</td>`)
+            .join("")}</tr>`
+      )
+      .join("")}</tbody>` +
+    `</table></div>`;
+
+  return { html, lastIndex: last };
+}
+
 function renderMarkdown(source) {
   const text = plainDashes(source).replace(/\r\n/g, "\n");
   const blocks = [];
@@ -126,6 +182,7 @@ function renderMarkdown(source) {
     .replace(/`([^`\n]+)`/g, "<code>$1</code>");
 
   const out = [];
+  const lines = escaped.split("\n");
   let list = null;
   let para = [];
 
@@ -142,11 +199,20 @@ function renderMarkdown(source) {
     }
   };
 
-  for (const raw of escaped.split("\n")) {
-    const line = raw.trimEnd();
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trimEnd();
     if (!line.trim()) {
       flushPara();
       flushList();
+      continue;
+    }
+    /* Markdown table: a header row, a |---|---| rule, then body rows. */
+    const table = parseTable(lines, i);
+    if (table) {
+      flushPara();
+      flushList();
+      out.push(table.html);
+      i = table.lastIndex;
       continue;
     }
     if (/^\u0000B\d+\u0000$/.test(line.trim())) {
@@ -229,6 +295,140 @@ function referenceBlock(topic) {
   return parts.join("\n");
 }
 
+/* -------------------------------------------------- comparison questions */
+
+/* "Difference between X and Y" is the single most common TU question, and the
+   free model answers it badly or not at all. The curated topic list already
+   holds both sides, so those questions are answered here with a real table,
+   instantly and without touching the network. */
+const COMPARE_PATTERNS = [
+  /difference(?:s)? between (.+?) and (.+?)[?.!]*$/i,
+  /differentiate(?: between)? (.+?) and (.+?)[?.!]*$/i,
+  /distinguish(?: between)? (.+?) and (.+?)[?.!]*$/i,
+  /compare (.+?) (?:and|with|to|vs\.?) (.+?)[?.!]*$/i,
+  /^(.+?) vs\.? (.+?)[?.!]*$/i,
+];
+
+function cleanName(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/\(.*?\)/g, " ")
+    .replace(/[^a-z0-9+ ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function findTopic(name) {
+  const wanted = cleanName(name);
+  if (!wanted) return null;
+  for (const topic of state.topics) {
+    const title = cleanName(topic.title);
+    const slug = cleanName(String(topic.slug || "").replace(/-/g, " "));
+    if (title === wanted || slug === wanted) return topic;
+  }
+  for (const topic of state.topics) {
+    const title = cleanName(topic.title);
+    const slug = cleanName(String(topic.slug || "").replace(/-/g, " "));
+    if (title.startsWith(`${wanted} `) || title.endsWith(` ${wanted}`)) return topic;
+    if (slug.startsWith(`${wanted} `) || slug.endsWith(` ${wanted}`)) return topic;
+  }
+  return null;
+}
+
+/* Match one side of a question against the curated comparison records. */
+function curatedSide(name, aliases) {
+  const wanted = cleanName(name);
+  if (!wanted) return false;
+  return aliases.some((alias) => {
+    const value = cleanName(alias);
+    return wanted === value || wanted.includes(value) || value.includes(wanted);
+  });
+}
+
+function curatedComparison(question) {
+  for (const pattern of COMPARE_PATTERNS) {
+    const match = String(question).match(pattern);
+    if (!match) continue;
+    const [left, right] = [match[1], match[2]];
+    for (const entry of state.comparisons) {
+      const forward =
+        curatedSide(left, entry.aliasesA || [entry.a]) && curatedSide(right, entry.aliasesB || [entry.b]);
+      const backward =
+        curatedSide(left, entry.aliasesB || [entry.b]) && curatedSide(right, entry.aliasesA || [entry.a]);
+      if (forward || backward) return entry;
+    }
+  }
+  return null;
+}
+
+function curatedTable(entry) {
+  const head = `| Aspect | ${entry.a} | ${entry.b} |`;
+  const rule = "| --- | --- | --- |";
+  const body = entry.rows.map((row) => `| **${row[0]}** | ${row[1]} | ${row[2]} |`).join("\n");
+  return [head, rule, body].join("\n");
+}
+
+function comparisonTopics(question) {
+  for (const pattern of COMPARE_PATTERNS) {
+    const match = String(question).match(pattern);
+    if (!match) continue;
+    const left = findTopic(match[1]);
+    const right = findTopic(match[2]);
+    if (left && right && left.slug !== right.slug) return [left, right];
+  }
+  return null;
+}
+
+/* A curated table wins because it is checked; otherwise build one from two
+   saved topics. Returns markdown, or an empty string when neither applies. */
+function localComparison(question) {
+  const curated = curatedComparison(question);
+  if (curated) return curatedTable(curated);
+  const pair = comparisonTopics(question);
+  if (pair) return comparisonTable(pair[0], pair[1]);
+  return "";
+}
+
+function cellText(value, limit) {
+  const text = String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/\$/g, "")
+    .replace(/\|/g, "/")
+    .trim();
+  if (!limit || text.length <= limit) return text || "-";
+  const cut = text.slice(0, limit);
+  const stop = cut.lastIndexOf(" ");
+  return `${stop > 40 ? cut.slice(0, stop) : cut}…`;
+}
+
+function comparisonTable(left, right) {
+  const rows = [];
+  rows.push(["Definition", cellText(left.definition, 220), cellText(right.definition, 220)]);
+
+  const points = (topic) => (topic.how || []).slice(0, 3).map((line) => cellText(line, 150)).join("; ");
+  const leftPoints = points(left);
+  const rightPoints = points(right);
+  if (leftPoints || rightPoints) {
+    rows.push(["How it works", leftPoints || "-", rightPoints || "-"]);
+  }
+
+  const keys = [];
+  for (const source of [left.complexity || {}, right.complexity || {}]) {
+    for (const key of Object.keys(source)) if (!keys.includes(key)) keys.push(key);
+  }
+  for (const key of keys) {
+    rows.push([key, cellText(left.complexity?.[key] || "-", 60), cellText(right.complexity?.[key] || "-", 60)]);
+  }
+
+  const examLine = (topic) => cellText((topic.exam || [])[0] || "-", 170);
+  rows.push(["Exam point", examLine(left), examLine(right)]);
+
+  const head = `| Aspect | ${cellText(left.title, 48)} | ${cellText(right.title, 48)} |`;
+  const rule = "| --- | --- | --- |";
+  const body = rows.map((row) => `| **${row[0]}** | ${row[1]} | ${row[2]} |`).join("\n");
+  return [head, rule, body].join("\n");
+}
+
 /* ------------------------------------------------------------- streaming */
 
 function sseContent(line) {
@@ -250,7 +450,9 @@ function rateLimitSeconds(message) {
 }
 
 /* Open the event stream through our edge proxy. A local file server has no
-   /api route, so fall back to calling the provider directly while developing. */
+   /api route, and the shared proxy can run out of its provider quota, so fall
+   back to calling the provider from the visitor's own connection, which has a
+   quota of its own. */
 async function openStream(messages, signal) {
   const budget = LENGTHS[state.length].budget;
   let response = await fetch("api/chat", {
@@ -260,7 +462,14 @@ async function openStream(messages, signal) {
     signal,
   });
 
-  if (response.status === 404 || response.status === 405) {
+  const needsDirect =
+    response.status === 404 ||
+    response.status === 405 ||
+    response.status === 402 ||
+    response.status === 429 ||
+    response.status >= 500;
+
+  if (needsDirect) {
     response = await fetch(MODEL_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -269,6 +478,10 @@ async function openStream(messages, signal) {
         stream: true,
         temperature: 0.35,
         max_tokens: budget,
+        private: true,
+        // The anonymous model is a reasoning model. Low effort keeps the answer
+        // from waiting on a long private chain of thought.
+        reasoning_effort: "low",
         messages,
       }),
       signal,
@@ -462,6 +675,19 @@ async function submitQuestion(raw) {
     return;
   }
 
+  /* Comparison questions are answered from the checked notes, instantly,
+     instead of waiting on a model that mangles them. */
+  const table = localComparison(question);
+  if (table) {
+    render(table);
+    bubble.finish({ seconds: 0, cached: true });
+    writeCache(answerCacheKey(question), table);
+    state.history.push({ role: "user", content: question });
+    state.history.push({ role: "assistant", content: table });
+    finishBusy();
+    return;
+  }
+
   try {
     const answer = await streamAnswer(question, {
       signal: state.controller.signal,
@@ -555,60 +781,105 @@ function topicsForChapter(chapterTitle) {
   return scored.slice(0, 2).map((item) => item.topic);
 }
 
-function chapterNote(subject, chapterTitle) {
-  const matches = topicsForChapter(chapterTitle);
-  const panel = el("div", "chapter-panel");
+/* The note file for one subject, fetched the first time a chapter is opened. */
+async function subjectNotes(subjectSlug) {
+  if (!subjectSlug) return {};
+  if (state.subjectNotes[subjectSlug]) return state.subjectNotes[subjectSlug];
+  try {
+    const response = await fetch(`data/notes/${subjectSlug}.json`);
+    if (!response.ok) return {};
+    state.subjectNotes[subjectSlug] = await response.json();
+  } catch {
+    state.subjectNotes[subjectSlug] = {};
+  }
+  return state.subjectNotes[subjectSlug];
+}
 
+function chapterNote(subject, chapter) {
+  const chapterTitle = chapter.title;
+  const panel = el("div", "chapter-panel");
+  const code = el("span", "chapter-panel__code", subject.code || "CSIT");
   const head = el("div", "chapter-panel__head");
-  head.append(
-    el("span", "chapter-panel__code", subject.code || "CSIT"),
-    el("strong", null, chapterTitle)
-  );
+  head.append(code, el("strong", null, chapterTitle));
   panel.appendChild(head);
 
-  if (matches.length) {
-    panel.appendChild(
-      el("p", "chapter-panel__def", "Related saved notes for this chapter. Read the summary here, then ask the tutor for a full worked example.")
-    );
-    for (const topic of matches) {
-      const note = el("div", "topic-note");
-      note.appendChild(el("h3", "topic-note__title", topic.title));
-      note.appendChild(el("p", null, topic.definition));
-      if (topic.how && topic.how.length) {
-        const list = el("ul", "chapter-panel__list");
-        topic.how.slice(0, 3).forEach((line) => list.appendChild(el("li", null, line)));
-        note.appendChild(list);
-      }
-      if (topic.complexity && Object.keys(topic.complexity).length) {
-        const bits = Object.entries(topic.complexity)
-          .map(([k, v]) => `${k}: ${v}`)
-          .join(" | ");
-        note.appendChild(el("p", "chapter-panel__meta", bits));
-      }
-      panel.appendChild(note);
-    }
-  } else {
-    panel.appendChild(
-      el(
-        "p",
-        "chapter-panel__def",
-        `This chapter is best explained live. The tutor will walk through ${chapterTitle} with an example tailored to ${subject.name}.`
-      )
-    );
-  }
+  /* Primary content: the note written for this exact chapter. */
+  const slot = el("div", "chapter-panel__body");
+  const loader = el("p", "status-line", "Loading the study note for this chapter.");
+  slot.appendChild(loader);
+  panel.appendChild(slot);
 
   const actions = el("div", "chapter-panel__actions");
+  const askPrompt = `Explain ${chapterTitle} for ${subject.name} (${subject.code}) with a worked example.`;
   const ask = el("button", "btn-inline", "Ask about this chapter");
   ask.type = "button";
-  ask.addEventListener("click", () => {
-    openTutor(`Explain ${chapterTitle} for ${subject.name} (${subject.code}) with a worked example.`);
-  });
+  ask.addEventListener("click", () => openTutor(askPrompt, true));
   actions.appendChild(ask);
-  const needs = el("button", "btn-inline btn-inline--ghost", "Type my own question");
-  needs.type = "button";
-  needs.addEventListener("click", () => openTutor(""));
-  actions.appendChild(needs);
+
+  const typeOwn = el("button", "btn-inline btn-inline--ghost", "Type my own question");
+  typeOwn.type = "button";
+  typeOwn.addEventListener("click", () => openTutor(""));
+  actions.appendChild(typeOwn);
+
+  if (chapter.url) {
+    const source = el("a", "btn-inline btn-inline--ghost", "Official study material");
+    source.href = chapter.url;
+    source.target = "_blank";
+    source.rel = "noreferrer noopener";
+    source.setAttribute("aria-label", `Open ${chapterTitle} on hamrocsit.com`);
+    actions.appendChild(source);
+  }
   panel.appendChild(actions);
+
+  subjectNotes(subject.slug).then((notes) => {
+    slot.innerHTML = "";
+    const note = notes[chapter.slug];
+    if (note) {
+      const body = el("div", "chapter-note");
+      body.innerHTML = renderMarkdown(note);
+      slot.appendChild(body);
+    }
+
+    const related = topicsForChapter(chapterTitle).filter(
+      (topic) => !(note && note.includes(topic.title))
+    );
+    if (related.length) {
+      slot.appendChild(
+        el("p", "chapter-panel__meta", `Related notes: ${related.map((t) => t.title).join(" | ")}`)
+      );
+      for (const topic of related) {
+        const relatedNote = el("details", "topic-note");
+        const summary = el("summary", "topic-note__title", topic.title);
+        relatedNote.appendChild(summary);
+        relatedNote.appendChild(el("p", null, topic.definition));
+        if (topic.how && topic.how.length) {
+          const list = el("ul", "chapter-panel__list");
+          topic.how.slice(0, 3).forEach((line) => list.appendChild(el("li", null, line)));
+          relatedNote.appendChild(list);
+        }
+        slot.appendChild(relatedNote);
+      }
+    }
+
+    if (!note) {
+      /* No imported note for this chapter yet. Say so plainly and make the
+         next step one click, instead of leaving an empty panel. */
+      const empty = el("div", "chapter-empty");
+      empty.appendChild(
+        el(
+          "p",
+          "chapter-panel__def",
+          `No imported note for ${chapterTitle} yet. The tutor can explain the whole chapter now, and the official material is one click away.`
+        )
+      );
+      const explain = el("button", "btn-inline", "Explain this chapter now");
+      explain.type = "button";
+      explain.addEventListener("click", () => openTutor(askPrompt, true));
+      empty.appendChild(explain);
+      slot.appendChild(empty);
+    }
+  });
+
   return panel;
 }
 
@@ -627,11 +898,15 @@ function showView(name) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function openTutor(question) {
+function openTutor(question, submit) {
   showView("tutor");
   dom.askInput.value = question;
   dom.askInput.focus();
   dom.askInput.dispatchEvent(new Event("input"));
+  if (question && submit) {
+    submitQuestion(question);
+    return;
+  }
   if (!question) dom.askInput.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
@@ -706,7 +981,7 @@ function renderCourses() {
           list.querySelectorAll(".chapter").forEach((c) => c.classList.remove("is-open"));
           if (alreadyOpen) return;
           chip.classList.add("is-open");
-          const panel = chapterNote(subject, chapter.title);
+          const panel = chapterNote(subject, chapter);
           panel.dataset.title = chapter.title;
           noteSlot.appendChild(panel);
         });
@@ -823,7 +1098,7 @@ function drawQuestionList() {
     });
 
     ask.addEventListener("click", () => {
-      openTutor(`Solve this past TU board question step by step: ${q.title}`);
+      openTutor(`Solve this past TU board question step by step: ${q.title}`, true);
     });
 
     dom.qList.appendChild(card);
@@ -965,13 +1240,15 @@ async function boot() {
 
   setStatus("Loading syllabus", null);
   try {
-    const [studyRes, topicsRes] = await Promise.all([
+    const [studyRes, topicsRes, comparisonsRes] = await Promise.all([
       fetch("data/study.json"),
       fetch("data/topics.json").catch(() => null),
+      fetch("data/comparisons.json").catch(() => null),
     ]);
     if (!studyRes.ok) throw new Error(String(studyRes.status));
     state.data = await studyRes.json();
     if (topicsRes && topicsRes.ok) state.topics = await topicsRes.json();
+    if (comparisonsRes && comparisonsRes.ok) state.comparisons = await comparisonsRes.json();
     renderSemesters();
     renderCourses();
     renderQuestions();
